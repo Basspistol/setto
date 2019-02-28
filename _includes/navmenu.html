@@ -1,0 +1,12 @@
+  <div id="navigation" class="icofont">
+
+    <div class="flexnav1" style="font-size: 2em;">
+{% for link in site.data.navigation %}
+      <a href="{{ link.url }}" title="{{ link.title }}" class="{{ link.class }}">{{ link.text }}</a>
+{% endfor %}
+      <!-- <a href="{{ base }}/rss.xml" title="RSS Feed" class="icofont-rss-feed" target="_blank"></a> -->
+    </div>
+
+  </div>
+
+

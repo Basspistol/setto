@@ -1,0 +1,40 @@
+{% include allhead.html %} 
+
+<!-- Main Entity of Page -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "MusicGroup",
+    "image": "{{ site.production_url }}{{ site.banner }}",
+    "name": "{{ site.title }}",
+    "track": {
+      "@type": "MusicRecording",
+      "audio": "{{ page.audio_url }}",
+      "name": "{{ page.title }}",
+      "url": "{{ site.production_url }}{{ page.url }}",
+      "dateCreated": "{{ page.date }}",
+      "dateModified": "{{ site.time | date_to_xmlschema }}",
+      "datePublished": "{{ page.date }}",
+      "copyrightYear": "{{ site.time | date: "%Y" }}",
+      "thumbnailUrl": "{{ site.audio_url }}{{ page.cover }}"
+    }
+  }
+  </script>
+
+<!-- Facebook OpenGraph -->
+
+
+<meta property="og:type" content="music.album" />
+<meta property="og:locale" content="en_us" />
+<meta property="og:url" content="{{ site.production_url }}{{ page.url }}" />
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:description" content="{{ page.description }}" />
+<meta property="og:image" content="{{ site.production_url }}/assets/img/{{ page.image }}" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:site_name" content="{{ site.title }}" />
+<meta property="og:audio:secure_url" content="{{ page.audio_url }}" />
+<meta property="og:audio:type" content="audio/vnd.facebook.bridge" />
+<meta property="music:musician" content="https://musicbrainz.org/artist/{{ site.musicbrainz_artistid }}" />
+<meta property="music:release_date" content="{{ page.date }}" />
+
+<!-- END rendered SEO Meta -->

@@ -1,0 +1,22 @@
+permalink: /:categories/:title.html
+
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "*.*~", ".xcf", "*.blend*"]
+
+title : 徒 setto セット
+tagline: Set, Party, Gang! &#35;Cybersoul
+
+production_url : https://setto.basspistol.com
+audio_url: /assets/mu/
+
+# banner should be 1024x1024
+banner: /assets/img/setto_logo.png
+icon: /assets/img/setto_icon.png
+email: setto@protonmail.com
+
+social_ids: [insta, twitter]
+social:
+  insta: 'https://www.instagram.com/tosettosetto'
+  twitter: 'https://twitter.com/ToSettoSetto'
+
+# musicbrainz
+musicbrainz_artistid: '31e8e456-0589-47eb-9334-20872851cd3e'

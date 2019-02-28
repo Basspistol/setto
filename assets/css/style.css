@@ -1,0 +1,190 @@
+---
+---
+{% include normalize.css %} 
+{% include icofont.css %}
+
+/****************
+| FONTS
+****************/
+
+@font-face {
+font-family: 'Roboto';
+src: url('../fonts/MajorMonoDisplay-Regular.ttf');
+}
+@font-face {
+font-family: 'RobotB';
+src: url('../fonts/MajorMonoDisplay-Regular.ttf');
+}
+@font-face {
+font-family: 'Plaster';
+  src: url('../fonts/collects.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: Roboto, Helvertica, Arial, sans-serif;
+  color: #9bc9b5;
+  font-size: 1em;
+  background-color: #190086;
+}
+
+canvas {
+  overflow-x: hidden;
+  position: fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  z-index: -1;
+}
+
+h1, h2, h3, h4 {
+  font-family: Plaster, Helvertica, Arial, sans-serif;
+}
+h1 {
+  font-size: 2.5em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1em;
+}
+a {
+  font-family: RobotB;
+  text-decoration: none;
+  color: #fff;
+  transition-property: color;
+  transition: color 0.5s ease-in-out;
+}
+a:hover {
+  color: #ff00b6;
+  transition-property: color;
+  transition: color 0.5s ease-in-out;
+}
+
+/*******
+NAV MENU
+*******/
+
+#navigation {
+
+  background: linear-gradient(to bottom,  #0f1108ff 10px, #0f110800);
+  position: sticky;
+  height: 100px;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  padding: 0;
+  z-index: 100;
+  text-align: left;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+}
+#navigation a {
+  color:#fff;
+  text-decoration: none;
+  font-family: Plaster, Helvertica, Arial, sans-serif;
+}
+#navigation a:hover {
+  color: #ff00b6;
+  background-color: transparent;
+}
+#navigation a.current {
+  color: #00e9ff;
+
+}
+.flexnav{
+  margin: 0;
+  flex: 1 1 300px;
+}
+.flexnav1{
+  margin: 0;
+  flex: 1 1 300px;
+  padding: 0 0 10px 10px;
+
+}
+/*******
+Content 
+*******/
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  margin: 0;
+  padding: 10px;
+  font-size: 1.2em;
+}
+#flexhead {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.flexhead {
+  padding: 0 10px 0 2px;
+  flex: 1 0 40%;
+}
+.flexitem {
+  padding: 0 10px 0 2px;
+  flex: 1 1 400px;
+  flex-wrap: wrap;
+}
+#flexrelease {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border-bottom: 1px solid #9bc9b5;
+  margin-bottom: 20px;
+}
+.flexrelease {
+  padding: 0 10px 0 2px;
+  flex: 1 1 300px;
+  opacity: 0.5;
+}
+
+
+/************
+Music
+************/
+.flexrecord {
+  margin: 0;
+  flex: 1 1 300px;
+
+  transition: background-position ease .5s, filter ease 0.5s, opacity ease .5s;
+  -webkit-filter: invert(100%) blur(2px);
+  -moz-filter: invert(100%) blur(2px);
+  -ms-filter: invert(100%) blur(2px);
+  -o-filter: invert(100%) blur(2px);
+  filter: invert(100%) blur(2px);
+  opacity: 0.5;
+}
+.flexrecord:hover {
+  transition: background-position ease .5s, filter ease 0.5s, opacity ease .5s;
+  -webkit-filter: invert(0%) blur(0px);
+  -moz-filter: invert(0%) blur(0px);
+  -ms-filter: invert(0%) blur(0px);
+  -o-filter: invert(0%) blur(0px);
+  filter: invert(0%) blur(0px);
+  opacity: 1;
+}
+.flexshops {
+  margin: 0;
+  flex: 1 1 300px;
+  transition: background-position ease .5s, filter ease 0.5s, opacity ease .5s;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -ms-filter: blur(2px);
+  -o-filter: blur(2px);
+  filter: blur(2px);
+  opacity: 0.5;
+}
+.flexshops:hover {
+  transition: background-position ease .5s, filter ease 0.5s, opacity ease .5s;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -ms-filter: blur(0px);
+  -o-filter: blur(0px);
+  filter: blur(0px);
+  opacity: 1;
+}
