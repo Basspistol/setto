@@ -2,5 +2,5 @@
   image: /assets/img/darkweb.jpg
   path: /darkweb/
 - title: Satoshi Mon Ami
-  image: satoshimonami.jpg
-  path: /satoshimonami
+  image: /assets/img/satoshimonami.jpg
+  path: /satoshimonami/
