@@ -1,3 +1,25 @@
 ---
-layout: default
 ---
+{% include base.html %} 
+<!DOCTYPE html> 
+<html>
+  <head>
+    {% include trackhead.html %}
+  </head>
+
+  <body>
+{% include navmenu.html %}
+    <div id="content">
+      <div class="description">
+      <h2>{{ page.title }}</h2>
+      <p>{{ page.description }}</p>
+
+      </div>
+      <div class="description"><br />Provide yourself:<br />{% for shop in page.stores %}<a href="{{ shop.url }}" target="_blank" rel="noopener noreferrer nofollow"><h2 style="line-height: 0.5em;">{{ shop.name }}</h2></a>
+{% endfor %}
+      </div>
+    </div> 
+{% include releasepage.html %}
+  </body>
+
+</html>

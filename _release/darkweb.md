@@ -1,6 +1,8 @@
 ---
 title: darkweb
 date: 2019-02-07 00:00:00
+description: >-
+  At the end of the tunnel through the flashy but controlled cyberspace we call the &quot;Internet&quot;, there is a light of hope for the underground. 
 vid: darkweb
 image: /assets/img/darkweb.jpg
 category: music
