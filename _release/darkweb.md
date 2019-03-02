@@ -1,8 +1,9 @@
 ---
-title: darkweb
+title: Darkweb
 date: 2019-02-07 00:00:00
 description: >-
-  At the end of the tunnel through the flashy but controlled cyberspace we call the &quot;Internet&quot;, there is a light of hope for the underground. 
+  As dystopian as the present might seem on-line, there is always room for the
+  strange in the cypher.
 vid: darkweb
 image: /assets/img/darkweb.jpg
 category: music
@@ -37,3 +38,6 @@ stores:
     img:
 ---
 
+As dystopian as the present might seem on-line, there is always room for the strange in the cypher.
+
+At the end of the tunnel through the flashy but controlled cyberspace we call the "Internet", there is a light of hope for the underground.
