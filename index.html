@@ -17,7 +17,7 @@ category:
   </section>
   <div id="flexrelease">
     {% for release in site.release %}
-    <div class="flexrelease"><a href="{{ base }}{{ release.path }}"><img src="{{ base }}{{ release.image }}" style="width:100%; max-width: 700px; min-width: 300px;border-radius: 3px;"/><h2>{{ release.title }}</h2></a></div>
+    <div class="flexrelease"><a href="{{ base }}{{ release.url }}"><img src="{{ base }}{{ release.image }}" style="width:100%; max-width: 700px; min-width: 300px;border-radius: 3px;"/><h2>{{ release.title }}</h2></a></div>
     {% endfor %}
   </div>
   <div class="flexitem">
