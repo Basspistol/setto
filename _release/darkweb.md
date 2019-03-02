@@ -1,0 +1,34 @@
+---
+title: darkweb
+date: 2019-02-07 00:00:00
+vid: darkweb
+image: darkweb.jpg
+category: music
+audio_url: 'https://shop.basspistol.com/album/darkweb'
+layout: release
+stores:
+  - name:
+    url:
+    img:
+  - name:
+    url:
+    img:
+  - name:
+    url:
+    img:
+  - name:
+    url:
+    img:
+  - name:
+    url:
+    img:
+  - name:
+    url:
+    img:
+  - name:
+    url:
+    img:
+  - name:
+    url:
+    img:
+---
