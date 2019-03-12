@@ -3,7 +3,7 @@ title: Darkweb
 date: 2019-02-07 19:07:00
 description: >-
   As dystopian as the present might seem on-line, there is always room for the
-  strange in the cypher.
+  strange in the cypher...
 vid: darkweb
 image: /assets/img/darkweb.jpg
 category: music
