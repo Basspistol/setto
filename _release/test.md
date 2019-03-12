@@ -12,3 +12,5 @@ stores:
     url:
     img:
 ---
+
+Super
