@@ -24,3 +24,8 @@ musicbrainz_artistid: '31e8e456-0589-47eb-9334-20872851cd3e'
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+
+collections:
+  release:
+    output: true
+    permalink: /:name/

@@ -1,21 +1,23 @@
 ---
 title: ゲットー・スービド
 layout: default
-description: 'Cypherpunk at core, induced by popcorn chewing threads in obscure chat-rooms.'
-cover: 
-date: '2018-12-11'
-category: ''
+description: >-
+  The music of 徒 SETTO セット (pronounced "To Setto Setto") is a cypher cloud jam
+  induced by popcorn chewing threads in obscure chat-rooms.
+cover:
+date: 2018-12-11 00:00:00
+category:
 ---
 
 <div id="content">
   <section id="flexhead">
   <div class="flexhead">
-    <p style="font-size:1.5em;line-height:1.05em;max-width: 700px;">The music of 徒 SETTO セット (pronounced "To Setto Setto") is Cypherpunk at core, induced by popcorn chewing threads in obscure chat-rooms. It is the brainchild of <a href="https://instagram.com/wtfcoucou" target="_blank">wtfcoucou</a> incarnated by <a href="https://instagram.com/tosettosetto" target="_blank">Sethybwoy.</a>
+    <p style="font-size:1.5em;line-height:1.05em;max-width: 700px;">{{ page.description }}<a href="https://instagram.com/tosettosetto" target="_blank">Sethybwoy.</a>
   </div>
   </section>
   <div id="flexrelease">
-    {% for release in site.data.releases %}
-    <div class="flexrelease"><a href="{{ base }}{{ release.path}}"><img src="{{ base }}{{ release.image }}" style="width:100%; max-width: 700px; min-width: 300px;border-radius: 3px;"/><h2>{{ release.title }}</h2></a></div>
+    {% for release in site.release %}
+    <div class="flexrelease"><a href="{{ base }}{{ release.url }}"><img src="{{ base }}{{ release.image }}" style="width:100%; max-width: 700px; min-width: 300px;border-radius: 3px;"/><h2>{{ release.title }}</h2></a></div>
     {% endfor %}
   </div>
   <div class="flexitem">
