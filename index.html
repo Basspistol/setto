@@ -16,7 +16,8 @@ category:
   </div>
   </section>
   <div id="flexrelease">
-    {% for release in site.release %}
+    {% assign sortedreleases = site.releases | sort: 'date' | reverse %}
+    {% for release in sortedreleases %}
     <div class="flexrelease"><a href="{{ site.baseurl }}{{ release.url }}"><img src="{{ site.baseurl }}{{ release.image }}" style="width:100%; max-width: 700px; min-width: 300px;border-radius: 3px;"/><h2>{{ release.title }}</h2></a></div>
     {% endfor %}
   </div>

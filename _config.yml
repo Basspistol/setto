@@ -27,6 +27,6 @@ plugins:
   - jekyll-seo-tag
 
 collections:
-  release:
+  releases:
     output: true
     permalink: /:name/
