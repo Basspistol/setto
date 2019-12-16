@@ -63,7 +63,7 @@ function tryStart() {
   started = true;
 
   var video = document.createElement('video');
-  video.src = '/assets/vi/HardwareJam20191214.mp4';
+  video.src = 'https://media.basspistol.com/setto/vi/HardwareJam20191214.mp4';
   video.crossOrigin = 'anonymous';
 
   video.autoplay = true;
