@@ -12,7 +12,7 @@ function attribution(first, second, url, position) {
   linkElement.style.right = /right/.test(position) ? '10px' : 'auto';
   linkElement.style.top = /top/.test(position) ? '10px' : 'auto';
   linkElement.style.bottom = /bottom/.test(position) ? '10px' : 'auto';
-  linkElement.style.fontFamily = 'Helvetica, Arial, sans-serif';
+  linkElement.style.fontFamily = 'Roboto, Helvetica, Arial, sans-serif';
   linkElement.style.textAlign = /right/.test(position) ? 'right' : 'left';
   linkElement.style.textTransform = 'uppercase';
   linkElement.style.textDecoration = 'none';
