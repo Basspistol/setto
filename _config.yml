@@ -30,3 +30,6 @@ collections:
   releases:
     output: true
     permalink: /:name/
+  videos:
+    output: true
+    permalink: /:name/
