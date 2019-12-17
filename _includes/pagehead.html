@@ -19,9 +19,9 @@
     "inLanguage": "en_us",
     "headline": "{{ site.tagline }}",
     "dateCreated": "{{ page.date }}",
-    "dateModified": "{{ site.time | date_to_xmlschema }}",
+    "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
     "datePublished": "{{ page.date }}",
-    "copyrightYear": "{{ site.time | date: "%Y" }}",
+    "copyrightYear": "{{ page.last_modified_at | date: "%Y" }}",
     "author": {
         "@type": "Person",
         "name": "{{ site.title }}",

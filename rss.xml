@@ -9,7 +9,7 @@ title : The Basspistol RSS Feed
     <atom:link href="{{ site.url }}/rss.xml" rel="self" type="application/rss+xml" />
     <link>{{ site.url }}</link>
     <description>{{ site.tagline | xml_escape }}</description>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <lastBuildDate>{{ page.last_modified_at | date_to_rfc822 }}</lastBuildDate>
     <language>en-US</language>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
