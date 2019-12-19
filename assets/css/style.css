@@ -72,7 +72,7 @@ NAV MENU
   background: linear-gradient(to bottom,  #0f1108ff 10px, #0f110800);
   position: sticky;
   height: 100px;
-  top: 0;
+  bottom: 0;
   left: 0;
   display: flex;
   width: 100%;
@@ -196,9 +196,21 @@ Music
   fill: #9bc9b5;
   max-width: 80%;
 
+  transition: all ease 0.5s;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -ms-filter: blur(0px);
+  -o-filter: blur(0px);
+  filter: blur(0px);
 }
 .svglink:hover {
+  transition: all ease 0.5s;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -ms-filter: blur(2px);
+  -o-filter: blur(2px);
+  filter: blur(2px);
   fill: #ff00b6;
-  transition: all 1000ms ease-in-out;
+
 
 }
