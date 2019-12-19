@@ -81,6 +81,10 @@ NAV MENU
   text-align: left;
   flex-wrap: wrap;
   overflow-x: hidden;
+
+}
+#navigation svg {
+  max-width: 80vw;
 }
 #navigation a {
   color:#fff;
@@ -97,7 +101,7 @@ NAV MENU
 }
 .flexnav{
   margin: 0;
-  flex: 1 1 300px;
+  flex: 0 1 300px;
 }
 .flexnav1{
   margin: 0;
@@ -187,4 +191,14 @@ Music
   -o-filter: blur(0px);
   filter: blur(0px);
   opacity: 1;
+}
+.svglink {
+  fill: #9bc9b5;
+  max-width: 80%;
+
+}
+.svglink:hover {
+  fill: #ff00b6;
+  transition: all 1000ms ease-in-out;
+
 }
