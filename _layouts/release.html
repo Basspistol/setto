@@ -12,21 +12,57 @@
 <body>
   {% include navmenu.html %}
   <div id="content">
-    <div style="">
 
-    </div>
     <div class="description">
       <h2>{{ page.title }}</h2>
       <p>{{ page.description }}</p>
     </div>
-    <div class="description"><br />Provide yourself:<br />{% for shop in page.stores %}<a href="{{ shop.url }}"
+    <div class="description"><br />Provide yourself:
+      <br /><br />{% for shop in page.stores %}<a href="{{ shop.url }}"
         target="_blank" rel="noopener noreferrer nofollow">
-        <h2 style="line-height: 0.5em;">{{ shop.name }}</h2>
+        <h2 class="flexshops">{{ shop.name }}</h2>
       </a>
       {% endfor %}
     </div>
   </div>
-  {% include releasepage.html %}
+<!-- The video -->
+<div class="fullscreen-bg">
+  <video loop muted autoplay poster="{{ site.baseurl }}/assets/img/sakrecoer-logo.svg" class="fullscreen-bg__video">
+    <source src="{{ relBase }}/assets/vi/{{ page.vid }}.webm" type="video/webm">
+    <source src="{{ relBase }}/assets/vi/{{ page.vid }}.mp4" type="video/mp4">
+  </video>
+</div>
+
+  
+  <!-- Optional: some overlay text to describe the video -->
+
+<style type="text/css">
+
+  
+  /* Add some content at the bottom of the video/page */
+  #content {
+    margin:auto;
+
+    width: 100%;
+    padding: 0;
+    display: flex;
+    z-index: 10;
+  }
+  .description {
+    padding: 10px;
+    flex: 1 1 300px;
+    flex-wrap: wrap;
+    min-width: 300px;
+    background: rgba(0, 0, 0, 0.75);
+    margin: 10px;
+    border-radius: 3px;
+  }
+
+  canvas {
+    z-index: -100;
+  }
+  </style>
+  
 </body>
 
 </html>
