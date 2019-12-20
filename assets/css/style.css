@@ -235,7 +235,7 @@ Music
   left: 0;
   width: 100vw;
   height: 100%;
-  background: linear-gradient(230deg, #ff00ffe6, #416a00e6);
+  background: linear-gradient(230deg, #100147e6, #4e0055e6);
   margin:0;
   padding: 0;
 }
@@ -256,7 +256,7 @@ Music
 
 @media (max-width: 767px) {
   .fullscreen-bg {
-    background: url('/assets/img/sakrecoer-logo.svg') center center / cover no-repeat;
+    background: #000 center center / cover no-repeat;
     
   }
   .pivot {
@@ -268,10 +268,6 @@ Music
     font-size: 2.25em;
   }
 
-
-  // .fullscreen-bg__video {
-  //   display: none;
-  // }
 }
 
 }

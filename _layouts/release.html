@@ -16,7 +16,7 @@
     <div class="description">
       <h2>{{ page.title }}</h2>
       <p>{{ page.description }}</p>
-      <img src="{{ page.image }}" style="width:100%; border-radius: 3px;" alt="Cover art for {{ page.title }} by {{ site.name }}" />
+      <img src="{{ page.image }}" style="width:50%;min-width:280px; border-radius: 3px;" alt="Cover art for {{ page.title }} by {{ site.name }}" />
     </div>
     <div class="description"><br />Provide yourself:
       <br /><br />{% for shop in page.stores %}<a href="{{ shop.url }}"
@@ -28,7 +28,7 @@
   </div>
 <!-- The video -->
 <div class="fullscreen-bg">
-  <video loop muted autoplay poster="{{ site.baseurl }}/assets/img/sakrecoer-logo.svg" class="fullscreen-bg__video">
+  <video loop muted autoplay poster="{{ relBase }}{{ page.image }}" class="fullscreen-bg__video">
     <source src="{{ relBase }}/assets/vi/{{ page.vid }}.webm" type="video/webm">
     <source src="{{ relBase }}/assets/vi/{{ page.vid }}.mp4" type="video/mp4">
   </video>
