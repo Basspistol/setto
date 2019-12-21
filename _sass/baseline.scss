@@ -17,7 +17,7 @@ font-family: 'Plaster';
   font-style: normal;
 }
 body {
-  font-family: Roboto, Helvertica, Arial, sans-serif;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
   color: #9bc9b5;
   font-size: 1em;
   background-color: #190086;
@@ -69,12 +69,13 @@ NAV MENU
   left: 0;
   display: flex;
   width: 100%;
-  padding: 10px;
+  padding: 0;
   z-index: 100;
   text-align: left;
   flex-wrap: wrap;
   overflow-x: hidden;
   .svglink {
+    margin: 10px;
     fill: #9bc9b5;
     max-width: 80%;
     transition: all ease 0.5s;
@@ -126,13 +127,8 @@ Content
   padding: 10px;
   font-size: 1.2em;
 }
-#flexhead {
-  display: flex;
-  flex-wrap: wrap;
 
-}
 .flexhead {
-  padding: 0 10px 0 2px;
   flex: 1 0 40%;
 }
 .flexitem {
@@ -145,10 +141,11 @@ Content
   flex-wrap: wrap;
   width: 100%;
   border-bottom: 1px solid #9bc9b5;
-  margin-bottom: 20px;
+
 }
 .flexrelease {
-  padding: 0 10px 0 2px;
+  margin: auto;
+  padding: 5px;
   flex: 1 1 300px;
   opacity: 0.5;
   transition: all 0.5s ease-in-out;
