@@ -1,8 +1,3 @@
----
----
-{% include normalize.css %} 
-{% include icofont.css %}
-
 /****************
 | FONTS
 ****************/
@@ -39,7 +34,7 @@ canvas {
 }
 
 h1, h2, h3, h4 {
-  font-family: Plaster, Helvertica, Arial, sans-serif;
+  font-family: Plaster, Helvetica, Arial, sans-serif;
 }
 h1 {
   font-size: 2.5em;
@@ -66,9 +61,7 @@ a:hover {
 /*******
 NAV MENU
 *******/
-
 #navigation {
-
   background: linear-gradient(to bottom,  #0f1108ff 10px, #0f110800);
   position: sticky;
   height: 100px;
@@ -81,7 +74,6 @@ NAV MENU
   text-align: left;
   flex-wrap: wrap;
   overflow-x: hidden;
-
 }
 #navigation svg {
   max-width: 80vw;
@@ -97,18 +89,12 @@ NAV MENU
 }
 #navigation a.current {
   color: #00e9ff;
-
 }
 .flexnav{
   margin: 0;
   flex: 0 1 300px;
 }
-.flexnav1{
-  margin: 0;
-  flex: 1 1 300px;
-  padding: 0 0 10px 10px;
 
-}
 /*******
 Content 
 *******/
@@ -267,7 +253,4 @@ Music
 
     font-size: 2.25em;
   }
-
-}
-
 }
