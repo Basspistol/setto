@@ -2,30 +2,27 @@
 ---
 <!DOCTYPE html>
 <html>
-
 <head>
   {% include relBase.html %}
   {% include trackhead.html %}
   {% include matomo.html %}
 </head>
-
 <body>
-  {% include navmenu.html %}
-  <div id="content">
-
-    <div class="description">
-      <h2>{{ page.title }}</h2>
-      <p>{{ page.description }}</p>
-      <img src="{{ page.image }}" style="width:50%;min-width:280px; border-radius: 3px;" alt="Cover art for {{ page.title }} by {{ site.name }}" />
-    </div>
-    <div class="description"><br />Provide yourself:
-      <br /><br />{% for shop in page.stores %}<a href="{{ shop.url }}"
-        target="_blank" rel="noopener noreferrer nofollow">
-        <h2 class="flexshops">{{ shop.name }}</h2>
-      </a>
-      {% endfor %}
-    </div>
+{% include navmenu.html %}
+<div id="content">
+  <div class="description">
+    <h2>{{ page.title }}</h2>
+    <p>{{ page.description }}</p>
+    <img src="{{ page.image }}" style="width:100%;min-width:280px; border-radius: 3px;" alt="Cover art for {{ page.title }} by {{ site.name }}" />
   </div>
+  <div class="description"><br />Provide yourself:
+    <br /><br />{% for shop in page.stores %}<a href="{{ shop.url }}"
+      target="_blank" rel="noopener noreferrer nofollow">
+      <h2 class="flexshops">{{ shop.name }}</h2>
+    </a>
+    {% endfor %}
+  </div>
+</div>
 <!-- The video -->
 <div class="fullscreen-bg">
   <video loop muted autoplay poster="{{ relBase }}{{ page.image }}" class="fullscreen-bg__video">
@@ -33,17 +30,11 @@
     <source src="{{ relBase }}/assets/vi/{{ page.vid }}.mp4" type="video/mp4">
   </video>
 </div>
-
-  
-  <!-- Optional: some overlay text to describe the video -->
-
+<!-- Optional: some overlay text to describe the video -->
 <style type="text/css">
-
-  
   /* Add some content at the bottom of the video/page */
   #content {
     margin:auto;
-
     width: 100%;
     padding: 0;
     display: flex;
@@ -58,12 +49,9 @@
     margin: 10px;
     border-radius: 3px;
   }
-
   canvas {
     z-index: -100;
   }
   </style>
-  
 </body>
-
 </html>
