@@ -9,21 +9,26 @@ date: 2018-12-11 00:00:00
 ---
 
 <div id="content">
-  <section id="flexhead">
   <div class="flexhead">
     <p style="font-size:1.5em;line-height:1.05em;max-width: 700px;">{{ page.description }}</p>
   </div>
-  </section>
   <div id="flexrelease">
     {% assign sortedreleases = site.releases | sort: 'date' | reverse %}
     {% for release in sortedreleases %}
-    <div class="flexrelease"><a href="{{ relBase }}{{ release.url }}"><img src="{{ relBase }}{{ release.image }}" style="width:100%; max-width: 700px; min-width: 300px;border-radius: 3px;" alt="Coverart for {{ release.title }}"/><h2>{{ release.title }}</h2></a></div>
+    <div class="flexrelease">
+      <a href="{{ relBase }}{{ release.url }}">
+        <img src="{{ relBase }}{{ release.image }}" style="width:100%; border-radius: 3px;" alt="Coverart for {{ release.title }}"/>
+        <h3>{{ release.title }}</h3>
+      </a>
+    </div>
     {% endfor %}
   </div>
   <div class="flexitem">
     <h1>Provide yourself</h1>
 {% for store in site.data.stores %}
-  <a href="{{ store.url }}" target="_blank" rel="noopener noreferrer nofollow"><h1 class="flexshops" style="line-height: 1.05em;">{{ store.name }}</h1></a>
+  <a href="{{ store.url }}" target="_blank" rel="noopener noreferrer nofollow">
+    <h2 class="flexshops" style="line-height: 1.05em;">{{ store.name }}</h2>
+  </a>
 {% endfor %}
   </div>
 
