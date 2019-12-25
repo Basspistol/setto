@@ -22,12 +22,12 @@
 
   height:10vh;
   #remoteControl {
-    margin-right: auto;
+    margin-left: 10px;
     height: 10vh;
     width: 50vw;
     max-width: 400px;
-    #rwdButton:hover + #skipRwd {
-      fill: #ff0;
+    #pause {
+      display:none;
     }
   }
 }
