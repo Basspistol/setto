@@ -19,7 +19,6 @@ category:
 {% include relBase.html %}
 {% include trackhead.html %}
 {% include matomo.html %}
-  
 </head>
 
   <body>
@@ -28,9 +27,9 @@ category:
     <canvas style="display:none" id="canvas3" width="570" height="570"></canvas>
     <canvas id="canvas2" width="570" height="570">*** THIS BROWSER DOES NOT SUPPORT THE CANVAS ELEMENT ***</canvas>
 
-<div class="playercontent">
-  <div></div>
-  <div></div>  
+<div class="playercontent coverart" style="background-image: url({{ relBase }}{{ page.image }});">
+  <div class="coverart"></div>
+  <div>{{ page.lyrics | markdownify }}</div>  
 </div>
 <div class="playercontrol">
   <div>

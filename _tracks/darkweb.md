@@ -4,36 +4,74 @@ date: 2019-02-07 19:07:00
 description: >-
   As dystopian as the present might seem on-line, there is always room for the
   strange in the cypher...
-vid: darkweb
+lyrics: >-
+  'Y'en a mare de ce web  
+  Il est tout pourri  
+  On peu plus rien y faire  
+  Seulement pousser des cris
+  Que personne va entendre
+  Si t'as pas mille amis
+  Ta home-page va se pendre
+  Perdu le goût de la vie
+  Envois ton Paypal
+  J'vais lui faire un refus
+  Ajoute-moi en ami
+  Tu vas kiffer mon flux
+  Viens pas faire ton vieux troll
+  Rien a foutre de toi
+  T’écris de belles paroles
+  Rien à foutre de toi
+  Puis au fond de ce noire
+  Je vois un rayon
+  Un programme provisoire
+  Pour poser mes sillons
+  Y a une communauté
+  De gens mal intégrés
+  Il sont tous comme moi
+  Mais encore plus tarés
+  Protocole anonyme
+  Connexion en chiffré
+  P2P solidaire
+  Connexion certifiée
+  Littéraire digital
+  Tu vas aussi kiffer
+  Ça s'appelle le Darkweb
+  Tu vas aussi kiffer
+
+  Facegoogle aux gogues
+  Y a plus que des conneries
+  Propagande démagogue
+  Petits chats tous mimis
+  Mais c'est quoi cette shit
+  Ça veut plus rien dire
+  Les keums envoient leurs bites
+  Comme si elles allaient applaudir
+  Non! C'est trop con
+  Je veux pas participer
+  Mais si je joue pas le jeux
+  Je vais être abandonné
+  Plus personne entendra
+  Tout ce que j'ai à crier
+  Plus personne ne lira
+  Tout ce que j'ai à crier
+  Puis au bout du tunnel
+  Je vois une lueur étrange
+  Celle d'un réseau fermé
+  Qui reste ouvert au strange
+  Un lieu virtuel
+  Une cité idéelle
+  Une banque de données
+  Pour les mal intégrés
+  Je peux y être qui je veux
+  Un antichrist bien pleb
+  Avoir beaucoup de cheveux
+  Un intello du Zagreb
+  T'as besoin d'faire entendre
+  Tu vas aussi kiffer
+  La clef tu peux la prendre
+  Tu vas aussi kiffer'
 image: /assets/img/darkweb.jpg
-audio_url: 'https://shop.basspistol.com/album/darkweb'
-stores:
-  - name: Bandcamp
-    url: 'https://shop.basspistol.com/album/darkweb'
-    img:
-  - name: Spotify
-    url: 'https://open.spotify.com/album/0meSZO7BeGoHJc6BWnRvhN'
-    img:
-  - name: Apple Music
-    url: 'https://itunes.apple.com/us/album/darkweb-single/1449847586'
-    img:
-  - name: iTunes
-    url: 'https://itunes.apple.com/us/album/darkweb-single/1449847586'
-    img:
-  - name: Google Play
-    url: >-
-      https://play.google.com/store/music/album/%E5%BE%92_setto_%E3%82%BB%E3%83%83%E3%83%88_Darkweb?id=Bcrzzrtj7yfcyladynit7hg4age
-    img:
-  - name: Amazon Music
-    url: >-
-      https://www.amazon.com/Darkweb-Explicit-%E5%BE%92-setto-%E3%82%BB%E3%83%83%E3%83%88/dp/B07MWCRW39/ref=sr_1_1?s=dmusic&ie=UTF8&qid=1549565482&sr=1-1-mp3-albums-bar-strip-0&keywords=%E5%BE%92+setto+%E3%82%BB%E3%83%83%E3%83%88
-    img:
-  - name: Deezer
-    url: 'https://www.deezer.com/fr/album/84669482'
-    img:
-  - name: Napster
-    url: 'https://us.napster.com/artist/-setto-/album/darkweb-single'
-    img:
+release: darkweb
 ---
 
 As dystopian as the present might seem on-line, there is always room for the strange in the cypher.
