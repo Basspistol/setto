@@ -1,4 +1,4 @@
-permalink: /:categories/:title.html
+permalink: /:categories/:name/
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "*.*~", ".xcf", "*.blend*"]
 
@@ -33,3 +33,20 @@ collections:
   videos:
     output: true
     permalink: /:name/
+  tracks:
+    output: true
+
+# Defaults
+
+defaults:
+  - scope:
+      path: ""
+      type: "videos"
+    values:
+      category: "video"
+  - scope:
+      path: ""
+      type: "tracks"
+    values:
+      layout: "track"
+      category: "tracks"
