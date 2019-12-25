@@ -18,8 +18,16 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: red;
-  text-align: center;
-  height:10vh;
+  background-color: transparent;
 
+  height:10vh;
+  #remoteControl {
+    margin-right: auto;
+    height: 10vh;
+    width: 50vw;
+    max-width: 400px;
+    #rwdButton:hover + #skipRwd {
+      fill: #ff0;
+    }
+  }
 }
