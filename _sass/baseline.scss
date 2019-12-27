@@ -58,63 +58,6 @@ a:hover {
   transition: color 0.5s ease-in-out;
 }
 
-/*******
-NAV MENU
-*******/
-#navigation {
-  background: linear-gradient(to bottom,  #0f1108ff 10px, #0f110800);
-  position: sticky;
-  height: 15vh;
-  top: 0;
-  left: 0;
-  display: flex;
-  width: 100%;
-  padding: 0;
-  z-index: 100;
-  text-align: left;
-  flex-wrap: wrap;
-  overflow-x: hidden;
-  .svglink {
-    margin: 10px;
-    fill: #9bc9b5;
-    max-width: 80%;
-    transition: all ease 0.5s;
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    -ms-filter: blur(2px);
-    -o-filter: blur(2px);
-    filter: blur(2px);
-  }
-  .svglink:hover {
-    transition: all ease 0.5s;
-    -webkit-filter: blur(0px);
-    -moz-filter: blur(0px);
-    -ms-filter: blur(0px);
-    -o-filter: blur(0px);
-    filter: blur(0px);
-
-    fill: #ff00b6;
-  }
-}
-#navigation svg {
-  max-width: 80vw;
-}
-#navigation a {
-  color:#fff;
-  text-decoration: none;
-  font-family: Plaster, Helvertica, Arial, sans-serif;
-}
-#navigation a:hover {
-  color: #ff00b6;
-  background-color: transparent;
-}
-#navigation a.current {
-  color: #00e9ff;
-}
-.flexnav{
-  margin: 0;
-  flex: 0 1 300px;
-}
 
 /*******
 Content 
@@ -126,81 +69,35 @@ Content
   margin: 0;
   padding: 10px;
   font-size: 1.2em;
+  .flexhead {
+    flex: 1 0 40%;
+  }
+  .flexitem {
+    padding: 0 10px 0 2px;
+    flex: 1 1 400px;
+    flex-wrap: wrap;
+  }
+  #flexrelease {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-bottom: 1px solid #9bc9b5;
+  
+  }
+  .flexrelease {
+    margin: auto;
+    padding: 5px;
+    flex: 1 1 300px;
+    opacity: 0.5;
+    transition: all 0.5s ease-in-out;
+  }
+  .flexrelease:hover {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+  }
 }
 
-.flexhead {
-  flex: 1 0 40%;
-}
-.flexitem {
-  padding: 0 10px 0 2px;
-  flex: 1 1 400px;
-  flex-wrap: wrap;
-}
-#flexrelease {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  border-bottom: 1px solid #9bc9b5;
-
-}
-.flexrelease {
-  margin: auto;
-  padding: 5px;
-  flex: 1 1 300px;
-  opacity: 0.5;
-  transition: all 0.5s ease-in-out;
-}
-.flexrelease:hover {
-  opacity: 1;
-  transition: all 0.5s ease-in-out;
-}
-
-
-/************
-Music
-************/
-.flexrecord {
-  margin: 0;
-  flex: 1 1 300px;
-  transition: background-position ease .5s, filter ease 0.5s, opacity ease .5s;
-  -webkit-filter: invert(100%) blur(2px);
-  -moz-filter: invert(100%) blur(2px);
-  -ms-filter: invert(100%) blur(2px);
-  -o-filter: invert(100%) blur(2px);
-  filter: invert(100%) blur(2px);
-  opacity: 0.5;
-}
-.flexrecord:hover {
-  transition: background-position ease .5s, filter ease 0.5s, opacity ease .5s;
-  -webkit-filter: invert(0%) blur(0px);
-  -moz-filter: invert(0%) blur(0px);
-  -ms-filter: invert(0%) blur(0px);
-  -o-filter: invert(0%) blur(0px);
-  filter: invert(0%) blur(0px);
-  opacity: 1;
-}
-.flexshops {
-  margin: 0;
-  flex: 1 1 300px;
-  transition: background-position ease .5s, filter ease 0.5s, opacity ease .5s;
-  -webkit-filter: blur(2px);
-  -moz-filter: blur(2px);
-  -ms-filter: blur(2px);
-  -o-filter: blur(2px);
-  filter: blur(2px);
-  opacity: 0.5;
-}
-.flexshops:hover {
-  transition: background-position ease .5s, filter ease 0.5s, opacity ease .5s;
-  -webkit-filter: blur(0px);
-  -moz-filter: blur(0px);
-  -ms-filter: blur(0px);
-  -o-filter: blur(0px);
-  filter: blur(0px);
-  opacity: 1;
-}
-
-
+// Background Video
 .fullscreen-bg {
   position: fixed;
   top: 0;
