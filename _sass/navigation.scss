@@ -1,0 +1,58 @@
+/*******
+NAV MENU
+*******/
+#navigation {
+  background: linear-gradient(to bottom,  #0f1108ff 10px, #0f110800);
+  position: sticky;
+  height: 15vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  padding: 0;
+  z-index: 100;
+  text-align: left;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  .svglink {
+    margin: 10px;
+    fill: #9bc9b5;
+    max-width: 80%;
+    transition: all ease 0.5s;
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -ms-filter: blur(2px);
+    -o-filter: blur(2px);
+    filter: blur(2px);
+  }
+  .svglink:hover {
+    fill: #ff00b6;
+    transition: all ease 0.5s;
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -ms-filter: blur(0px);
+    -o-filter: blur(0px);
+    filter: blur(0px);
+
+
+  }
+}
+#navigation svg {
+  max-width: 80vw;
+}
+#navigation a {
+  color:#fff;
+  text-decoration: none;
+  font-family: Plaster, Helvertica, Arial, sans-serif;
+}
+#navigation a:hover {
+  color: #ff00b6;
+  background-color: transparent;
+}
+#navigation a.current {
+  color: #00e9ff;
+}
+.flexnav{
+  margin: 0;
+  flex: 0 1 300px;
+}
