@@ -17,6 +17,7 @@ _site
 _site/*
 _data/.~lock.*.csv#
 .sass-cache
+.jekyll-cache
 
 
 # big data media
