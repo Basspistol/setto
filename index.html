@@ -2,7 +2,7 @@
 title: ゲットー・スービド
 layout: default
 description: >-
-  The music of 徒 Setto セット (pronounced: To Setto Setto) is a cypher cloud jam
+  The music of To Setto Setto is a cypher cloud jam
   induced by popcorn chewing threads in obscure chat-rooms.
 image: /siteicon.png
 date: 2018-12-11 00:00:00
@@ -10,6 +10,7 @@ date: 2018-12-11 00:00:00
 
 <div id="content">
   <div class="flexhead">
+    <h1 style="font-family: Astloch-B, Helvetica, Arial, sans-serif;">{{ site.title }}</h1>
     <p style="font-size:1.5em;line-height:1.05em;max-width: 700px;">{{ page.description }}</p>
   </div>
   <div id="flexrelease">
@@ -24,7 +25,7 @@ date: 2018-12-11 00:00:00
     {% endfor %}
   </div>
   <div class="flexitem">
-    <h1>Provide yourself</h1>
+    <h2 style="font-family: Astloch-B, Helvetica, Arial, sans-serif;">Provide yourself</h2>
 {% for store in site.data.stores %}
   <a href="{{ store.url }}" target="_blank" rel="noopener noreferrer nofollow" onclick="_paq.push(['trackEvent', 'StoreLink', '{{ store.name | remove: " " }}']);">
     <h2 class="flexshops" style="line-height: 1.05em;">{{ store.name }}</h2>
