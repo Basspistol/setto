@@ -1,17 +1,21 @@
 @font-face {
-  font-family: 'Roboto';
-  src: url('../../fonts/MajorMonoDisplay-Regular.ttf');
+  font-family: 'Astloch';
+  src: url('../../fonts/Astloch-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
   }
-  @font-face {
-  font-family: 'RobotB';
-  src: url('../../fonts/MajorMonoDisplay-Regular.ttf');
+@font-face {
+  font-family: 'Astloch-B';
+  src: url('../../fonts/Astloch-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
   }
-  @font-face {
+@font-face {
   font-family: 'Plaster';
-    src: url('../../fonts/collects.ttf');
-    font-weight: normal;
-    font-style: normal;
-  }
+  src: url('../../fonts/collects.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -35,12 +39,15 @@ html, body {
   justify-content: center;
   align-items: center;
   background-color: black;
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-family: 'Astloch-B', Helvetica, Arial, sans-serif;
   color: #fff;
 }
-
+div {
+  font-family: 'Astloch-B', Helvetica, Arial, sans-serif;
+text-transform: lowercase;
+}
 #hint {
-
+  font-size: 2em;
   text-align: center;
   padding: 20px;
 }

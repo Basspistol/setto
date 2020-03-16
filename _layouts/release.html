@@ -11,14 +11,14 @@
 {% include navmenu.html %}
 <div id="content">
   <div class="description">
-    <h2>{{ page.title }}</h2>
+    <h1 style="font-family: Astloch-B, Helvetica, Arial, sans-serif;">{{ page.title }}</h1>
 
     <p>{{ page.description }}</p>
     <img src="{{ page.image }}" class="releaseimage" alt="Cover art for {{ page.title }} by {{ site.name }}" />
 
  
   </div>
-  <div class="description"><br />Provide yourself:
+  <div class="description"><p>Provide yourself:</p>
     <br /><br />{% for shop in page.stores %}<a href="{{ shop.url }}"
       target="_blank" rel="noopener noreferrer nofollow" onclick="_paq.push(['trackEvent', 'StoreLink', '{{ shop.name | remove: " " }}']);">
       <h2 class="flexshops">{{ shop.name }}</h2>
