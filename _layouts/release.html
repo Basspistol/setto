@@ -20,7 +20,7 @@
   </div>
   <div class="description"><br />Provide yourself:
     <br /><br />{% for shop in page.stores %}<a href="{{ shop.url }}"
-      target="_blank" rel="noopener noreferrer nofollow" onclick="_paq.push(['trackEvent', 'StoreLink', '{{ shop.name }}']);">
+      target="_blank" rel="noopener noreferrer nofollow" onclick="_paq.push(['trackEvent', 'StoreLink', '{{ shop.name | remove: " " }}']);">
       <h2 class="flexshops">{{ shop.name }}</h2>
     </a>
     {% endfor %}

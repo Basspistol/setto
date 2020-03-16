@@ -26,7 +26,7 @@ date: 2018-12-11 00:00:00
   <div class="flexitem">
     <h1>Provide yourself</h1>
 {% for store in site.data.stores %}
-  <a href="{{ store.url }}" target="_blank" rel="noopener noreferrer nofollow">
+  <a href="{{ store.url }}" target="_blank" rel="noopener noreferrer nofollow" onclick="_paq.push(['trackEvent', 'StoreLink', '{{ store.name | remove: " " }}']);">
     <h2 class="flexshops" style="line-height: 1.05em;">{{ store.name }}</h2>
   </a>
 {% endfor %}
