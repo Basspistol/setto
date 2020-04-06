@@ -9,6 +9,7 @@ image: /assets/img/satoshimonami.jpg
 category: music
 audio_url: 'https://open.spotify.com/album/116YJCcI5T9Iw9UBQCvJWF'
 layout: release
+credits: ''
 stores:
   - name: Bandcamp
     url: 'https://shop.basspistol.com/album/satoshi-mon-ami'

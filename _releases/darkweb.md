@@ -9,6 +9,7 @@ image: /assets/img/darkweb.jpg
 category: music
 audio_url: 'https://shop.basspistol.com/album/darkweb'
 layout: release
+credits: 'Cover-art by <a href="https://ritarn.com/" target="_blank" rel="noopener">Mattias “Ritarn” Lindström</a>'
 stores:
   - name: Bandcamp
     url: 'https://shop.basspistol.com/album/darkweb'
@@ -41,5 +42,3 @@ stores:
 As dystopian as the present might seem on-line, there is always room for the strange in the cypher.
 
 At the end of the tunnel through the flashy but controlled cyberspace we call the "Internet", there is a light of hope for the underground.
-
-Cover-art by [Mattias "RITARN" Lindström](https://ritarn.com/){: target="_blank"}
