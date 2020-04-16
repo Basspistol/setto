@@ -10,6 +10,7 @@ category: music
 audio_url: 'https://shop.basspistol.com/album/darkweb'
 layout: release
 credits: 'Cover-art by <a href="https://ritarn.com/" target="_blank" rel="noopener">Mattias “Ritarn” Lindström</a>'
+album: darkweb
 stores:
   - name: Bandcamp
     url: 'https://shop.basspistol.com/album/darkweb'

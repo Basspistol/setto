@@ -10,6 +10,7 @@ category: music
 audio_url: 'https://open.spotify.com/album/116YJCcI5T9Iw9UBQCvJWF'
 layout: release
 credits: ''
+album: satoshi-mon-ami
 stores:
   - name: Bandcamp
     url: 'https://shop.basspistol.com/album/satoshi-mon-ami'
