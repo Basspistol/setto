@@ -4,9 +4,9 @@ date:
 description: 
 vid: 
 image: 
-category: music
+category: 
+layout:
 audio_url: 
-layout: release
 credits: ''
 album:
 stores:

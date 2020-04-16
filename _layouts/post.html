@@ -1,16 +1,11 @@
 ---
 layout: default
 ---
-
 {% include relBase.html %}
 
 <!-- Banner -->
-<section class="banner onload-image-fade-in onload-content-fade-right style5 fullscreen content-align-center image-position-center">
-  <div class="content">
-    <h3 style="background-color: rgba(13, 13, 13, 0.75); border-radius: 7px;padding: 20px;">
-      {{ page.description }}</h3>
-  </div>
-
+<section
+  class="banner onload-image-fade-in onload-content-fade-right style2 fullscreen content-align-center image-position-center">
   <div class="image">
     <img src="{{ relBase }}{{ page.image }}" alt="" class="editable" />
   </div>
@@ -26,38 +21,155 @@ layout: default
         <!-- Content -->
         <div class="content">
           {{ content }}
-          {% if page.collection == 'posts' or page.collection == 'projects' %}
-        <!-- post Naviation -->
-        <div style="text-align: center;">
-          <h3>{{ site.data.translations[page.lang].post-nav}}</h3>
-        </div>
-        <div class="post-nav">
-          <div>
-            {% if page.previous.url and page.lang == page.previous.lang %}
-            <h4><a href="{{page.previous.url}}"><i class="fas fa-arrow-left"></i></a> <a href="{{page.previous.url}}">&nbsp;{{page.previous.title}}</a></h4>
-            <p style="margin-right: 20px">{{ page.previous.description }}</p>
-            {% endif %}
-          </div>
-          <div class="post-nav-next">
-            {% if page.next.url and page.lang == page.next.lang  %}
-            <h4><a href="{{page.next.url}}">&nbsp;{{page.next.title}}</a> <a href="{{page.next.url}}"><i class="fas fa-arrow-right"></i></a></h4>
-            <p style="margin-left: 20px">{{ page.next.description }}</p>
-            {% endif %}
-          </div>
-        </div>
-        <!-- End Post Navigation -->
-        {% endif %}
-        </div>
 
-        
+          {{ page.credits }}
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+<!-- HERE BEGINS MADNESS -->
+{% capture album_name -%}
+{{ page.album }}
+{%- endcapture %}
+{% for album in site.albums %}
+{% capture name -%}
+{{ album.relative_path | replace_first: album.collection, '' | replace_first: '_/', '' | replace_first: '.md', '' }}
+{%- endcapture %}
+{% if name == album_name %}
+<!-- Content -->
+<section class="wrapper style1 align-center">
+  <div class="inner" id="post-text">
+    <div class="index align-left">
+      <!-- Author -->
+      <section>
+        <header>
+          <h3>Data</h3>
+        </header>
+        <!-- Content -->
+        <div class="content">
+          {% for style in album.tracks %}
+          {% for category in style.common.genre %}
+          {% assign categories_array = categories_array | push: category | uniq %}
+          {% assign count = categories_array | size %}
+          {% endfor %}
+          {% endfor %}
+          <p>Style{% if count > 1 %}s{% endif %}:
+            <strong>{% for genre in categories_array %}{{ genre }}{% unless forloop.last %},
+              {% endunless %}{% endfor %}</strong><br />
+            {{ album.date | date: '%Y' }}</p>
+          <p>Track list:<br />
+            {% for track in album.tracks %}
+            {{ track.common.track.no }}. <strong>{{ track.common.title }}</strong> <span
+              id="{{ track.common.title | slugify | remove: '-'  }}"></span> <br />
+            <script type="text/javascript">
+              var {{ track.common.title | slugify | remove: '-'  }}timestamp = {{ track.format.duration | round }};
+              var {{ track.common.title | slugify | remove: '-'  }}hours = Math.floor({{ track.common.title | slugify | remove: '-'  }}timestamp / 60 / 60);
+              var {{ track.common.title | slugify | remove: '-'  }}minutes = Math.floor({{ track.common.title | slugify | remove: '-'  }}timestamp / 60) - ({{ track.common.title | slugify | remove: '-' }}hours * 60);
+              var {{ track.common.title | slugify | remove: '-'  }}seconds = {{ track.common.title | slugify | remove: '-' }}timestamp % 60;
+              var {{ track.common.title | slugify | remove: '-'  }}formatted = {{ track.common.title | slugify | remove: '-' }}hours.toString().padStart(2, '0') + ':' + {{ track.common.title | slugify | remove: '-' }}minutes.toString().padStart(2, '0') + ':' + {{ track.common.title | slugify | remove: '-' }}seconds.toString().padStart(2, '0');
+              var theSpan = document.getElementById("{{ track.common.title | slugify | remove: '-'  }}");
+              theSpan.innerHTML = {{ track.common.title | slugify | remove: '-' }}formatted;
+            </script>
+            {% endfor %}
+          </p>
+ 
+          
 
+          <ul class="icons">
+            {% for shop in site.data.stores %}
+            <li><a target="_blank" rel="noopener" href="{{ shop.url }}" class="icon brands style2 {{ shop.icon }}"><span class="label">{{ shop.name }}</span></a></li>
+            {% endfor %}
+          </ul>
+        </div>
 
       </section>
     </div>
   </div>
-  </section>
-
-{% if page.langref == 'about' %} 
-{% include team.html %}
+</section>
+<!-- Tracks -->
+<section id="news" class="wrapper style1 align-center">
+  <div class="gallery style1 medium lightbox onscroll-fade-in">
+    {% for track in album.tracks %}
+    <article>
+      <a href="{{ relBase }}/{{ track.slug }}/" class="image">
+        <img src="{{ relBase }}{{ track.cover}}" alt="" />
+      </a>
+      <div class="caption">
+        <h3>{{ track.common.title }}</h3>
+        <p>
+          <strong>{{ track.common.genre }}</strong>
+          <br />{{ track.common.year }}</p>
+        <ul class="actions fixed">
+          <li><span class="editable button small icon fa-play-circle">Play</span></li>
+        </ul>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+<!-- END Tracks -->
+<section class="wrapper style1 align-center">
+  <div class="inner" id="post-text">
+    <div class="index align-left">
+      <h2>Lyrics</h2>
+      {% for track in album.tracks %}
+      <section>
+        <header>
+          <h3>{{ track.common.title }}</h3>
+          <p style="font-size: 14px;">credits:
+            {{ track.all.Comment }}
+          </p>
+        </header>
+        <!-- Content -->
+        <div class="content">
+          <p style="font-family: monospace;font-size:16px;">
+            {{ track.all.UNSYNCEDLYRICS | newline_to_br }}
+          </p>
+        </div>
+      </section>
+      {% endfor %}
+    </div>
+    <a class="button button big wide icon solid fa-shopping-cart" href="#">Buy now</a>
+  </div>
+</section>
+{% break %} {% endif %} {% endfor %}
+<!-- HERE ENDS MADNESS -->
+{% if page.collection == 'posts' %}
+<section class="wrapper style1 align-center">
+  <div class="inner" id="post-text">
+    <div class="index align-left">
+      <!-- Author -->
+      <section>
+        <header>&nbsp;</header>
+        <!-- Content -->
+        <div class="content">
+          <!-- post Naviation -->
+          <div style="text-align: center;">
+            <h3>{{ site.data.translations[page.lang].post-nav}}</h3>
+          </div>
+          <div class="post-nav">
+            <div>
+              {% if page.previous.url and page.lang == page.previous.lang %}
+              <h4><a href="{{page.previous.url}}"><i class="fas fa-arrow-left"></i></a> <a
+                  href="{{page.previous.url}}">&nbsp;{{page.previous.title}}</a></h4>
+              <p style="margin-right: 20px">{{ page.previous.description }}</p>
+              {% endif %}
+            </div>
+            <div class="post-nav-next">
+              {% if page.next.url and page.lang == page.next.lang  %}
+              <h4><a href="{{page.next.url}}">&nbsp;{{page.next.title}}</a> <a href="{{page.next.url}}"><i
+                    class="fas fa-arrow-right"></i></a></h4>
+              <p style="margin-left: 20px">{{ page.next.description }}</p>
+              {% endif %}
+            </div>
+          </div>
+          <!-- End Post Navigation -->
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
 {% endif %}
+
 {% include footer.html %}

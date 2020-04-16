@@ -6,9 +6,8 @@ description: >-
   When day-to-day communication blurs the line between the virtual and real.
 vid: satoshi
 image: /assets/img/satoshimonami.jpg
-category: music
+category: release
 audio_url: 'https://open.spotify.com/album/116YJCcI5T9Iw9UBQCvJWF'
-layout: release
 credits: ''
 album: satoshi-mon-ami
 stores:

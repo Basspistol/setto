@@ -20,7 +20,8 @@
 		border: 0;
 		cursor: pointer;
 		display: inline-block;
-		font-weight: _font(weight-bold);
+    font-weight: _font(weight-bold);
+    font-family: monospace;
 		letter-spacing: _font(kerning-alt);
 		text-align: center;
 		text-decoration: none;

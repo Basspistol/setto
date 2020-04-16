@@ -322,7 +322,7 @@
 	@mixin color-items($p: null) {
  		.items.style1 {
  			> * {
-	 			border-color: _palette($p, border);
+	 			border-color: _palette($p, #fff);
 	 		}
  		}
 

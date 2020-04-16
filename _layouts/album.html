@@ -1,24 +1,13 @@
 ---
-layout: default
+layout: nil
 ---
 
-{% include relBase.html %}
-
-<!-- Banner -->
-<section
-  class="banner onload-image-fade-in onload-content-fade-right style2 fullscreen content-align-center image-position-center">
-  <div class="image">
-    <img src="{{ relBase }}{{ page.cover }}" alt="" class="editable" />
-  </div>
-</section>
 <!-- Tracks -->
 <section id="news" class="wrapper style1 align-center">
-  <br />
-  <h1>{{ page.title }}</h1>
-  <br />
+
   <div class="gallery style1 medium lightbox onscroll-fade-in">
 
-    {% for track in page.tracks %}
+    {% for track in album.tracks %}
     <article>
       <a href="{{ relBase }}/{{ track.slug }}/" class="image">
         <img src="{{ relBase }}{{ track.cover}}" alt="" />
@@ -50,7 +39,7 @@ layout: default
         {% include author.html %}
         <!-- Content -->
         <div class="content">
-          {% for style in page.tracks %}
+          {% for style in album.tracks %}
           {% for category in style.common.genre %}
           {% assign categories_array = categories_array | push: category | uniq %}
           {% assign count = categories_array | size %}
@@ -61,7 +50,7 @@ layout: default
               {% endunless %}{% endfor %}</strong><br />
             {{ album.date | date: '%Y' }}</p>
           <p>Track list:<br />
-            {% for track in page.tracks %}
+            {% for track in album.tracks %}
             {{ track.common.track.no }}. <strong>{{ track.common.title }}</strong> <span
               id="{{ track.common.title | slugify | remove: '-'  }}"></span> <br />
             <script type="text/javascript">
@@ -86,7 +75,7 @@ layout: default
   <div class="inner" id="post-text">
     <div class="index align-left">
       <h2>Lyrics</h2>
-      {% for track in page.tracks %}
+      {% for track in album.tracks %}
       <section>
         <header>
           <h3>{{ track.common.title }}</h3>
@@ -110,4 +99,3 @@ layout: default
   </div>
 </section>
 
-{% include footer.html %}
