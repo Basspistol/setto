@@ -417,10 +417,14 @@ div.content {
      margin-bottom: 1em;
   */
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
 }
 .post-nav div {
   /* flex-grow, flex-shrink, flex-basis */
-  flex: 1 1 0;
+  flex: 0 1 300px;
+
 }
 .post-nav-next {
   text-align: right;
