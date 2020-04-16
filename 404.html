@@ -1,25 +1,28 @@
 ---
+title: 404 ceci n'est pas une page
+description: Sidan du letar efter har antingen flyttats eller aldrig funnits.
+image: /images/404.jpg
+lang-ref: 404
 sitemap: false
 ---
-<!DOCTYPE html> 
-<html>
-  <head>
-     {% include allhead.html %} 
-     {% include matomo.html %}
-  </head>
+{% include relBase.html %}
 
-  <body>
-{% include navmenu.html %}
-    <canvas style="display:none" id="canvas" width="285" height="285"></canvas>
-    <canvas style="display:none" id="canvas3" width="570" height="570"></canvas>
-    <canvas id="canvas2" width="570" height="570">*** THIS BROWSER DOES NOT SUPPORT THE CANVAS ELEMENT ***</canvas>
+<!-- Banner -->
+<section
+  class="banner onload-image-fade-in onload-content-fade-right style2 fullscreen content-align-center image-position-center"
+  style="height:100vh;">
 
-    <div id="content">
-      <div class="flexitem">
-        <h1>404 ERROR</h1>
-      </div>
-    </div>
+  <div class="content editable">
+    <h1 class="editable">{{ page.title }}</h1>
+    <p>{{ page.description }}</p>
+    <ul class="actions stacked">
+      <li><a href="/" class="button big wide smooth-scroll-middle">{{ site.data.translations[page.lang].back }}</a></li>
+    </ul>
+  </div>
 
-  </body>
+  <div class="image">
+    <img src="{{ relBase }}{{ page.image }}" alt="" class="editable" />
+  </div>
+</section>
 
-</html>
+{% include footer.html %}

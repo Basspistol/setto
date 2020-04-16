@@ -1,25 +1,32 @@
-<!DOCTYPE html> 
+---
+lang: en
+---
+<!DOCTYPE HTML>
 <!--
-
-  徒 setto セット bless you, oh code seekers, with an eternal god and master free wish of good fortune. 
-
+  Based on _Story_ by html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  Remixed and Jekyllified by Set Hallstrom for Nordforce Technology AB
 -->
-<html lang="en">
-  <head>
+<html lang="{% if page.lang != site.lang %}{{ page.lang }}{% else %}{{ site.lang }}{% endif %}">
+<head>
+{% seo %}
+<link type="application/atom+xml" rel="alternate" href="{{ site.url }}/feed.xml" title="{{ site.name }}" />
+{% include seo.html %}
 {% include relBase.html %}
-{% if page.category == 'music' %}{% include trackhead.html %}{% else %}{% include pagehead.html %}{% endif %}
-{% include matomo.html %}
-  
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+<link rel="stylesheet" href="{{ relBase }}/assets/css/main.css" />
+<noscript><link rel="stylesheet" href="{{ relBase }}/assets/css/noscript.css" /></noscript>
 </head>
 
-  <body>
-
-    <canvas style="display:none" id="canvas" width="285" height="285"></canvas>
-    <canvas style="display:none" id="canvas3" width="570" height="570"></canvas>
-    <canvas id="canvas2" width="570" height="570">*** THIS BROWSER DOES NOT SUPPORT THE CANVAS ELEMENT ***</canvas>
-{% include navmenu.html %}
-{{ content }}
-
-  </body>
-
+<body class="is-preload" id="body">
+  <span id="top" style="display: none;"></span>
+  <!-- Wrapper -->
+  <div id="wrapper" class="divided">
+    {{ content }}
+  </div>
+  {% include navigation.html %}
+  {% include scripts.html %}
+  {% include cookie-consent.html %}
+</body>
 </html>

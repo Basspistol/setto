@@ -2,40 +2,141 @@
 title: ゲットー・スービド
 layout: default
 description: >-
-  The music of To Setto Setto is a cypher cloud jam
+  The music of To&nbsp;Setto&nbsp;Setto is a cypher cloud jam
   induced by popcorn chewing threads in obscure chat-rooms.
-image: /siteicon.png
+image: /images/setto-logoicon.svg
 date: 2018-12-11 00:00:00
 ---
+{% include relBase.html %}
+<!-- Banner -->
+<section
+  class="banner onload-image-fade-in onload-content-fade-right style3 fullscreen content-align-center image-position-center">
+  <div class="content">
+    <h1 style="margin-top:80px">{{ page.title }}</h1>
 
-<div id="content">
-  <div class="flexhead">
-    <h1 style="font-family: Astloch-B, Helvetica, Arial, sans-serif;">{{ site.title }}</h1>
-    <p style="font-size:1.5em;line-height:1.05em;max-width: 700px;">{{ page.description }}</p>
+    <p class="major">{{ page.description }}</p>
+    <ul class="actions stacked">
+      <li><a href="#albums" class="button large wide smooth-scroll-middle">Play dat!</a></li>
+    </ul>
   </div>
-  <div id="flexrelease">
-    {% assign sortedreleases = site.releases | sort: 'date' | reverse %}
-    {% for release in sortedreleases %}
-    <div class="flexrelease">
-      <a href="{{ relBase }}{{ release.url }}">
-        <img src="{{ relBase }}{{ release.image }}" style="width:100%; border-radius: 3px;" alt="Coverart for {{ release.title }}"/>
-        <h3>{{ release.title }}</h3>
+
+  <div class="image">
+    <img src="{{ relBase }}{{ page.image }}" alt="" class="editable" />
+  </div>
+</section>
+
+
+
+
+<!-- Albums -->
+{% for album in site.albums reversed %}
+<section id="albums" class="section-shadow banner style1 orient-{% cycle 'left', 'right' %} content-align-{% cycle 'right', 'left' %} image-position-center fullscreen onload-image-fade-in onload-content-fade-right">
+
+  <div class="content">
+    <h1>{{ album.title }}</h1>
+    {% for style in album.tracks %}
+    {% for category in style.common.genre %}
+    {% assign categories_array = categories_array | push: category | uniq %}
+    {% assign count = categories_array | size %}
+    {% endfor %}
+    {% endfor %}
+    <p>Style{% if count > 1 %}s{% endif %}:
+      <strong>{% for genre in categories_array %}{{ genre }}{% unless forloop.last %},
+        {% endunless %}{% endfor %}</strong><br />
+      {{ album.date | date: '%Y' }}</p>
+    <p>Track list:<br />
+      {% for track in album.tracks %} 
+      {{ track.common.track.no }}. <strong>{{ track.common.title }}</strong> <span id="{{ track.common.title | slugify | remove: '-'  }}"></span> <br />
+      <script type="text/javascript">
+        var {{ track.common.title | slugify | remove: '-'  }}timestamp = {{ track.format.duration | round }};
+        var {{ track.common.title | slugify | remove: '-'  }}hours = Math.floor({{ track.common.title | slugify | remove: '-'  }}timestamp / 60 / 60);
+        var {{ track.common.title | slugify | remove: '-'  }}minutes = Math.floor({{ track.common.title | slugify | remove: '-'  }}timestamp / 60) - ({{ track.common.title | slugify | remove: '-'  }}hours * 60);
+        var {{ track.common.title | slugify | remove: '-'  }}seconds = {{ track.common.title | slugify | remove: '-'  }}timestamp % 60;
+        var {{ track.common.title | slugify | remove: '-'  }}formatted = {{ track.common.title | slugify | remove: '-'  }}hours.toString().padStart(2, '0') + ':' + {{ track.common.title | slugify | remove: '-'  }}minutes.toString().padStart(2, '0') + ':' + {{ track.common.title | slugify | remove: '-'  }}seconds.toString().padStart(2, '0');
+        var theSpan = document.getElementById("{{ track.common.title | slugify | remove: '-'  }}");
+        theSpan.innerHTML = {{ track.common.title | slugify | remove: '-'  }}formatted;
+      </script>
+      {% endfor %}
+    </p>
+    <ul class="actions stacked">
+      <li><a href="{{ relBase }}{{ album.url }}" class="button big wide icon solid fa-volume-up">Listen</a></li>
+    </ul>
+  </div>
+
+  <div class="image">
+    <img src="{{ relBase }}{{ album.cover }}" alt="{{ album.title }}" title="Nordforce Ecosystem" />
+
+  </div>
+</section>
+{% endfor %}
+{% assign postcount = site.posts | size %}
+{% if postcount > 0 %}
+<!-- NEWS -->
+<section id="news" class="wrapper style1 align-center">
+
+  <div class="inner">
+    <h2 class="editable">{{ site.data.translations[page.lang].news }}</h2>
+    <p class="editable">Ramblings and shit</p>
+    <p class="editor-link"><a class="btn" rel="nofollow" href="cloudcannon:collections/_posts/">
+        <strong>&#9998;</strong> Edit All News
+      </a></p>
+  </div>
+</section>
+{% for post in site.posts %}
+{% if post.lang == page.lang %}
+<section id="second"
+  class="spotlight style1 orient-{% cycle 'left', 'right' %} content-align-{% cycle 'right', 'left' %} image-position-center onscroll-image-fade-in"
+  {% if forloop.index == 1 %}style="box-shadow: none;" {% endif %}>
+
+  <div class="content">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.description }}</p>
+    <p class="editor-link"><a class="btn" rel="nofollow" href="cloudcannon:collections/{{ post.path }}">
+        <strong>&#9998;</strong> Edit This Post
+      </a></p>
+    <ul class="actions stacked">
+      <li><a href="{{ relBase }}{{ post.url }}" class="button">{{ site.data.translations[page.lang].read-post }}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="image">
+    <img src="{{ relBase }}{{ post.image }}" alt="{{ post.title }}" />
+  </div>
+</section>
+{% endif %}
+{% endfor %}
+<!-- End News -->
+{% endif %}
+<!-- Tracks -->
+<section id="clients" class="wrapper style1 align-center">
+
+
+  <!-- Gallery -->
+  <div class="gallery style1 medium lightbox onscroll-fade-in">
+    {% for track in site.tracks %}
+    <article>
+      <a href="{{ relBase }}{{ track.url }}" class="image">
+        <img src="{{ relBase }}{{ track.cover }}" alt="{{ track.name }} " />
       </a>
-    </div>
+      <div class="caption">
+        <h3>{{ track.common.title }}</h3>
+
+        <p>
+          <strong>{{ track.common.genre }}</strong>
+          <br />{{ track.common.year }}</p>
+        <ul class="actions fixed">
+          <li><span class="editable button small">Play dat!</span></li>
+        </ul>
+      </div>
+    </article>
     {% endfor %}
   </div>
-  <div class="flexitem">
-    <h2 style="font-family: Astloch-B, Helvetica, Arial, sans-serif;">Provide yourself</h2>
-{% for store in site.data.stores %}
-  <a href="{{ store.url }}" target="_blank" rel="noopener noreferrer nofollow" onclick="_paq.push(['trackEvent', 'StoreLink', '{{ store.name | remove: " " }}']);">
-    <h2 class="flexshops" style="line-height: 1.05em;">{{ store.name }}</h2>
-  </a>
-{% endfor %}
-  </div>
+  <!-- End Gallery -->
 
-  <div class="flexitem">
-    <img src="{{ relBase }}/assets/img/setto-logoicon.svg" style="width:100%; min-width: 300px; max-height: 720px;opacity:0.5;" alt="To Setto Setto Logo" />      
-    <p style="font-size:1.5em;line-height:1.05em">01010100 01101000 01100101 00100000 01010000 01101111 01110111 01100101 01110010 00100000 01101111 01100110 00100000 01100001 00100000 01010111 01101111 01110010 01100100 <br /><br />
-  54 68 65 20 64 61 72 6b 20 76 6f 69 63 65</p>
-  </div>
-</div>
+</section>
+<!-- End Tracks -->
+
+
+
+{% include contact.html %}
+{% include footer.html %}

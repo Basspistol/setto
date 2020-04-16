@@ -1,0 +1,21 @@
+<!-- Navigation -->
+{% if page.url == '/' %}
+<a id="logo" class="logo smooth-scroll-middle" href="#top">&nbsp;</a>
+{% else %}
+<a id="logo" class="logo" href="#navbar" onclick="blurBody()">&nbsp;</a>
+<div id="navbar" style="display: block;" class="modalDialog">
+  <a href="#close" onclick="removeBlur()"><div id="closearea">  </div></a>
+  <nav>
+    <a href="#close" title="Close" onclick="removeBlur()" class="close-button close" style="margin: 0 auto;">X</a>
+    <ul> 
+{% if page.url != '/' %}
+      <li><a href="{{ relBase }}/" class="button small">{{ site.data.translations[page.lang].home }}</a></li>
+{% endif %}
+
+      <li><a href="{% if page.url != '/' %}{{ relBase }}/{% endif %}#albums" onclick="removeBlur()" class="button small smooth-scroll-middle">music</a></li>
+    </ul>
+  </nav>
+</div>
+
+{% endif %}
+<!-- End Navigation -->

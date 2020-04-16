@@ -1,8 +1,9 @@
-- text: 徒 SETTO セット
-  url: /
-  title: Home
-  class: ""
-#- text: ""
-#  url: /music/
-#  title: Music
-#  class: icofont-music
+- name: Nyheter
+  url: /nyheter/
+  external_site: false
+- name: Om Oss
+  url: /om-oss/
+  external_site: false
+- name: Team
+  url: https://career.nordforce.se/
+  external_site: true

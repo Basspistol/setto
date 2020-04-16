@@ -1,24 +1,4 @@
-
-# OS generated files #
-######################
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# mousepad shit #
-*.*~
-
-# jekyll no need to push #
-_site
-_site/*
-_data/.~lock.*.csv#
-.sass-cache
+## Jekyll stuff
 .jekyll-cache
-
-
-# big data media
-HardwareJam20191214.mp4
+_site/
+_site

@@ -1,23 +1,30 @@
-permalink: /:categories/:name/
+# ----
+# Site
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "*.*~", ".xcf", "*.blend*"]
-
-title : 徒 Setto セット
-tagline: Set, Party, Gang! &#35;Cybersoul
+title : 徒 setto セット
+description: Set, Party, Gang! &#35;Cybersoul
 
 url : https://setto.basspistol.com
-baseurl: ""
-audio_url: /assets/mu/
 
 # banner should be 1024x1024
 banner: /assets/img/setto_logo.png
 icon: /assets/img/setto_icon.png
-email: setto@protonmail.com
+logo: /assets/img/setto_icon.png
 
-social_ids: [insta, twitter]
+author: 
+  name: 徒 Setto セット
+  email: setto@basspistol.com
+  twitter: ToSettoSetto
 social:
-  insta: 'https://www.instagram.com/tosettosetto'
-  twitter: 'https://twitter.com/ToSettoSetto'
+  name: 徒 Setto セット
+  links:
+    - https://www.instagram.com/tosettosetto
+    - https://twitter.com/ToSettoSetto
+
+publisher:
+  name: Basspistol
+  domain: basspistol.com
+  mail: info@basspistol.com
 
 # musicbrainz
 musicbrainz_artistid: '31e8e456-0589-47eb-9334-20872851cd3e'
@@ -25,20 +32,60 @@ musicbrainz_artistid: '31e8e456-0589-47eb-9334-20872851cd3e'
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-last-modified-at
+
+# GEO 
+
+geo: 
+  timezone: "Europe/Stockholm"
+  lat: '7.48777'
+  long: '2.076389'
+  region: BJ-ZO
+  town: Setto
 
 collections:
-  releases:
+  albums:
     output: true
-    permalink: /:name/
-  videos:
+    permalink: /:path/
+  tracks:
     output: true
-    permalink: /:name/
+    permalink: /:path/
 
-# Defaults
+    # Defaults
+permalink: pretty
+
+exclude:
+  - changelog.md
+  - '*.*~'
+  - '*.xcf'
+  - '*.blend*'
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE
+
+sass:
+  sass_dir: _sass
 
 defaults:
-  - scope:
+  -
+    scope:
       path: ""
-      type: "videos"
     values:
-      category: "video"
+      layout: "default"
+      lang: en
+      _options:
+        image:
+          width: 1024
+          height: 720
+          resize_style: cover
+          uploads_dir: "/images"
+        content:
+          width: 720
+          height: 720
+          resize_style: cover
+          uploads_dir: "/images"  
+
+# ---------
+# Translate
+lang: en

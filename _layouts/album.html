@@ -1,0 +1,113 @@
+---
+layout: default
+---
+
+{% include relBase.html %}
+
+<!-- Banner -->
+<section
+  class="banner onload-image-fade-in onload-content-fade-right style2 fullscreen content-align-center image-position-center">
+  <div class="image">
+    <img src="{{ relBase }}{{ page.cover }}" alt="" class="editable" />
+  </div>
+</section>
+<!-- Tracks -->
+<section id="news" class="wrapper style1 align-center">
+  <br />
+  <h1>{{ page.title }}</h1>
+  <br />
+  <div class="gallery style1 medium lightbox onscroll-fade-in">
+
+    {% for track in page.tracks %}
+    <article>
+      <a href="{{ relBase }}/{{ track.slug }}/" class="image">
+        <img src="{{ relBase }}{{ track.cover}}" alt="" />
+      </a>
+      <div class="caption">
+        <h3>{{ track.common.title }}</h3>
+
+        <p>
+          <strong>{{ track.common.genre }}</strong>
+          <br />{{ track.common.year }}</p>
+        <ul class="actions fixed">
+          <li><span class="editable button small icon fa-play-circle">Play</span></li>
+        </ul>
+      </div>
+    </article>
+    {% endfor %}
+
+  </div>
+</section>
+<!-- END Tracks -->
+<!-- Content -->
+
+<section class="wrapper style1 align-center">
+  <div class="inner" id="post-text">
+
+    <div class="index align-left">
+      <!-- Author -->
+      <section>
+        {% include author.html %}
+        <!-- Content -->
+        <div class="content">
+          {% for style in page.tracks %}
+          {% for category in style.common.genre %}
+          {% assign categories_array = categories_array | push: category | uniq %}
+          {% assign count = categories_array | size %}
+          {% endfor %}
+          {% endfor %}
+          <p>Style{% if count > 1 %}s{% endif %}:
+            <strong>{% for genre in categories_array %}{{ genre }}{% unless forloop.last %},
+              {% endunless %}{% endfor %}</strong><br />
+            {{ album.date | date: '%Y' }}</p>
+          <p>Track list:<br />
+            {% for track in page.tracks %}
+            {{ track.common.track.no }}. <strong>{{ track.common.title }}</strong> <span
+              id="{{ track.common.title | slugify | remove: '-'  }}"></span> <br />
+            <script type="text/javascript">
+              var {{ track.common.title | slugify | remove: '-'  }}timestamp = {{ track.format.duration | round }};
+              var {{ track.common.title | slugify | remove: '-'  }}hours = Math.floor({{ track.common.title | slugify | remove: '-'  }}timestamp / 60 / 60);
+              var {{ track.common.title | slugify | remove: '-'  }}minutes = Math.floor({{ track.common.title | slugify | remove: '-'  }}timestamp / 60) - ({{ track.common.title | slugify | remove: '-' }}hours * 60);
+              var {{ track.common.title | slugify | remove: '-'  }}seconds = {{ track.common.title | slugify | remove: '-' }}timestamp % 60;
+              var {{ track.common.title | slugify | remove: '-'  }}formatted = {{ track.common.title | slugify | remove: '-' }}hours.toString().padStart(2, '0') + ':' + {{ track.common.title | slugify | remove: '-' }}minutes.toString().padStart(2, '0') + ':' + {{ track.common.title | slugify | remove: '-' }}seconds.toString().padStart(2, '0');
+              var theSpan = document.getElementById("{{ track.common.title | slugify | remove: '-'  }}");
+              theSpan.innerHTML = {{ track.common.title | slugify | remove: '-' }}formatted;
+            </script>
+            {% endfor %}
+          </p>
+          <a class="button button big wide icon solid fa-shopping-cart" href="#">Buy now</a>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+<section class="wrapper style1 align-center">
+  
+  <div class="inner" id="post-text">
+    <div class="index align-left">
+      <h2>Lyrics</h2>
+      {% for track in page.tracks %}
+      <section>
+        <header>
+          <h3>{{ track.common.title }}</h3>
+          <p style="font-size: 14px;">credits:
+            
+              {{ track.all.Comment }}
+          
+          </p>
+          
+        </header>
+        <!-- Content -->
+        <div class="content">
+          <p>
+            {{ track.all.UNSYNCEDLYRICS }}
+          </p>
+        </div>
+      </section>
+      {% endfor %}
+    </div>
+    <a class="button button big wide icon solid fa-shopping-cart" href="#">Buy now</a>
+  </div>
+</section>
+
+{% include footer.html %}

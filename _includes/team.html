@@ -1,0 +1,23 @@
+<section class="wrapper style1 align-center">
+  <div class="inner" style="padding-top: 40px;">
+    <h2 class="editable">
+      Team:et
+    </h2>
+    <p class="editable">
+      Insert text
+    </p>
+    <div class="items style1 medium onscroll-fade-in">
+      {% for member_name in page.team_members %} {% for member in site.team_members %} {% capture name -%}
+      {{ member.relative_path | replace_first: member.collection, '' | replace_first: '_/', '' | replace_first: '.md', '' }}
+      {%- endcapture %} {% if name == member_name %}
+      <section>
+        <div class="onscroll-fade-in" alt="Bild av {{ member.name }}" style="margin:auto;background-image:url({{ member.image }});background-repeat: no-repeat;background-size:cover; border-radius:150px; width:150px; height:150px;">
+        </div>
+        <h3>{{ member.name }} </h3>
+        <p>{{ member.bio_html }}</p>
+      </section>
+      {% break %} {% endif %} {% endfor %} {% endfor %}
+
+    </div>
+  </div>
+</section>

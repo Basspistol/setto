@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+{% include relBase.html %}
+
+<!-- Banner -->
+<section class="banner onload-image-fade-in onload-content-fade-right style5 fullscreen content-align-center image-position-center">
+  <div class="content">
+    <h3 style="background-color: rgba(13, 13, 13, 0.75); border-radius: 7px;padding: 20px;">
+      {{ page.description }}</h3>
+  </div>
+
+  <div class="image">
+    <img src="{{ relBase }}{{ page.image }}" alt="" class="editable" />
+  </div>
+</section>
+<!-- Content -->
+<section class="wrapper style1 align-center">
+  <div class="inner" id="post-text">
+    <h1>{{ page.title }}</h1>
+    <div class="index align-left">
+      <!-- Author -->
+      <section>
+        {% include author.html %}
+        <!-- Content -->
+        <div class="content">
+          {{ content }}
+          {% if page.collection == 'posts' or page.collection == 'projects' %}
+        <!-- post Naviation -->
+        <div style="text-align: center;">
+          <h3>{{ site.data.translations[page.lang].post-nav}}</h3>
+        </div>
+        <div class="post-nav">
+          <div>
+            {% if page.previous.url and page.lang == page.previous.lang %}
+            <h4><a href="{{page.previous.url}}"><i class="fas fa-arrow-left"></i></a> <a href="{{page.previous.url}}">&nbsp;{{page.previous.title}}</a></h4>
+            <p style="margin-right: 20px">{{ page.previous.description }}</p>
+            {% endif %}
+          </div>
+          <div class="post-nav-next">
+            {% if page.next.url and page.lang == page.next.lang  %}
+            <h4><a href="{{page.next.url}}">&nbsp;{{page.next.title}}</a> <a href="{{page.next.url}}"><i class="fas fa-arrow-right"></i></a></h4>
+            <p style="margin-left: 20px">{{ page.next.description }}</p>
+            {% endif %}
+          </div>
+        </div>
+        <!-- End Post Navigation -->
+        {% endif %}
+        </div>
+
+        
+
+
+      </section>
+    </div>
+  </div>
+  </section>
+
+{% if page.langref == 'about' %} 
+{% include team.html %}
+{% endif %}
+{% include footer.html %}
