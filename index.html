@@ -25,8 +25,44 @@ date: 2018-12-11 00:00:00
   </div>
 </section>
 
+{% assign postcount = site.posts | size %}
+{% if postcount > 0 %}
+<!-- NEWS -->
+<section id="news" class="wrapper style1 align-center">
 
+  <div class="inner">
+    <h2 class="editable">{{ site.data.translations[page.lang].news }}</h2>
+    <p class="editable">Ramblings and shit</p>
+    <p class="editor-link"><a class="btn" rel="nofollow" href="cloudcannon:collections/_posts/">
+        <strong>&#9998;</strong> Edit All News
+      </a></p>
+  </div>
+</section>
+{% for post in site.posts %}
 
+<section id="second"
+  class="spotlight style1 orient-{% cycle 'left', 'right' %} content-align-{% cycle 'right', 'left' %} image-position-center onscroll-image-fade-in"
+  {% if forloop.index == 1 %}style="box-shadow: none;" {% endif %}>
+
+  <div class="content">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.description }}</p>
+    <p class="editor-link"><a class="btn" rel="nofollow" href="cloudcannon:collections/{{ post.path }}">
+        <strong>&#9998;</strong> Edit This Post
+      </a></p>
+    <ul class="actions stacked">
+      <li><a href="{{ relBase }}{{ post.url }}" class="button">{{ site.data.translations[page.lang].read-post }}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="image">
+    <img src="{{ relBase }}{{ post.image }}" alt="{{ post.title }}" />
+  </div>
+</section>
+
+{% endfor %}
+<!-- End News -->
+{% endif %}
 
 <!-- Albums -->
 {% for album in site.albums reversed %}
@@ -69,44 +105,7 @@ date: 2018-12-11 00:00:00
   </div>
 </section>
 {% endfor %}
-{% assign postcount = site.posts | size %}
-{% if postcount > 0 %}
-<!-- NEWS -->
-<section id="news" class="wrapper style1 align-center">
 
-  <div class="inner">
-    <h2 class="editable">{{ site.data.translations[page.lang].news }}</h2>
-    <p class="editable">Ramblings and shit</p>
-    <p class="editor-link"><a class="btn" rel="nofollow" href="cloudcannon:collections/_posts/">
-        <strong>&#9998;</strong> Edit All News
-      </a></p>
-  </div>
-</section>
-{% for post in site.posts %}
-
-<section id="second"
-  class="spotlight style1 orient-{% cycle 'left', 'right' %} content-align-{% cycle 'right', 'left' %} image-position-center onscroll-image-fade-in"
-  {% if forloop.index == 1 %}style="box-shadow: none;" {% endif %}>
-
-  <div class="content">
-    <h2>{{ post.title }}</h2>
-    <p>{{ post.description }}</p>
-    <p class="editor-link"><a class="btn" rel="nofollow" href="cloudcannon:collections/{{ post.path }}">
-        <strong>&#9998;</strong> Edit This Post
-      </a></p>
-    <ul class="actions stacked">
-      <li><a href="{{ relBase }}{{ post.url }}" class="button">{{ site.data.translations[page.lang].read-post }}</a>
-      </li>
-    </ul>
-  </div>
-  <div class="image">
-    <img src="{{ relBase }}{{ post.image }}" alt="{{ post.title }}" />
-  </div>
-</section>
-
-{% endfor %}
-<!-- End News -->
-{% endif %}
 <!-- Tracks -->
 <section id="clients" class="wrapper style1 align-center">
 
