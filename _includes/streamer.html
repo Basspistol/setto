@@ -1,0 +1,20 @@
+<section>
+<h3 style="text-align: center;display: block;">Buy</h3>
+<div class="streamer">
+  {% for shop in site.data.stores %}
+  {% if shop.download == true %}
+  <a target="_blank" rel="noopener" href="{{ shop.url }}" alt="Stream from {{ shop.name }}" title="Stream from {{ shop.name }}" class="button icon brands {{ shop.icon }}">Buy on {{ shop.name }}</a>
+  {% endif %}
+  {% endfor %}
+</div>
+</section>
+<h3 style="text-align: center;display: block;margin-top:40px;">Stream</h3>
+<div class="streamer">
+
+  {% for shop in site.data.stores %}
+  {% if shop.download != true %}
+  
+  <a style="flex: 0 0 75px;margin:10px; font-size: 75px;" target="_blank" rel="noopener" href="{{ shop.url }}" alt="Stream from {{ shop.name }}" title="Stream from {{ shop.name }}" class="icon style2 brands {{ shop.icon }}"><span class="label">{{ shop.name }}</span></a>
+  {% endif %}
+  {% endfor %}
+</div>

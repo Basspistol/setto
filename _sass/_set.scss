@@ -428,3 +428,24 @@ div.content {
 .post-nav-next {
   text-align: right;
 }
+
+
+/* Stream links */ 
+
+.streamer {
+  list-style-type:none;
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  a {
+    flex: 1 0 150px;
+    margin:10px;
+  }
+  .button {
+    display: block;
+    flex: unset;
+  }
+  h3 {
+    flex: unset;
+  }
+}

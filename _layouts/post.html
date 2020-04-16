@@ -12,7 +12,7 @@ layout: default
 </section>
 <!-- Content -->
 <section class="wrapper style1 align-center">
-  <div class="inner" id="post-text">
+  <div class="inner">
     <h1>{{ page.title }}</h1>
     <div class="index align-left">
       <!-- Author -->
@@ -39,7 +39,7 @@ layout: default
 {% if name == album_name %}
 <!-- Content -->
 <section class="wrapper style1 align-center">
-  <div class="inner" id="post-text">
+  <div class="inner">
     <div class="index align-left">
       <!-- Author -->
       <section>
@@ -76,14 +76,11 @@ layout: default
  
           
 
-          <ul class="icons">
-            {% for shop in site.data.stores %}
-            <li><a target="_blank" rel="noopener" href="{{ shop.url }}" class="icon brands style2 {{ shop.icon }}"><span class="label">{{ shop.name }}</span></a></li>
-            {% endfor %}
-          </ul>
+
         </div>
 
       </section>
+
     </div>
   </div>
 </section>
@@ -106,11 +103,15 @@ layout: default
       </div>
     </article>
     {% endfor %}
+    <section style="margin-top:40px;">
+      
+      {% include streamer.html %}
+    </section>
   </div>
 </section>
 <!-- END Tracks -->
 <section class="wrapper style1 align-center">
-  <div class="inner" id="post-text">
+  <div class="inner">
     <div class="index align-left">
       <h2>Lyrics</h2>
       {% for track in album.tracks %}
@@ -137,7 +138,7 @@ layout: default
 <!-- HERE ENDS MADNESS -->
 {% if page.collection == 'posts' %}
 <section class="wrapper style1 align-center">
-  <div class="inner" id="post-text">
+  <div class="inner">
     <div class="index align-left">
       <!-- Author -->
       <section>
@@ -167,6 +168,7 @@ layout: default
           <!-- End Post Navigation -->
         </div>
       </section>
+      
     </div>
   </div>
 </section>
