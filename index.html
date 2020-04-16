@@ -83,7 +83,7 @@ date: 2018-12-11 00:00:00
   </div>
 </section>
 {% for post in site.posts %}
-{% if post.lang == page.lang %}
+
 <section id="second"
   class="spotlight style1 orient-{% cycle 'left', 'right' %} content-align-{% cycle 'right', 'left' %} image-position-center onscroll-image-fade-in"
   {% if forloop.index == 1 %}style="box-shadow: none;" {% endif %}>
@@ -103,7 +103,7 @@ date: 2018-12-11 00:00:00
     <img src="{{ relBase }}{{ post.image }}" alt="{{ post.title }}" />
   </div>
 </section>
-{% endif %}
+
 {% endfor %}
 <!-- End News -->
 {% endif %}
