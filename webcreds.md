@@ -5,7 +5,6 @@ description: >-
   build this website.
 image: /images/creds.jpg
 lang-ref: credits
-layout: post
 ---
 
 ## CMS
