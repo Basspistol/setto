@@ -25,50 +25,25 @@ date: 2018-12-11 00:00:00
   </div>
 </section>
 
-{% assign postcount = site.posts | size %}
-{% if postcount > 0 %}
-<!-- NEWS -->
-<section id="news" class="wrapper style1 align-center onload-content-fade-right">
 
-  <div class="inner">
-    <h2 class="editable">Ramblings and shit</h2>
-    <p class="editor-link"><a class="btn" rel="nofollow" href="cloudcannon:collections/_posts/">
-        <strong>&#9998;</strong> Edit All News
-      </a></p>
-  </div>
-</section>
-{% for post in site.posts %}
 
-<section id="second"
-  class="spotlight style1 orient-{% cycle 'left', 'right' %} content-align-{% cycle 'right', 'left' %} image-position-center onscroll-image-fade-in"
-  {% if forloop.index == 1 %}style="box-shadow: none;" {% endif %}>
 
-  <div class="content">
-    <h2>{{ post.title }}</h2>
-    <p>{{ post.description }}</p>
-    <p class="editor-link"><a class="btn" rel="nofollow" href="cloudcannon:collections/{{ post.path }}">
-        <strong>&#9998;</strong> Edit This Post
-      </a></p>
-    <ul class="actions stacked">
-      <li><a href="{{ relBase }}{{ post.url }}" class="button">{{ site.data.translations[page.lang].read-post }}</a>
-      </li>
-    </ul>
-  </div>
-  <div class="image">
-    <img src="{{ relBase }}{{ post.image }}" alt="{{ post.title }}" />
-  </div>
-</section>
-
-{% endfor %}
-<!-- End News -->
-{% endif %}
 
 <!-- Albums -->
-{% for album in site.albums reversed %}
+{% for post in site.posts reversed %}
+{% capture album_name -%}
+{{ post.album }}
+{%- endcapture %}
+{% for album in site.albums %}
+{% capture name -%}
+{{ album.relative_path | replace_first: album.collection, '' | replace_first: '_/', '' | replace_first: '.md', '' }}
+{%- endcapture %}
+{% if name == album_name %}
 <section id="albums" class="section-shadow banner style1 orient-{% cycle 'left', 'right' %} content-align-{% cycle 'right', 'left' %} image-position-center fullscreen onload-image-fade-in onload-content-fade-right">
 
   <div class="content">
     <h1>{{ album.title }}</h1>
+    <p>{{ post.description }}</p>
     {% for style in album.tracks %}
     {% for category in style.common.genre %}
     {% assign categories_array = categories_array | push: category | uniq %}
@@ -94,7 +69,7 @@ date: 2018-12-11 00:00:00
       {% endfor %}
     </p>
     <ul class="actions stacked">
-      <li><a href="{{ relBase }}{{ album.url }}" class="button big wide icon solid fa-volume-up">Listen</a></li>
+      <li><a href="{{ relBase }}{{ post.url }}" class="button big wide icon solid fa-volume-up">Listen</a></li>
     </ul>
   </div>
 
@@ -103,6 +78,7 @@ date: 2018-12-11 00:00:00
 
   </div>
 </section>
+{% break %} {% endif %} {% endfor %}
 {% endfor %}
 
 <!-- Tracks -->

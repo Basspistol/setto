@@ -16,11 +16,11 @@ en:
   news: News
   top: Back to top
   cookies: >- 
-    <p>We only use cookies when you agree to it. Please help us improve our marketing! 
-    <br />Click <a href="#" id="cookie-notice-decline">here</a> if you don't want to help. 
-    <br />Read more about our <a href="/en/cookies/">use of cookies</a>
+    <p>I only use cookies if you agree to it. They don't contain any identifiable information about you, but they will just let me know if you comeback! <strong>If you accept the cookies, and come back in 2 days i'll give you a freebie!</strong>
+    <br />Click <a href="#" id="cookie-notice-decline">here</a> if you want this shit to go away and never bother with cookies again. 
+    <br />Read more about how basspistol <a href="/en/cookies/">use of cookies</a>
     </p>
-  cookie-agree: I want to help
+  cookie-agree: Tasty Freebie!
   back: Take me back!
   home: Home
   post-nav: Read more posts

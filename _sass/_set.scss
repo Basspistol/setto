@@ -340,21 +340,18 @@ div.content {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: _palette(fg);
-  color: _palette(bg);
+  background-color: #333;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-content: center;
   align-items: center;
 
-  a {
-  color: _palette(bg);
-  }
+
   p {
     flex: 1 0 250px;
     margin: 0;
-    font-size: .8em;
-
+    font-size: 12px;
+    font-family: monospace;
   }
   @media only screen and (max-width: 569px) {
     p {
