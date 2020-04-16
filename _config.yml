@@ -45,14 +45,18 @@ geo:
 
 collections:
   albums:
-    output: true
-    permalink: /:path/
+    output: false
   tracks:
     output: true
     permalink: /:path/
 
     # Defaults
 permalink: pretty
+
+categories:
+  - release
+  - rambling
+  - video
 
 exclude:
   - changelog.md
@@ -68,12 +72,29 @@ sass:
   sass_dir: _sass
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
-      layout: "default"
+      layout: "page"
       lang: en
+      _options:
+        image:
+          width: 1024
+          height: 720
+          resize_style: cover
+          uploads_dir: "/images"
+        content:
+          width: 720
+          height: 720
+          resize_style: cover
+          uploads_dir: "/images"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      lang: en
+      permalink: /:title/
       _options:
         image:
           width: 1024
