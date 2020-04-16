@@ -1,27 +1,27 @@
 - name: Ghetto Supply
-  url: mailto:setto@protonmail.com
-  img:  
+  url: mailto:setto@basspistol.com
+  icon: fa-envelope-open
 - name: Bandcamp
   url: https://shop.basspistol.com
-  img: 
+  icon: fa-bandcamp
 - name: Spotify
   url: https://open.spotify.com/artist/0gus2IdSkfrvFDBPqeiksM/
-  img: 
+  icon: fa-spotify
 - name: Apple Music
   url: https://itunes.apple.com/us/artist/%E5%BE%92-setto-%E3%82%BB%E3%83%83%E3%83%88/1447055514
-  img: 
+  icon: fa-apple
 - name: iTunes
   url: https://itunes.apple.com/us/artist/%E5%BE%92-setto-%E3%82%BB%E3%83%83%E3%83%88/1447055514
-  img: 
+  icon: fa-itunes-note
 - name: Google Play
   url: https://play.google.com/store/music/artist/%E5%BE%92_setto_%E3%82%BB%E3%83%83%E3%83%88?id=Ayi4avjpfyinbrepzebpsvpjc5a
-  img: 
+  icon: fa-google-play
 - name: Amazon Music
   url: https://www.amazon.com/dp/B07LDXZYNY/ref=dm_ws_ps_adp
-  img: 
+  icon: fa-amazon
 - name: Deezer
   url: https://www.deezer.com/fr/artist/56004012
-  img: 
+  icon: fa-headphones
 - name: Napster
   url: https://us.napster.com/artist/-setto-
-  img: 
+  icon: fa-napster
