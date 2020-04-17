@@ -1,4 +1,119 @@
 - layout: album
+  slug: cyber-grany
+  name: Cyber Grany
+  artists: 徒 Setto セット
+  bitrate: 320000
+  trackCount: 1
+  cover: /assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.jpeg
+  date: 2019-1-1
+  tracks:
+    - path: >-
+        /home/set/git/basspistol/setto/assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.mp3
+      audio: /assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.mp3
+      slug: cyber-grany/1-grandma-got-the-ssh-keys
+      albumSlug: cyber-grany
+      trackSlug: 1-grandma-got-the-ssh-keys
+      coverPath: >-
+        /home/set/git/basspistol/setto/assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.jpeg
+      cover: /assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.jpeg
+      format:
+        tagTypes:
+          - ID3v2.3
+        trackInfo: []
+        lossless: false
+        container: MPEG
+        codec: MPEG 1 Layer 3
+        sampleRate: 44100
+        numberOfChannels: 2
+        bitrate: 320000
+        codecProfile: CBR
+        numberOfSamples: 8909568
+        duration: 202.03102040816327
+      native:
+        ID3v2.3:
+          - id: TIT2
+            value: Grandma got the SSH keys
+          - id: TPE1
+            value: 徒 Setto セット
+          - id: TRCK
+            value: 1/1
+          - id: TALB
+            value: Cyber Grany
+          - id: TPE2
+            value: To Setto Setto
+          - id: TCON
+            value: Acid Trap
+          - id: 'TXXX:CDDB DiscID'
+            value: 0200ca01
+          - id: 'TXXX:discid'
+            value: 0200ca01
+          - id: 'TXXX:MusicBrainz DiscID'
+            value: bhKd3SFqkr6x1L9X2JkIZ6UIaRA-
+          - id: 'TXXX:musicbrainz_discid'
+            value: bhKd3SFqkr6x1L9X2JkIZ6UIaRA-
+          - id: COMM
+            value:
+              language: XXX
+              description: WEBSITE
+              text: 'https://setto.basspistol.com'
+          - id: COMM
+            value:
+              language: XXX
+              description: Comment
+              text: Special track for Acid December 2019
+          - id: TYER
+            value: '2019'
+      quality:
+        warnings: []
+      common:
+        track:
+          'no': 1
+          of: 1
+        disk:
+          'no': null
+          of: null
+        title: Grandma got the SSH keys
+        artists:
+          - 徒 Setto セット
+        artist: 徒 Setto セット
+        album: Cyber Grany
+        albumartist: To Setto Setto
+        genre:
+          - Acid Trap
+        comment:
+          - 'https://setto.basspistol.com'
+          - Special track for Acid December 2019
+        year: 2019
+      transformed:
+        ID3v2.3:
+          TIT2: Grandma got the SSH keys
+          TPE1: 徒 Setto セット
+          TRCK: 1/1
+          TALB: Cyber Grany
+          TPE2: To Setto Setto
+          TCON: Acid Trap
+          'TXXX:CDDB DiscID': 0200ca01
+          'TXXX:discid': 0200ca01
+          'TXXX:MusicBrainz DiscID': bhKd3SFqkr6x1L9X2JkIZ6UIaRA-
+          'TXXX:musicbrainz_discid': bhKd3SFqkr6x1L9X2JkIZ6UIaRA-
+          WEBSITE: 'https://setto.basspistol.com'
+          Comment: Special track for Acid December 2019
+          TYER: '2019'
+      all:
+        TIT2: Grandma got the SSH keys
+        TPE1: 徒 Setto セット
+        TRCK: 1/1
+        TALB: Cyber Grany
+        TPE2: To Setto Setto
+        TCON: Acid Trap
+        'TXXX:CDDB DiscID': 0200ca01
+        'TXXX:discid': 0200ca01
+        'TXXX:MusicBrainz DiscID': bhKd3SFqkr6x1L9X2JkIZ6UIaRA-
+        'TXXX:musicbrainz_discid': bhKd3SFqkr6x1L9X2JkIZ6UIaRA-
+        WEBSITE: 'https://setto.basspistol.com'
+        Comment: Special track for Acid December 2019
+        TYER: '2019'
+- layout: album
   slug: darkweb
   name: Darkweb
   artists: 徒 Setto セット
@@ -7,14 +122,12 @@
   cover: /assets/albums/darkweb/1-swipe.jpeg
   date: 2019-1-1
   tracks:
-    - path: >-
-        /home/set/git/basspistol/setto.2020.shop/assets/albums/darkweb/1-swipe.mp3
+    - path: /home/set/git/basspistol/setto/assets/albums/darkweb/1-swipe.mp3
       audio: /assets/albums/darkweb/1-swipe.mp3
       slug: darkweb/1-swipe
       albumSlug: darkweb
       trackSlug: 1-swipe
-      coverPath: >-
-        /home/set/git/basspistol/setto.2020.shop/assets/albums/darkweb/1-swipe.jpeg
+      coverPath: /home/set/git/basspistol/setto/assets/albums/darkweb/1-swipe.jpeg
       cover: /assets/albums/darkweb/1-swipe.jpeg
       format:
         tagTypes:
@@ -373,14 +486,12 @@
           Je yeuxt vers l'avant de temps en temps.
         TCON: Cyber Soul
         TYER: '2019'
-    - path: >-
-        /home/set/git/basspistol/setto.2020.shop/assets/albums/darkweb/2-darkweb.mp3
+    - path: /home/set/git/basspistol/setto/assets/albums/darkweb/2-darkweb.mp3
       audio: /assets/albums/darkweb/2-darkweb.mp3
       slug: darkweb/2-darkweb
       albumSlug: darkweb
       trackSlug: 2-darkweb
-      coverPath: >-
-        /home/set/git/basspistol/setto.2020.shop/assets/albums/darkweb/2-darkweb.jpeg
+      coverPath: /home/set/git/basspistol/setto/assets/albums/darkweb/2-darkweb.jpeg
       cover: /assets/albums/darkweb/2-darkweb.jpeg
       format:
         tagTypes:
@@ -472,13 +583,13 @@
         TCON: Cypher Rap
         TYER: '2019'
     - path: >-
-        /home/set/git/basspistol/setto.2020.shop/assets/albums/darkweb/2-darkweb-instrumental-.mp3
+        /home/set/git/basspistol/setto/assets/albums/darkweb/2-darkweb-instrumental-.mp3
       audio: /assets/albums/darkweb/2-darkweb-instrumental-.mp3
       slug: darkweb/2-darkweb-instrumental-
       albumSlug: darkweb
       trackSlug: 2-darkweb-instrumental-
       coverPath: >-
-        /home/set/git/basspistol/setto.2020.shop/assets/albums/darkweb/2-darkweb-instrumental-.jpeg
+        /home/set/git/basspistol/setto/assets/albums/darkweb/2-darkweb-instrumental-.jpeg
       cover: /assets/albums/darkweb/2-darkweb-instrumental-.jpeg
       format:
         tagTypes:
@@ -562,13 +673,13 @@
         Comment: Cover art and music by To&nbsp;Setto&nbsp;Setto
         TYER: '2019'
     - path: >-
-        /home/set/git/basspistol/setto.2020.shop/assets/albums/darkweb/3-swipe-instrumental-.mp3
+        /home/set/git/basspistol/setto/assets/albums/darkweb/3-swipe-instrumental-.mp3
       audio: /assets/albums/darkweb/3-swipe-instrumental-.mp3
       slug: darkweb/3-swipe-instrumental-
       albumSlug: darkweb
       trackSlug: 3-swipe-instrumental-
       coverPath: >-
-        /home/set/git/basspistol/setto.2020.shop/assets/albums/darkweb/3-swipe-instrumental-.jpeg
+        /home/set/git/basspistol/setto/assets/albums/darkweb/3-swipe-instrumental-.jpeg
       cover: /assets/albums/darkweb/3-swipe-instrumental-.jpeg
       format:
         tagTypes:
@@ -662,13 +773,13 @@
   date: 2018-1-1
   tracks:
     - path: >-
-        /home/set/git/basspistol/setto.2020.shop/assets/albums/satoshi-mon-ami/1-k-as-tu-fait-de-nous-.mp3
+        /home/set/git/basspistol/setto/assets/albums/satoshi-mon-ami/1-k-as-tu-fait-de-nous-.mp3
       audio: /assets/albums/satoshi-mon-ami/1-k-as-tu-fait-de-nous-.mp3
       slug: satoshi-mon-ami/1-k-as-tu-fait-de-nous-
       albumSlug: satoshi-mon-ami
       trackSlug: 1-k-as-tu-fait-de-nous-
       coverPath: >-
-        /home/set/git/basspistol/setto.2020.shop/assets/albums/satoshi-mon-ami/1-k-as-tu-fait-de-nous-.jpeg
+        /home/set/git/basspistol/setto/assets/albums/satoshi-mon-ami/1-k-as-tu-fait-de-nous-.jpeg
       cover: /assets/albums/satoshi-mon-ami/1-k-as-tu-fait-de-nous-.jpeg
       format:
         tagTypes:
@@ -752,13 +863,13 @@
         TCON: Cyber Soul
         TYER: '2018'
     - path: >-
-        /home/set/git/basspistol/setto.2020.shop/assets/albums/satoshi-mon-ami/2-r-ve-de-toi.mp3
+        /home/set/git/basspistol/setto/assets/albums/satoshi-mon-ami/2-r-ve-de-toi.mp3
       audio: /assets/albums/satoshi-mon-ami/2-r-ve-de-toi.mp3
       slug: satoshi-mon-ami/2-r-ve-de-toi
       albumSlug: satoshi-mon-ami
       trackSlug: 2-r-ve-de-toi
       coverPath: >-
-        /home/set/git/basspistol/setto.2020.shop/assets/albums/satoshi-mon-ami/2-r-ve-de-toi.jpeg
+        /home/set/git/basspistol/setto/assets/albums/satoshi-mon-ami/2-r-ve-de-toi.jpeg
       cover: /assets/albums/satoshi-mon-ami/2-r-ve-de-toi.jpeg
       format:
         tagTypes:
