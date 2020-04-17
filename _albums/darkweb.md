@@ -8,13 +8,12 @@ trackCount: 4
 cover: /assets/albums/darkweb/1-swipe.jpeg
 date: 2019-1-1
 tracks:
-  - path: /home/set/git/basspistol/setto.2020.shop/assets/albums/darkweb/1-swipe.mp3
+  - path: /home/set/git/basspistol/setto/assets/albums/darkweb/1-swipe.mp3
     audio: /assets/albums/darkweb/1-swipe.mp3
     slug: darkweb/1-swipe
     albumSlug: darkweb
     trackSlug: 1-swipe
-    coverPath: >-
-      /home/set/git/basspistol/setto.2020.shop/assets/albums/darkweb/1-swipe.jpeg
+    coverPath: /home/set/git/basspistol/setto/assets/albums/darkweb/1-swipe.jpeg
     cover: /assets/albums/darkweb/1-swipe.jpeg
     format:
       tagTypes:
@@ -339,14 +338,12 @@ tracks:
         Je yeuxt vers l'avant de temps en temps.
       TCON: Cyber Soul
       TYER: '2019'
-  - path: >-
-      /home/set/git/basspistol/setto.2020.shop/assets/albums/darkweb/2-darkweb.mp3
+  - path: /home/set/git/basspistol/setto/assets/albums/darkweb/2-darkweb.mp3
     audio: /assets/albums/darkweb/2-darkweb.mp3
     slug: darkweb/2-darkweb
     albumSlug: darkweb
     trackSlug: 2-darkweb
-    coverPath: >-
-      /home/set/git/basspistol/setto.2020.shop/assets/albums/darkweb/2-darkweb.jpeg
+    coverPath: /home/set/git/basspistol/setto/assets/albums/darkweb/2-darkweb.jpeg
     cover: /assets/albums/darkweb/2-darkweb.jpeg
     format:
       tagTypes:
@@ -436,13 +433,13 @@ tracks:
       TCON: Cypher Rap
       TYER: '2019'
   - path: >-
-      /home/set/git/basspistol/setto.2020.shop/assets/albums/darkweb/2-darkweb-instrumental-.mp3
+      /home/set/git/basspistol/setto/assets/albums/darkweb/2-darkweb-instrumental-.mp3
     audio: /assets/albums/darkweb/2-darkweb-instrumental-.mp3
     slug: darkweb/2-darkweb-instrumental-
     albumSlug: darkweb
     trackSlug: 2-darkweb-instrumental-
     coverPath: >-
-      /home/set/git/basspistol/setto.2020.shop/assets/albums/darkweb/2-darkweb-instrumental-.jpeg
+      /home/set/git/basspistol/setto/assets/albums/darkweb/2-darkweb-instrumental-.jpeg
     cover: /assets/albums/darkweb/2-darkweb-instrumental-.jpeg
     format:
       tagTypes:
@@ -526,13 +523,13 @@ tracks:
       Comment: Cover art and music by To&nbsp;Setto&nbsp;Setto
       TYER: '2019'
   - path: >-
-      /home/set/git/basspistol/setto.2020.shop/assets/albums/darkweb/3-swipe-instrumental-.mp3
+      /home/set/git/basspistol/setto/assets/albums/darkweb/3-swipe-instrumental-.mp3
     audio: /assets/albums/darkweb/3-swipe-instrumental-.mp3
     slug: darkweb/3-swipe-instrumental-
     albumSlug: darkweb
     trackSlug: 3-swipe-instrumental-
     coverPath: >-
-      /home/set/git/basspistol/setto.2020.shop/assets/albums/darkweb/3-swipe-instrumental-.jpeg
+      /home/set/git/basspistol/setto/assets/albums/darkweb/3-swipe-instrumental-.jpeg
     cover: /assets/albums/darkweb/3-swipe-instrumental-.jpeg
     format:
       tagTypes:
