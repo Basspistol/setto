@@ -6,7 +6,6 @@ vid:
 image: 
 category: 
 layout:
-audio_url: 
 credits: ''
 album:
 stores:

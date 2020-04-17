@@ -6,7 +6,6 @@ vid:
 image: /assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.jpeg
 category: release
 layout: post
-audio_url:
 credits:
 album: cyber-grany
 stores:

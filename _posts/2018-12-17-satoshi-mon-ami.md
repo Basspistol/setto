@@ -7,7 +7,6 @@ description: >-
 vid: satoshi
 image: /assets/img/satoshimonami.jpg
 category: release
-audio_url: 'https://open.spotify.com/album/116YJCcI5T9Iw9UBQCvJWF'
 credits: ''
 album: satoshi-mon-ami
 stores:
