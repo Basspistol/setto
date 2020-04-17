@@ -10,8 +10,11 @@ date: 2018-12-11 00:00:00
 {% include relBase.html %}
 <!-- Banner -->
 <section
-  class="banner onload-image-fade-in onload-content-fade-right style3 fullscreen content-align-center image-position-center;" style="background-image:url('/images/nebula-bw.jpg');background-size:cover;background-repeat:no-repeat;background-position: center;">
-  <div style="z-index:0;position:absolute; top:0; left:0; width:100%;height:100%;background-color: rgba(13, 13 ,13, 0.75);"></div>
+  class="banner onload-image-fade-in onload-content-fade-right style3 fullscreen content-align-center image-position-center;"
+  style="background-image:url('/images/nebula-bw.jpg');background-size:cover;background-repeat:no-repeat;background-position: center;">
+  <div
+    style="z-index:0;position:absolute; top:0; left:0; width:100%;height:100%;background-color: rgba(13, 13 ,13, 0.75);">
+  </div>
   <div class="content" style="z-index:1">
     <h1 style="margin-top:80px">{{ page.title }}</h1>
 
@@ -35,39 +38,41 @@ date: 2018-12-11 00:00:00
 {{ album.relative_path | replace_first: album.collection, '' | replace_first: '_/', '' | replace_first: '.md', '' }}
 {%- endcapture %}
 {% if name == album_name %}
-<section id="albums" class="section-shadow banner style1 orient-{% cycle 'left', 'right' %} content-align-{% cycle 'right', 'left' %} image-position-center fullscreen onload-image-fade-in onload-content-fade-right">
+<section id="albums"
+  class="section-shadow banner style1 orient-{% cycle 'left', 'right' %} content-align-{% cycle 'right', 'left' %} image-position-center fullscreen onload-image-fade-in onload-content-fade-right">
 
   <div class="content">
     <h1>{{ post.title }}</h1>
     <p>{{ post.description }}</p>
     {% if post.category == 'release' %}
-    {% for style in album.tracks %}
-    {% for category in style.common.genre %}
-    {% assign categories_array = categories_array | push: category | uniq %}
-    {% assign count = categories_array | size %}
-    {% endfor %}
-    {% endfor %}
-    <p>Style{% if count > 1 %}s{% endif %}:
-      <strong>{% for genre in categories_array %}{{ genre }}{% unless forloop.last %},
-        {% endunless %}{% endfor %}</strong><br />
-      {{ album.date | date: '%Y' }}</p>
-    <p>Track list:<br />
-      {% for track in album.tracks %} 
-      {{ track.common.track.no }}. <strong>{{ track.common.title }}</strong> <span id="{{ track.common.title | slugify | remove: '-'  }}"></span> <br />
-      <script type="text/javascript">
-        var {{ track.common.title | slugify | remove: '-'  }}timestamp = {{ track.format.duration | round }};
-        var {{ track.common.title | slugify | remove: '-'  }}hours = Math.floor({{ track.common.title | slugify | remove: '-'  }}timestamp / 60 / 60);
-        var {{ track.common.title | slugify | remove: '-'  }}minutes = Math.floor({{ track.common.title | slugify | remove: '-'  }}timestamp / 60) - ({{ track.common.title | slugify | remove: '-'  }}hours * 60);
-        var {{ track.common.title | slugify | remove: '-'  }}seconds = {{ track.common.title | slugify | remove: '-'  }}timestamp % 60;
-        var {{ track.common.title | slugify | remove: '-'  }}formatted = {{ track.common.title | slugify | remove: '-'  }}hours.toString().padStart(2, '0') + ':' + {{ track.common.title | slugify | remove: '-'  }}minutes.toString().padStart(2, '0') + ':' + {{ track.common.title | slugify | remove: '-'  }}seconds.toString().padStart(2, '0');
-        var theSpan = document.getElementById("{{ track.common.title | slugify | remove: '-'  }}");
-        theSpan.innerHTML = {{ track.common.title | slugify | remove: '-'  }}formatted;
-      </script>
-      {% endfor %}
-      {% endif %}
+
+    <p>{{ album.date | date: '%Y' }}</p>
+    <p>Track list:</p>
+    {% for track in album.tracks %}
+    <p>
+      {{ track.common.track.no }}. <strong>{{ track.common.title }}</strong>
+      <br /><span id="{{ track.common.title | slugify | remove: '-'  }}"
+        style="font-family: monospace;font-size: 14px"></span>
+      <span style="font-family: monospace;font-size: 14px">{{ track.common.genre }} </span>
     </p>
+    <hr style="margin: 20px 0" />
+
+    <script type="text/javascript">
+      var {{ track.common.title | slugify | remove: '-'  }}timestamp = {{ track.format.duration | round }};
+      var {{ track.common.title | slugify | remove: '-'  }}hours = Math.floor({{ track.common.title | slugify | remove: '-'  }}timestamp / 60 / 60);
+      var {{ track.common.title | slugify | remove: '-'  }}minutes = Math.floor({{ track.common.title | slugify | remove: '-'  }}timestamp / 60) - ({{ track.common.title | slugify | remove: '-' }}hours * 60);
+      var {{ track.common.title | slugify | remove: '-'  }}seconds = {{ track.common.title | slugify | remove: '-' }}timestamp % 60;
+      var {{ track.common.title | slugify | remove: '-'  }}formatted = {{ track.common.title | slugify | remove: '-' }}hours.toString().padStart(2, '0') + ':' + {{ track.common.title | slugify | remove: '-' }}minutes.toString().padStart(2, '0') + ':' + {{ track.common.title | slugify | remove: '-' }}seconds.toString().padStart(2, '0');
+      var theSpan = document.getElementById("{{ track.common.title | slugify | remove: '-'  }}");
+      theSpan.innerHTML = {{ track.common.title | slugify | remove: '-' }}formatted;
+    </script>
+    {% endfor %}
+    {% endif %}
+
     <ul class="actions stacked">
-      <li><a href="{{ relBase }}{{ post.url }}" class="button big wide {% if post.category == 'release' %}icon solid fa-volume-up{% endif %}">Cheggid out</a></li>
+      <li><a href="{{ relBase }}{{ post.url }}"
+          class="button big wide {% if post.category == 'release' %}icon solid fa-volume-up{% endif %}">Cheggid out</a>
+      </li>
     </ul>
   </div>
 
@@ -82,7 +87,7 @@ date: 2018-12-11 00:00:00
 <!-- Tracks -->
 <section id="clients" class="wrapper style1 align-center">
 
-<h2 style="margin-top:40px;">Tracks</h2>
+  <h2 style="margin-top:40px;">Tracks</h2>
   <!-- Gallery -->
   <div class="gallery style1 medium lightbox onscroll-fade-in">
     {% for track in site.tracks %}

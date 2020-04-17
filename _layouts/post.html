@@ -31,41 +31,33 @@ layout: default
           <p>{{ page.credits }}</p>
           {% if page.category == 'release' %}
           <!-- HERE BEGINS MADNESS -->
-          {% capture album_name -%}
-          {{ page.album }}
-          {%- endcapture %}
           {% for album in site.albums %}
-          {% capture name -%}
-          {{ album.relative_path | replace_first: album.collection, '' | replace_first: '_/', '' | replace_first: '.md', '' }}
-          {%- endcapture %}
-          {% if name == album_name %}
+          {% if page.album == album.slug %}
           <!-- Content -->
           <div class="content">
-            {% for style in album.tracks %}
-            {% for category in style.common.genre %}
-            {% assign categories_array = categories_array | push: category | uniq %}
-            {% assign count = categories_array | size %}
-            {% endfor %}
-            {% endfor %}
-            <p>Style{% if count > 1 %}s{% endif %}:
-              <strong>{% for genre in categories_array %}{{ genre }}{% unless forloop.last %},
-                {% endunless %}{% endfor %}</strong></p>
-            <p>Track list:<br />
-              {% for track in album.tracks %}
-              {{ track.common.track.no }}. <strong>{{ track.common.title }}</strong> <span
-                id="{{ track.common.title | slugify | remove: '-'  }}"></span> <br />
-              <script type="text/javascript">
-                var {{ track.common.title | slugify | remove: '-'  }}timestamp = {{ track.format.duration | round }};
-                var {{ track.common.title | slugify | remove: '-'  }}hours = Math.floor({{ track.common.title | slugify | remove: '-'  }}timestamp / 60 / 60);
-                var {{ track.common.title | slugify | remove: '-'  }}minutes = Math.floor({{ track.common.title | slugify | remove: '-'  }}timestamp / 60) - ({{ track.common.title | slugify | remove: '-' }}hours * 60);
-                var {{ track.common.title | slugify | remove: '-'  }}seconds = {{ track.common.title | slugify | remove: '-' }}timestamp % 60;
-                var {{ track.common.title | slugify | remove: '-'  }}formatted = {{ track.common.title | slugify | remove: '-' }}hours.toString().padStart(2, '0') + ':' + {{ track.common.title | slugify | remove: '-' }}minutes.toString().padStart(2, '0') + ':' + {{ track.common.title | slugify | remove: '-' }}seconds.toString().padStart(2, '0');
-                var theSpan = document.getElementById("{{ track.common.title | slugify | remove: '-'  }}");
-                theSpan.innerHTML = {{ track.common.title | slugify | remove: '-' }}formatted;
-              </script>
-              {% endfor %}
+
+            <p>Track list:</p>
+
+            {% for track in album.tracks %}
+            <p>
+              {{ track.common.track.no }}. <strong>{{ track.common.title }}</strong>
+              <br /><span id="{{ track.common.title | slugify | remove: '-'  }}"
+                style="font-family: monospace;font-size: 14px"></span>
+              <span style="font-family: monospace;font-size: 14px">{{ track.common.genre }} </span>
             </p>
+            <hr style="margin: 20px 0" />
+            <script type="text/javascript">
+              var {{ track.common.title | slugify | remove: '-'  }}timestamp = {{ track.format.duration | round }};
+              var {{ track.common.title | slugify | remove: '-'  }}hours = Math.floor({{ track.common.title | slugify | remove: '-'  }}timestamp / 60 / 60);
+              var {{ track.common.title | slugify | remove: '-'  }}minutes = Math.floor({{ track.common.title | slugify | remove: '-'  }}timestamp / 60) - ({{ track.common.title | slugify | remove: '-' }}hours * 60);
+              var {{ track.common.title | slugify | remove: '-'  }}seconds = {{ track.common.title | slugify | remove: '-' }}timestamp % 60;
+              var {{ track.common.title | slugify | remove: '-'  }}formatted = {{ track.common.title | slugify | remove: '-' }}hours.toString().padStart(2, '0') + ':' + {{ track.common.title | slugify | remove: '-' }}minutes.toString().padStart(2, '0') + ':' + {{ track.common.title | slugify | remove: '-' }}seconds.toString().padStart(2, '0');
+              var theSpan = document.getElementById("{{ track.common.title | slugify | remove: '-'  }}");
+              theSpan.innerHTML = {{ track.common.title | slugify | remove: '-' }}formatted;
+            </script>
+            {% endfor %}
           </div>
+        </div>
       </section>
     </div>
   </div>
@@ -96,29 +88,7 @@ layout: default
   </div>
 </section>
 <!-- END Tracks -->
-<section class="wrapper style1 align-center">
-  <div class="inner">
-    <div class="index align-left">
-      <h2>Lyrics</h2>
-      {% for track in album.tracks %}
-      <section>
-        <header>
-          <h3>{{ track.common.title }}</h3>
-          <p style="font-size: 14px;">credits:
-            {{ track.all.Comment }}
-          </p>
-        </header>
-        <!-- Content -->
-        <div class="content">
-          <p style="font-family: monospace;font-size:16px;">
-            {{ track.all.UNSYNCEDLYRICS | newline_to_br }}
-          </p>
-        </div>
-      </section>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+
 {% break %} {% endif %} {% endfor %}
 <!-- HERE ENDS MADNESS -->
 {% endif %}
