@@ -1,7 +1,21 @@
-/* NAVIGATION */
-/* Style the navbar */
+
 
 /* Animation */
+@-webkit-keyframes infiniteRotate {    
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes infinite-rotate {  
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes infinite-rotate {  
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+
 
 @-webkit-keyframes backgroundBlink {
   0%{background-position:73% 0%}
@@ -40,6 +54,18 @@
   -moz-animation: BackgroundFlow 200s ease infinite;
   animation: BackgroundFlow 200s ease infinite;
 }
+
+.spinnit {
+
+  -webkit-animation: infiniteRotate 2s linear infinite; /* Safari */
+  -moz-animation: infiniteRotate 2s linear infinite;
+  animation: infiniteRotate 2s linear infinite;
+  }
+.paused {
+  animation-play-state: paused;
+}
+
+/* Navigation */
 
 .logo {
   z-index: 10;

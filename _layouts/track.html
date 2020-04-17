@@ -3,58 +3,140 @@ layout: default
 ---
 
 {% include relBase.html %}
-
 <!-- Banner -->
-<section class="banner onload-image-fade-in onload-content-fade-right style2 fullscreen content-align-center image-position-center">
+<section
+  class="banner onload-image-fade-in onload-content-fade-right style3 fullscreen content-align-center image-position-center">
   <div class="content">
-    <h3 style="color:white; background-color: rgba(1, 106, 254, 0.75); border-radius: 7px;padding: 20px;">
-      {{ page.description }}</h3>
+    <h1 style="margin-top:80px">{{ page.common.title }}</h1>
+
+    <p><strong><span id="tracktime"></span></strong><span id="{{ page.common.title | slugify | remove: '-'  }}"></span></strong> <br />
+      Style: <strong>{% for style in page.common.genre %}{{ style }}{% endfor %}</strong>
+      <script type="text/javascript">
+        var {{ page.common.title | slugify | remove: '-'  }}timestamp = {{ page.format.duration | round }};
+        var {{ page.common.title | slugify | remove: '-'  }}hours = Math.floor({{ page.common.title | slugify | remove: '-'  }}timestamp / 60 / 60);
+        var {{ page.common.title | slugify | remove: '-'  }}minutes = Math.floor({{ page.common.title | slugify | remove: '-'  }}timestamp / 60) - ({{ page.common.title | slugify | remove: '-' }}hours * 60);
+        var {{ page.common.title | slugify | remove: '-'  }}seconds = {{ page.common.title | slugify | remove: '-' }}timestamp % 60;
+        var {{ page.common.title | slugify | remove: '-'  }}formatted = {{ page.common.title | slugify | remove: '-' }}hours.toString().padStart(2, '0') + ':' + {{ page.common.title | slugify | remove: '-' }}minutes.toString().padStart(2, '0') + ':' + {{ page.common.title | slugify | remove: '-' }}seconds.toString().padStart(2, '0');
+        var theSpan = document.getElementById("{{ page.common.title | slugify | remove: '-'  }}");
+        theSpan.innerHTML = {{ page.common.title | slugify | remove: '-' }}formatted;
+      </script>
+
+    </p>
+    <ul class="actions stacked">
+      <li><a id="mu_pause" href="#albums" class="button icon solid fa-play">Play dat!</a></li>
+    </ul>
   </div>
 
   <div class="image">
-    <img src="{{ relBase }}{{ page.image }}" alt="" class="editable" />
+    <img src="{{ relBase }}{{ page.cover }}" alt="{{ page.title }} logo" id="coverart" />
   </div>
 </section>
 <!-- Content -->
 <section class="wrapper style1 align-center">
-  <div class="inner" id="post-text">
-    <h1>{{ page.title }}</h1>
+  <div class="inner">
     <div class="index align-left">
-      <!-- Author -->
       <section>
         {% include author.html %}
         <!-- Content -->
         <div class="content">
-          {{ content }}
-          {% if page.collection == 'posts' or page.collection == 'projects' %}
-        <!-- post Naviation -->
-        <div style="text-align: center;">
-          <h3>{{ site.data.translations[page.lang].post-nav}}</h3>
+          {% unless page.all.UNSYNCEDLYRICS == '' %}<h2>Lyrics</h2>{% endunless %}
+          <p style="font-family: monospace;font-size:16px;">
+            {{ page.all.UNSYNCEDLYRICS | newline_to_br }}
+          </p>
+          <p>credits:
+            {{ page.all.Comment }}
+          </p>
+          </header>
         </div>
-        <div class="post-nav">
-          <div>
-            {% if page.previous.url and page.lang == page.previous.lang %}
-            <h4><a href="{{page.previous.url}}"><i class="fas fa-arrow-left"></i></a> <a href="{{page.previous.url}}">&nbsp;{{page.previous.title}}</a></h4>
-            <p style="margin-right: 20px">{{ page.previous.description }}</p>
-            {% endif %}
-          </div>
-          <div class="post-nav-next">
-            {% if page.next.url and page.lang == page.next.lang  %}
-            <h4><a href="{{page.next.url}}">&nbsp;{{page.next.title}}</a> <a href="{{page.next.url}}"><i class="fas fa-arrow-right"></i></a></h4>
-            <p style="margin-left: 20px">{{ page.next.description }}</p>
-            {% endif %}
-          </div>
-        </div>
-        <!-- End Post Navigation -->
-        {% endif %}
-        </div>
-
-        
-
-
       </section>
     </div>
   </div>
-  </section>
+</section>
 
+<!-- Page navigation -->
+<section class="wrapper style1 align-center">
+  <div class="inner">
+    <div class="index align-left">
+      <!-- Author -->
+      {% include streamer.html %}
+      <section>
+        <!-- Content -->
+        <div class="content">
+          <!-- post Naviation -->
+          <div style="text-align: center;">
+            <h3>Play more songs grom this release</h3>
+          </div>
+          <div class="post-nav">
+            <div>
+              {% if page.previous.url and page.lang == page.previous.lang %}
+              <h4><a href="{{ relBase }}/{{ page.previousTrack.slug }}/"><i class="fas fa-arrow-left"></i></a> <a
+                  href="{{ relBase }}/{{ page.previousTrack.slug }}/">&nbsp;{{ page.previousTrack.common.title }}</a>
+              </h4>
+              {% endif %}
+            </div>
+            <div class="post-nav-next">
+              {% if page.next.url and page.lang == page.next.lang  %}
+              <h4><a href="{{ relBase }}/{{ page.nextTrack.slug }}/">&nbsp;{{ page.nextTrack.common.title }}</a> <a
+                  href="{{ relBase }}/{{ page.nextTrack.slug }}/"><i class="fas fa-arrow-right"></i></a></h4>
+              {% endif %}
+            </div>
+          </div>
+          <!-- End Post Navigation -->
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+<!-- Audio player-->
+<audio autoplay preload="true">
+  <source src="{{ relBase }}{{ page.audio }}" type="audio/mpeg" ontimeupdate='updateTrackTime(this);' />
+  <h1>Your browser isn't ready for so much hotness. Use the download-link instead.</h1>.
+</audio>
 {% include footer.html %}
+
+<script type="text/javascript">
+  function loadUrl(newLocation) {
+    window.location = newLocation;
+    return false;
+  }
+
+  var mu = document.getElementsByTagName("audio")[0];
+  var pauseButton = document.getElementById("mu_pause");
+  var spincover = document.getElementById("coverart");
+
+  mu.addEventListener('ended', function () {
+    // only functional if "loop" is removed
+    mu.pause();
+    mu.currentTime = 0;
+    loadUrl("{{ relBase }}/{{ page.nextTrack.slug }}/"); return false;
+  });
+
+  pauseButton.addEventListener("click", function () {
+    if (mu.paused) {
+      mu.play();
+      pauseButton.innerHTML = "Pause";
+      pauseButton.classList.remove("fa-play");
+      pauseButton.classList.add("fa-pause");
+      spincover.classList.add("spinnit");
+      spincover.classList.remove("paused");
+    }
+    else {
+      mu.pause();
+      pauseButton.innerHTML = "Resume";
+      pauseButton.classList.add("fa-play");
+      pauseButton.classList.remove("fa-pause");
+      spincover.classList.add("paused");
+    }
+  });
+
+  mu.addEventListener('timeupdate', function () {
+    var timestamp = Math.floor(mu.currentTime);
+    var hours = Math.floor(timestamp / 60 / 60);
+    var minutes = Math.floor(timestamp / 60) - (hours * 60);
+    var seconds = timestamp % 60;
+    var formatted = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
+    var thecurrentSpan = document.getElementById("tracktime");
+    thecurrentSpan.innerHTML = formatted + ' / ';
+  });
+
+</script>
