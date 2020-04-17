@@ -16,6 +16,13 @@ lang: en
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 <link rel="stylesheet" href="{{ relBase }}/assets/css/main.css" />
+{% if page.url == '/' %}
+<script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+  }
+</script>
+{% endif %}
 <noscript><link rel="stylesheet" href="{{ relBase }}/assets/css/noscript.css" /></noscript>
 </head>
 
