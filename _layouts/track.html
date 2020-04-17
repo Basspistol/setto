@@ -5,8 +5,9 @@ layout: default
 {% include relBase.html %}
 <!-- Banner -->
 <section
-  class="banner onload-image-fade-in onload-content-fade-right style3 fullscreen content-align-center image-position-center">
-  <div class="content">
+  class="banner onload-image-fade-in onload-content-fade-right style3 fullscreen content-align-center image-position-center" style="background-image:url(' {{ page.cover }}');background-size: cover; background-repeat: no-repeat;">
+  <div style="z-index:0;position:absolute; top:0; left:0; width:100%;height:100%;background-color: rgba(13, 13 ,13, 0.85);"></div>
+  <div class="content" style="z-index:1">
     <h1 style="margin-top:80px">{{ page.common.title }}</h1>
 
     <p><strong><span id="tracktime"></span></strong><span id="{{ page.common.title | slugify | remove: '-'  }}"></span></strong> <br />
