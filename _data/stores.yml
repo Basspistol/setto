@@ -10,10 +10,6 @@
   url: https://itunes.apple.com/us/artist/%E5%BE%92-setto-%E3%82%BB%E3%83%83%E3%83%88/1447055514
   icon: fa-apple
   download: false
-- name: iTunes
-  url: https://itunes.apple.com/us/artist/%E5%BE%92-setto-%E3%82%BB%E3%83%83%E3%83%88/1447055514
-  icon: fa-itunes-note
-  download: false
 - name: Google Play
   url: https://play.google.com/store/music/artist/%E5%BE%92_setto_%E3%82%BB%E3%83%83%E3%83%88?id=Ayi4avjpfyinbrepzebpsvpjc5a
   icon: fa-google-play
