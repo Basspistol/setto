@@ -5,93 +5,78 @@ layout: default
 
 <!-- Banner -->
 <section
-  class="banner onload-image-fade-in onload-content-fade-right style2 fullscreen content-align-center image-position-center">
+  class="banner onload-image-fade-in onload-content-fade-right style2 fullscreen content-align-center image-position-center"
+  style="height:100vh;background-color: rgba(13,13,13,0.85);">
+  <div class="content editable">
+    <h1 class="editable">{{ page.title }}</h1>
+    <p>{{ page.description }}</p>
+    <ul class="actions stacked">
+      <li><a href="#moe" class="button small smooth-scroll-middle">cheggit!</a></li>
+    </ul>
+  </div>
   <div class="image">
-    <img src="{{ relBase }}{{ page.image }}" alt="" class="editable" />
+    <img src="{{ relBase }}{{ page.image }}" alt="{{ page.title }}" class="editable" />
   </div>
 </section>
 <!-- Content -->
 <section class="wrapper style1 align-center">
-  <div class="inner">
-    <h1>{{ page.title }}</h1>
+  <div class="inner" style="padding-top: 40px;">
     <div class="index align-left">
       <!-- Author -->
-      <section>
+      <section style="padding-top:40px;" id="moe">
         {% include author.html %}
         <!-- Content -->
         <div class="content">
           {{ content }}
-
-          {{ page.credits }}
-        </div>
-      </section>
-    </div>
-  </div>
-</section>
-{% if page.category == 'release' %}
-<!-- HERE BEGINS MADNESS -->
-{% capture album_name -%}
-{{ page.album }}
-{%- endcapture %}
-{% for album in site.albums %}
-{% capture name -%}
-{{ album.relative_path | replace_first: album.collection, '' | replace_first: '_/', '' | replace_first: '.md', '' }}
-{%- endcapture %}
-{% if name == album_name %}
-<!-- Content -->
-<section class="wrapper style1 align-center">
-  <div class="inner">
-    <div class="index align-left">
-      <!-- Author -->
-      <section>
-        <header>
-          <h3>Data</h3>
-        </header>
-        <!-- Content -->
-        <div class="content">
-          {% for style in album.tracks %}
-          {% for category in style.common.genre %}
-          {% assign categories_array = categories_array | push: category | uniq %}
-          {% assign count = categories_array | size %}
-          {% endfor %}
-          {% endfor %}
-          <p>Style{% if count > 1 %}s{% endif %}:
-            <strong>{% for genre in categories_array %}{{ genre }}{% unless forloop.last %},
-              {% endunless %}{% endfor %}</strong><br />
-            {{ album.date | date: '%Y' }}</p>
-          <p>Track list:<br />
-            {% for track in album.tracks %}
-            {{ track.common.track.no }}. <strong>{{ track.common.title }}</strong> <span
-              id="{{ track.common.title | slugify | remove: '-'  }}"></span> <br />
-            <script type="text/javascript">
-              var {{ track.common.title | slugify | remove: '-'  }}timestamp = {{ track.format.duration | round }};
-              var {{ track.common.title | slugify | remove: '-'  }}hours = Math.floor({{ track.common.title | slugify | remove: '-'  }}timestamp / 60 / 60);
-              var {{ track.common.title | slugify | remove: '-'  }}minutes = Math.floor({{ track.common.title | slugify | remove: '-'  }}timestamp / 60) - ({{ track.common.title | slugify | remove: '-' }}hours * 60);
-              var {{ track.common.title | slugify | remove: '-'  }}seconds = {{ track.common.title | slugify | remove: '-' }}timestamp % 60;
-              var {{ track.common.title | slugify | remove: '-'  }}formatted = {{ track.common.title | slugify | remove: '-' }}hours.toString().padStart(2, '0') + ':' + {{ track.common.title | slugify | remove: '-' }}minutes.toString().padStart(2, '0') + ':' + {{ track.common.title | slugify | remove: '-' }}seconds.toString().padStart(2, '0');
-              var theSpan = document.getElementById("{{ track.common.title | slugify | remove: '-'  }}");
-              theSpan.innerHTML = {{ track.common.title | slugify | remove: '-' }}formatted;
-            </script>
+          <p>{{ page.credits }}</p>
+          {% if page.category == 'release' %}
+          <!-- HERE BEGINS MADNESS -->
+          {% capture album_name -%}
+          {{ page.album }}
+          {%- endcapture %}
+          {% for album in site.albums %}
+          {% capture name -%}
+          {{ album.relative_path | replace_first: album.collection, '' | replace_first: '_/', '' | replace_first: '.md', '' }}
+          {%- endcapture %}
+          {% if name == album_name %}
+          <!-- Content -->
+          <div class="content">
+            {% for style in album.tracks %}
+            {% for category in style.common.genre %}
+            {% assign categories_array = categories_array | push: category | uniq %}
+            {% assign count = categories_array | size %}
             {% endfor %}
-          </p>
- 
-          
-
-
-        </div>
-
+            {% endfor %}
+            <p>Style{% if count > 1 %}s{% endif %}:
+              <strong>{% for genre in categories_array %}{{ genre }}{% unless forloop.last %},
+                {% endunless %}{% endfor %}</strong></p>
+            <p>Track list:<br />
+              {% for track in album.tracks %}
+              {{ track.common.track.no }}. <strong>{{ track.common.title }}</strong> <span
+                id="{{ track.common.title | slugify | remove: '-'  }}"></span> <br />
+              <script type="text/javascript">
+                var {{ track.common.title | slugify | remove: '-'  }}timestamp = {{ track.format.duration | round }};
+                var {{ track.common.title | slugify | remove: '-'  }}hours = Math.floor({{ track.common.title | slugify | remove: '-'  }}timestamp / 60 / 60);
+                var {{ track.common.title | slugify | remove: '-'  }}minutes = Math.floor({{ track.common.title | slugify | remove: '-'  }}timestamp / 60) - ({{ track.common.title | slugify | remove: '-' }}hours * 60);
+                var {{ track.common.title | slugify | remove: '-'  }}seconds = {{ track.common.title | slugify | remove: '-' }}timestamp % 60;
+                var {{ track.common.title | slugify | remove: '-'  }}formatted = {{ track.common.title | slugify | remove: '-' }}hours.toString().padStart(2, '0') + ':' + {{ track.common.title | slugify | remove: '-' }}minutes.toString().padStart(2, '0') + ':' + {{ track.common.title | slugify | remove: '-' }}seconds.toString().padStart(2, '0');
+                var theSpan = document.getElementById("{{ track.common.title | slugify | remove: '-'  }}");
+                theSpan.innerHTML = {{ track.common.title | slugify | remove: '-' }}formatted;
+              </script>
+              {% endfor %}
+            </p>
+          </div>
       </section>
-
     </div>
   </div>
 </section>
 <!-- Tracks -->
-<section id="news" class="wrapper style1 align-center">
+<section id="albumdata" class="wrapper style1 align-center">
   <div class="gallery style1 medium lightbox onscroll-fade-in">
     {% for track in album.tracks %}
     <article>
       <a href="{{ relBase }}/{{ track.slug }}/" class="image">
-        <img src="{{ relBase }}{{ track.cover}}" alt="" />
+        <img src="{{ relBase }}{{ track.cover}}" alt="{{ track.common.title }}" />
       </a>
       <div class="caption">
         <h3>{{ track.common.title }}</h3>
@@ -105,7 +90,7 @@ layout: default
     </article>
     {% endfor %}
     <section style="margin-top:40px;">
-      
+
       {% include streamer.html %}
     </section>
   </div>
@@ -144,7 +129,7 @@ layout: default
       <!-- Author -->
       {% include streamer.html %}
       <section>
-        
+
         <!-- Content -->
         <div class="content">
           <!-- post Naviation -->
@@ -170,7 +155,7 @@ layout: default
           <!-- End Post Navigation -->
         </div>
       </section>
-      
+
     </div>
   </div>
 </section>
