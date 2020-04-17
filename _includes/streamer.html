@@ -3,7 +3,7 @@
 <div class="streamer">
   {% for shop in site.data.stores %}
   {% if shop.download == true %}
-  <a target="_blank" rel="noopener" href="{{ shop.url }}" alt="Stream from {{ shop.name }}" title="Stream from {{ shop.name }}" class="button icon brands {{ shop.icon }}">Buy on {{ shop.name }}</a>
+  <a onclick="_paq.push(['trackEvent', 'StoreLink', '{{ shop.name | remove: " "  }}']);" target="_blank" rel="noopener" href="{{ shop.url }}" alt="Stream from {{ shop.name }}" title="Stream from {{ shop.name }}" class="button icon brands {{ shop.icon }}">Buy on {{ shop.name }}</a>
   {% endif %}
   {% endfor %}
 </div>
@@ -14,7 +14,7 @@
   {% for shop in site.data.stores %}
   {% if shop.download != true %}
   
-  <a style="flex: 0 0 75px;margin:10px; font-size: 75px;" target="_blank" rel="noopener" href="{{ shop.url }}" alt="Stream from {{ shop.name }}" title="Stream from {{ shop.name }}" class="icon style2 brands {{ shop.icon }}"><span class="label">{{ shop.name }}</span></a>
+  <a onclick="_paq.push(['trackEvent', 'StoreLink', '{{ shop.name | remove: " " }}']);" style="flex: 0 0 75px;margin:10px; font-size: 75px;" target="_blank" rel="noopener" href="{{ shop.url }}" alt="Stream from {{ shop.name }}" title="Stream from {{ shop.name }}" class="icon style2 brands {{ shop.icon }}"><span class="label">{{ shop.name }}</span></a>
   {% endif %}
   {% endfor %}
 </div>
