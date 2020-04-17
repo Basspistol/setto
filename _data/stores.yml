@@ -18,10 +18,6 @@
   url: https://play.google.com/store/music/artist/%E5%BE%92_setto_%E3%82%BB%E3%83%83%E3%83%88?id=Ayi4avjpfyinbrepzebpsvpjc5a
   icon: fa-google-play
   download: false
-- name: Amazon Music
-  url: https://www.amazon.com/dp/B07LDXZYNY/ref=dm_ws_ps_adp
-  icon: fa-amazon
-  download: false
 - name: Deezer
   url: https://www.deezer.com/fr/artist/56004012
   icon: fa-creative-commons-sampling
