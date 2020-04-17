@@ -44,7 +44,7 @@ date: 2018-12-11 00:00:00
   <div class="content">
     <h1>{{ post.title }}</h1>
     <p>{{ post.description }}</p>
-    {% if page.category == 'release' %}
+    {% if post.category == 'release' %}
     {% for style in album.tracks %}
     {% for category in style.common.genre %}
     {% assign categories_array = categories_array | push: category | uniq %}
