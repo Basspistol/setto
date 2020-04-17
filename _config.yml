@@ -90,6 +90,12 @@ defaults:
           uploads_dir: "/images"
   - scope:
       path: ""
+      type: "tracks"
+    values:
+      seo:
+        type: "AudioObject"
+  - scope:
+      path: ""
       type: "posts"
     values:
       layout: "post"
