@@ -9,7 +9,7 @@ lang: en
 -->
 <html lang="{% if page.lang != site.lang %}{{ page.lang }}{% else %}{{ site.lang }}{% endif %}">
 <head>
-{% seo %}
+{% seo title=false %}
 <link type="application/atom+xml" rel="alternate" href="{{ site.url }}/feed.xml" title="{{ site.name }}" />
 {% include seo.html %}
 {% include relBase.html %}
