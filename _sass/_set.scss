@@ -432,21 +432,27 @@ div.content {
 
 
 /* Stream links */ 
-
-.streamer {
-  list-style-type:none;
-  display:flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  a {
-    flex: 1 0 150px;
-    margin:10px;
-  }
-  .button {
+.streambox {
+ 
     display: block;
-    flex: unset;
-  }
-  h3 {
-    flex: unset;
+    text-align: center;
+
+  .streamer {
+    list-style-type:none;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a {
+      flex: 1 0 150px;
+      margin:10px;
+    }
+    .button {
+      display: block;
+      flex: unset;
+    }
+    h3 {
+      flex: unset;
+    }
   }
 }

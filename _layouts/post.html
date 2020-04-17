@@ -28,6 +28,7 @@ layout: default
     </div>
   </div>
 </section>
+{% if page.category == 'release' %}
 <!-- HERE BEGINS MADNESS -->
 {% capture album_name -%}
 {{ page.album }}
@@ -131,16 +132,17 @@ layout: default
       </section>
       {% endfor %}
     </div>
-    <a class="button button big wide icon solid fa-shopping-cart" href="#">Buy now</a>
   </div>
 </section>
 {% break %} {% endif %} {% endfor %}
 <!-- HERE ENDS MADNESS -->
+{% endif %}
 {% if page.collection == 'posts' %}
 <section class="wrapper style1 align-center">
   <div class="inner">
     <div class="index align-left">
       <!-- Author -->
+      {% include streamer.html %}
       <section>
         
         <!-- Content -->
