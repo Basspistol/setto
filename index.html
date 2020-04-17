@@ -10,8 +10,9 @@ date: 2018-12-11 00:00:00
 {% include relBase.html %}
 <!-- Banner -->
 <section
-  class="banner onload-image-fade-in onload-content-fade-right style3 fullscreen content-align-center image-position-center">
-  <div class="content">
+  class="banner onload-image-fade-in onload-content-fade-right style3 fullscreen content-align-center image-position-center;" style="background-image:url('/images/nebula-bw.jpg');background-size:cover;background-repeat:no-repeat;background-position: center;">
+  <div style="z-index:0;position:absolute; top:0; left:0; width:100%;height:100%;background-color: rgba(13, 13 ,13, 0.75);"></div>
+  <div class="content" style="z-index:1">
     <h1 style="margin-top:80px">{{ page.title }}</h1>
 
     <p class="major">{{ page.description }}</p>
