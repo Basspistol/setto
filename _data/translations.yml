@@ -6,7 +6,7 @@ en:
   lastname: Last name
   email: E-mail
   message: Message
-  privacy: 'I agree with the <a href=''/cookies/''>privacy policy.</a>'
+  privacy: 'I agree with the <a href=''/cookies/#privacythingy''>privacy policy.</a>'
   newsletter: I want the newsletter!
   required: Required field
   contact-us: Get in touch
@@ -18,7 +18,7 @@ en:
   cookies: >- 
     <p>I only use cookies if you agree to it. They don't contain any identifiable information about you, but they will just let me know if you comeback! <strong>If you accept the cookies, and come back in 2 days i'll give you a freebie!</strong>
     <br />Click <a href="#" id="cookie-notice-decline">here</a> if you want this shit to go away and never bother with cookies again. 
-    <br />Read more about how basspistol <a href="/cookies/">use of cookies</a>
+    <br />Read more about how basspistol <a href="/cookies/">uses cookies</a>
     </p>
   cookie-agree: Tasty Freebie!
   back: Take me back!

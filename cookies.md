@@ -66,7 +66,7 @@ lang-ref: cookies
 <p>(if you can't see a dialogue box here, you are already opted out by your browser and/or any of it's add-ons)<br /><br /><iframe style="border: 0; height: 300px; width: 300px;" src="https://terminalnetwork.matomo.cloud/index.php?module=CoreAdminHome&amp;action=optOut&amp;language=en&amp;backgroundColor=000000&amp;fontColor=ffffff&amp;fontSize=&amp;fontFamily=sans-serif"></iframe></p>
 
 
-<h2>Personal data protection</h2>
+<h2 id="privacythingy">Personal data protection</h2>
 <p>{{ site.publisher.name }} is committed to user privacy.</p>
 <p>The policy on protection of individuals with regard to the processing of personal data by {{ site.publisher.name }} is based on <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018R1725">Regulation (EU) 2018/1725</a> of the European Parliament and Council of 23 October 2018 on the protection of natural persons with regard to the processing of personal data by {{ site.publisher.name }} and on the free movement of such data, and repealing Regulation (EC) No 45/2001 and Decision No 1247/2002/EC.</p>
 <p>This general policy covers the {{ site.publisher.name }}'s family of websites, within the {{ site.publisher.domain }} domain. Although you can browse through most of these websites without giving any personal information, in some cases information is required in order to provide the e-services you request. Websites that require such information treat it in full compliance with the regulation mentioned above and provide information about the use of your data in their specific privacy policy statements.</p>
