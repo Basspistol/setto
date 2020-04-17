@@ -91,7 +91,7 @@ layout: default
   </div>
 </section>
 <!-- Audio player-->
-<audio autoplay preload="true">
+<audio autoplay preload="true" data-matomo-title="{{ page.common.title }}">
   <source src="{{ relBase }}{{ page.audio }}" type="audio/mpeg" ontimeupdate='updateTrackTime(this);' />
   <h1>Your browser isn't ready for so much hotness. Use the download-link instead.</h1>.
 </audio>
