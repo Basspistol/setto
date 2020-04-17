@@ -47,15 +47,15 @@ date: 2018-12-11 00:00:00
     {% if post.category == 'release' %}
 
     <p>{{ album.date | date: '%Y' }}</p>
-    <p>Track list:</p>
+    
     {% for track in album.tracks %}
-    <p>
+    <p style="margin-bottom: 30px;">
       {{ track.common.track.no }}. <strong>{{ track.common.title }}</strong>
       <br /><span id="{{ track.common.title | slugify | remove: '-'  }}"
         style="font-family: monospace;font-size: 14px"></span>
       <span style="font-family: monospace;font-size: 14px">{{ track.common.genre }} </span>
     </p>
-    <hr style="margin: 20px 0" />
+   
 
     <script type="text/javascript">
       var {{ track.common.title | slugify | remove: '-'  }}timestamp = {{ track.format.duration | round }};
