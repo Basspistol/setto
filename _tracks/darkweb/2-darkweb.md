@@ -92,14 +92,14 @@ all:
   TYER: '2019'
 nextTrack:
   path: >-
-    /home/set/git/basspistol/setto/assets/albums/darkweb/2-darkweb-instrumental-.mp3
-  audio: /assets/albums/darkweb/2-darkweb-instrumental-.mp3
-  slug: darkweb/2-darkweb-instrumental-
+    /home/set/git/basspistol/setto/assets/albums/darkweb/3-swipe-instrumental-.mp3
+  audio: /assets/albums/darkweb/3-swipe-instrumental-.mp3
+  slug: darkweb/3-swipe-instrumental-
   albumSlug: darkweb
-  trackSlug: 2-darkweb-instrumental-
+  trackSlug: 3-swipe-instrumental-
   coverPath: >-
-    /home/set/git/basspistol/setto/assets/albums/darkweb/2-darkweb-instrumental-.jpeg
-  cover: /assets/albums/darkweb/2-darkweb-instrumental-.jpeg
+    /home/set/git/basspistol/setto/assets/albums/darkweb/3-swipe-instrumental-.jpeg
+  cover: /assets/albums/darkweb/3-swipe-instrumental-.jpeg
   format:
     tagTypes:
       - ID3v2.3
@@ -111,75 +111,70 @@ nextTrack:
     numberOfChannels: 2
     bitrate: 128000
     codecProfile: CBR
-    numberOfSamples: 12526848
-    duration: 284.05551020408166
+    numberOfSamples: 12436992
+    duration: 282.0179591836735
   native:
     ID3v2.3:
       - id: TIT2
-        value: Darkweb (Instrumental)
+        value: Swipe (Instrumental)
       - id: TPE1
         value: 徒 Setto セット
-      - id: COMM
-        value: &ref_0
-          language: XXX
-          description: ''
-          text: ''
-      - id: TALB
-        value: Darkweb
-      - id: TPE2
-        value: 徒 Setto セット
-      - id: TCON
-        value: Cypher Rap
-      - id: TRCK
-        value: '2'
       - id: COMM
         value:
           language: XXX
           description: Comment
-          text: Cover art and music by To&nbsp;Setto&nbsp;Setto
+          text: >-
+            Cover art by Mattias Ritarn Lindström, Music by
+            To&nbsp;Setto&nbsp;Setto
+      - id: TALB
+        value: Darkweb
+      - id: TRCK
+        value: '3'
+      - id: TPE2
+        value: 徒 Setto セット
+      - id: TCON
+        value: Cyber Soul
       - id: TYER
         value: '2019'
   quality:
-    warnings: []
+    warnings:
+      - message: Illegal ID3v2 tag length
   common:
     track:
-      'no': 2
+      'no': 3
       of: null
     disk:
       'no': null
       of: null
-    title: Darkweb (Instrumental)
+    title: Swipe (Instrumental)
     artists:
       - 徒 Setto セット
     artist: 徒 Setto セット
     comment:
-      - ''
-      - Cover art and music by To&nbsp;Setto&nbsp;Setto
+      - 'Cover art by Mattias Ritarn Lindström, Music by To&nbsp;Setto&nbsp;Setto'
     album: Darkweb
     albumartist: 徒 Setto セット
     genre:
-      - Cypher Rap
+      - Cyber Soul
     year: 2019
   transformed:
     ID3v2.3:
-      TIT2: Darkweb (Instrumental)
+      TIT2: Swipe (Instrumental)
       TPE1: 徒 Setto セット
-      COMM: *ref_0
+      Comment: 'Cover art by Mattias Ritarn Lindström, Music by To&nbsp;Setto&nbsp;Setto'
       TALB: Darkweb
+      TRCK: '3'
       TPE2: 徒 Setto セット
-      TCON: Cypher Rap
-      TRCK: '2'
-      Comment: Cover art and music by To&nbsp;Setto&nbsp;Setto
+      TCON: Cyber Soul
       TYER: '2019'
   all:
-    TIT2: Darkweb (Instrumental)
+    TIT2: Swipe (Instrumental)
     TPE1: 徒 Setto セット
-    COMM: *ref_0
+    Comment: 'Cover art by Mattias Ritarn Lindström, Music by To&nbsp;Setto&nbsp;Setto'
     TALB: Darkweb
+    TRCK: '3'
     TPE2: 徒 Setto セット
-    TCON: Cypher Rap
-    TRCK: '2'
-    Comment: Cover art and music by To&nbsp;Setto&nbsp;Setto
+    TCON: Cyber Soul
     TYER: '2019'
 previousTrack:
   path: /home/set/git/basspistol/setto/assets/albums/darkweb/1-swipe.mp3
