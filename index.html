@@ -30,7 +30,7 @@ date: 2018-12-11 00:00:00
 
 
 <!-- Albums -->
-{% for post in site.posts reversed %}
+{% for post in site.posts %}
 {% capture album_name -%}
 {{ post.album }}
 {%- endcapture %}
@@ -42,8 +42,9 @@ date: 2018-12-11 00:00:00
 <section id="albums" class="section-shadow banner style1 orient-{% cycle 'left', 'right' %} content-align-{% cycle 'right', 'left' %} image-position-center fullscreen onload-image-fade-in onload-content-fade-right">
 
   <div class="content">
-    <h1>{{ album.title }}</h1>
+    <h1>{{ post.title }}</h1>
     <p>{{ post.description }}</p>
+    {% if page.category == 'release' %}
     {% for style in album.tracks %}
     {% for category in style.common.genre %}
     {% assign categories_array = categories_array | push: category | uniq %}
@@ -67,14 +68,15 @@ date: 2018-12-11 00:00:00
         theSpan.innerHTML = {{ track.common.title | slugify | remove: '-'  }}formatted;
       </script>
       {% endfor %}
+      {% endif %}
     </p>
     <ul class="actions stacked">
-      <li><a href="{{ relBase }}{{ post.url }}" class="button big wide icon solid fa-volume-up">Listen</a></li>
+      <li><a href="{{ relBase }}{{ post.url }}" class="button big wide {% if post.category == 'release' %}icon solid fa-volume-up{% endif %}">Cheggid out</a></li>
     </ul>
   </div>
 
   <div class="image">
-    <img src="{{ relBase }}{{ album.cover }}" alt="{{ album.title }}" title="Nordforce Ecosystem" />
+    <img src="{{ relBase }}{{ album.cover }}" alt="{{ post.title }}" title="{{ post.title }}" />
 
   </div>
 </section>
@@ -84,7 +86,7 @@ date: 2018-12-11 00:00:00
 <!-- Tracks -->
 <section id="clients" class="wrapper style1 align-center">
 
-
+<h2 style="margin-top:40px;">Tracks</h2>
   <!-- Gallery -->
   <div class="gallery style1 medium lightbox onscroll-fade-in">
     {% for track in site.tracks %}
