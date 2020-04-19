@@ -27,8 +27,10 @@ layout: default
         {% include author.html %}
         <!-- Content -->
         <div class="content">
+          <div style="font-family: monospace;font-size: 16px;">
           {{ content }}
           <p>{{ page.credits }}</p>
+          </div>
           {% if page.category == 'release' %}
           <!-- HERE BEGINS MADNESS -->
           {% for album in site.albums %}
