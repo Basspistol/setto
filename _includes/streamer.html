@@ -1,6 +1,6 @@
 {% if page.collection == 'tracks' %}
 <section class="streambox" style="margin-top:40px;">
-<h3 style="text-align: center;display: block;">Buy</h3>
+<h3 style="text-align: center;display: block;">Buy 徒 Setto セット Music</h3>
 <div class="streamer">
   {% for shop in site.data.stores %}
   {% if shop.download == true %}
@@ -23,7 +23,7 @@
 {% else %}
 {% if page.stores[0].name != nil %}
 <section class="streambox" style="margin-top:40px;">
-  <h3 style="text-align: center;display: block;">Buy</h3>
+  <h3 style="text-align: center;display: block;">Buy this record</h3>
   <div class="streamer">
     {% for shop in page.stores %}
     {% if shop.download == true %}
