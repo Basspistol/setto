@@ -10,6 +10,6 @@ album:
 stores:
   - name:
     url: 
-    icon: fa-creative-commons-sampling
+    icon: 
     download: false
 ---
