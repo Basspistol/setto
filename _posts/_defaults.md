@@ -2,14 +2,14 @@
 title: 
 date: 
 description: 
-vid: 
 image: 
 category: 
 layout:
 credits: ''
 album:
 stores:
-- name:
-  url: 
-  img: 
+  - name:
+    url: 
+    icon: fa-creative-commons-sampling
+    download: false
 ---
