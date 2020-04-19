@@ -4,7 +4,6 @@ date: 2018-12-17 19:00:00
 description: >-
   The 2 tracks of laid back cloud rap are tales of daily digital life-struggles.
   When day-to-day communication blurs the line between the virtual and real.
-vid: satoshi
 image: /assets/img/satoshimonami.jpg
 category: release
 credits: ''
@@ -12,31 +11,31 @@ album: satoshi-mon-ami
 stores:
   - name: Bandcamp
     url: 'https://shop.basspistol.com/album/satoshi-mon-ami'
-    img:
+    icon: fa-bandcamp
+    download: true
   - name: Spotify
     url: 'https://open.spotify.com/album/116YJCcI5T9Iw9UBQCvJWF'
-    img:
+    icon: fa-spotify
+    download: false
   - name: Apple Music
     url: >-
       https://itunes.apple.com/us/album/satoshi-mon-ami-single/1447055511?uo=4&app=music&at=1001lry3&ct=dashboard
     img:
-  - name: iTunes
-    url: >-
-      https://itunes.apple.com/us/album/satoshi-mon-ami-single/1447055511?uo=4&app=music&at=1001lry3&ct=dashboard&app=itunes&at=1001lry3&ct=dashboard
-    img:
+    icon: fa-apple
+    download: false
   - name: Google Play
     url: >-
       https://play.google.com/store/music/album/%E5%BE%92_setto_%E3%82%BB%E3%83%83%E3%83%88_Satoshi_mon_ami?id=Bygwvidl75kflmclmchl6wc5uba
-    img:
-  - name: Amazon Music
-    url: 'http://www.amazon.com/gp/product/B07LDY341X/?tag=distrokid06-20'
-    img:
+    icon: fa-google-play
+    download: false
   - name: Deezer
     url: 'https://www.deezer.com/album/82118382'
-    img:
+    icon: fa-creative-commons-sampling
+    download: false
   - name: Napster
     url: 'https://us.napster.com/artist/-setto-/album/satoshi-mon-ami'
-    img:
+    icon: fa-napster
+    download: false
 ---
 
 The 2 tracks of laid back cloud rap are tales of daily digital life-struggles. When day-to-day communication blurs the line between the virtual and real.

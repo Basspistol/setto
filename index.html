@@ -90,9 +90,11 @@ date: 2018-12-11 00:00:00
   <h2 style="margin-top:40px;">Tracks</h2>
   <!-- Gallery -->
   <div class="gallery style1 medium lightbox onscroll-fade-in">
-    {% for track in site.tracks %}
+
+    {% for album in site.data.albums %}
+    {% for track in album.tracks %}
     <article>
-      <a href="{{ relBase }}{{ track.url }}" class="image">
+      <a href="{{ relBase }}/{{ track.slug }}" class="image">
         <img src="{{ relBase }}{{ track.cover }}" alt="{{ track.name }} " />
       </a>
       <div class="caption">
@@ -106,6 +108,7 @@ date: 2018-12-11 00:00:00
         </ul>
       </div>
     </article>
+    {% endfor %}
     {% endfor %}
   </div>
   <!-- End Gallery -->
