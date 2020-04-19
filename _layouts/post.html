@@ -40,9 +40,9 @@ layout: default
 
             {% for track in album.tracks %}
             <p style="margin-bottom: 30px;">
-              {{ track.common.track.no }}. <strong>{{ track.common.title }}</strong>
+              <a href="{{ relBase }}/{{ track.slug }}" class="icon style2 solid player fa-play"></a> <a href="{{ relBase }}/{{ track.slug }}" style="text-decoration: none;"><strong>{{ track.common.track.no }}. {{ track.common.title }}</strong> </a>
               <br /><span id="{{ track.common.title | slugify | remove: '-'  }}"
-                style="font-family: monospace;font-size: 14px"></span>
+                style="font-family: monospace;font-size: 14px"></span> | 
               <span style="font-family: monospace;font-size: 14px">{{ track.common.genre }} </span>
             </p>
             
