@@ -20,12 +20,13 @@ function scrollMenu() {
 }
 
 // Make a pretty background when menu is open
-var bodyBluring = document.getElementById("wrapper")
+// var bodyBluring = document.getElementById("wrapper")
 
-function blurBody() {
-  bodyBluring.classList.toggle("blurredout");
-}
-function removeBlur() {
-  bodyBluring.classList.remove("blurredout")
-}
+// function blurBody() {
+//   bodyBluring.classList.toggle("blurredout");
+// }
+// function removeBlur() {
+//   bodyBluring.classList.remove("blurredout")
+// }
 
+/// request permission to autoplay
