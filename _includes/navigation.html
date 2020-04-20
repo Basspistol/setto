@@ -1,10 +1,10 @@
 <!-- Navigation -->
 {% if page.url == '/' %}
-<a id="logo" class="logo smooth-scroll-middle" href="#top">&nbsp;</a>
+<a id="logo" alt="Back to top" title="Back to top" class="logo smooth-scroll-middle" href="#top">&nbsp;</a>
 {% elsif page.collection == 'tracks' %}
-<a id="logo" class="logo smooth-scroll-middle" href="../">&nbsp;</a>
+<a id="logo" alt="Back to Album" title="Back to Album" class="logo smooth-scroll-middle" href="../">&nbsp;</a>
 {% else %}
-<a id="logo" class="logo" href="/" onclick="blurBody()">&nbsp;</a>
+<a id="logo" alt="Back to home page" title="Back to home page" class="logo" href="/">&nbsp;</a>
 
 
 {% endif %}

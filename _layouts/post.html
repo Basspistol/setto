@@ -42,7 +42,7 @@ layout: default
 
             {% for track in album.tracks %}
             <p style="margin-bottom: 30px;">
-              <a href="{{ relBase }}/{{ track.slug }}" class="icon style2 solid player fa-play"></a> <a href="{{ relBase }}/{{ track.slug }}" style="text-decoration: none;"><strong>{{ track.common.track.no }}. {{ track.common.title }}</strong> </a>
+              <a href="{{ relBase }}/{{ track.slug }}" title="Play {{ track.common.title }}" alt="Play {{ track.common.title }}" class="icon style2 solid player fa-play"></a> <a href="{{ relBase }}/{{ track.slug }}" title="Play {{ track.common.title }}" alt="Play {{ track.common.title }}" style="text-decoration: none;"><strong>{{ track.common.track.no }}. {{ track.common.title }}</strong> </a>
               <br /><span id="{{ track.common.title | slugify | remove: '-'  }}"
                 style="font-family: monospace;font-size: 14px"></span> | 
               <span style="font-family: monospace;font-size: 14px">{{ track.common.genre }} </span>
@@ -66,7 +66,7 @@ layout: default
 </section>
 <!-- Tracks -->
 <section id="albumdata" class="wrapper style1 align-center">
-  <div class="gallery style1 medium lightbox onscroll-fade-in">
+  <div class="gallery style1 medium onscroll-fade-in">
     {% for track in album.tracks %}
     <article>
       <a href="{{ relBase }}/{{ track.slug }}/" class="image">
@@ -111,14 +111,14 @@ layout: default
           <div class="post-nav">
             <div>
               {% if page.previous.url and page.lang == page.previous.lang %}
-              <h4><a href="{{page.previous.url}}"><i class="fas fa-arrow-left"></i></a> <a
+              <h4><a href="{{page.previous.url}}" alt="Read {{page.previous.title}}" title="Read {{page.previous.title}}"><i class="fas fa-arrow-left"></i></a> <a
                   href="{{page.previous.url}}">&nbsp;{{page.previous.title}}</a></h4>
               <p style="margin-right: 20px">{{ page.previous.description }}</p>
               {% endif %}
             </div>
             <div class="post-nav-next">
               {% if page.next.url and page.lang == page.next.lang  %}
-              <h4><a href="{{page.next.url}}">&nbsp;{{page.next.title}}</a> <a href="{{page.next.url}}"><i
+              <h4><a href="{{page.next.url}}">&nbsp;{{page.next.title}}</a> <a href="{{page.next.url}}" alt="Read {{page.next.title}}" title="Read {{page.next.title}}"><i
                     class="fas fa-arrow-right"></i></a></h4>
               <p style="margin-left: 20px">{{ page.next.description }}</p>
               {% endif %}
