@@ -20,7 +20,7 @@ date: 2018-12-11 00:00:00
 
     <p class="major">{{ page.description }}</p>
     <ul class="actions stacked">
-      <li><a href="#albums" class="button large wide smooth-scroll-middle">Gimme sommo!</a></li>
+      <li><a href="#album0" class="button large wide smooth-scroll-middle">Gimme sommo!</a></li>
     </ul>
   </div>
 
@@ -29,7 +29,7 @@ date: 2018-12-11 00:00:00
   </div>
 </section>
 <!-- Albums -->
-<span id="albums" style="display: none;"></span>
+
 {% for post in site.posts %}
 {% capture album_name -%}
 {{ post.album }}
@@ -39,7 +39,7 @@ date: 2018-12-11 00:00:00
 {{ album.relative_path | replace_first: album.collection, '' | replace_first: '_/', '' | replace_first: '.md', '' }}
 {%- endcapture %}
 {% if name == album_name %}
-<section 
+<section id="album{% increment var %}"
   class="section-shadow banner style1 orient-{% cycle 'left', 'right' %} content-align-{% cycle 'right', 'left' %} image-position-center fullscreen onload-image-fade-in onload-content-fade-right">
 
   <div class="content">
