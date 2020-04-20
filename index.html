@@ -29,6 +29,7 @@ date: 2018-12-11 00:00:00
   </div>
 </section>
 <!-- Albums -->
+<span id="albums" style="display: none;"></span>
 {% for post in site.posts %}
 {% capture album_name -%}
 {{ post.album }}
@@ -38,7 +39,7 @@ date: 2018-12-11 00:00:00
 {{ album.relative_path | replace_first: album.collection, '' | replace_first: '_/', '' | replace_first: '.md', '' }}
 {%- endcapture %}
 {% if name == album_name %}
-<section id="albums"
+<section 
   class="section-shadow banner style1 orient-{% cycle 'left', 'right' %} content-align-{% cycle 'right', 'left' %} image-position-center fullscreen onload-image-fade-in onload-content-fade-right">
 
   <div class="content">
@@ -95,8 +96,8 @@ date: 2018-12-11 00:00:00
     {% for album in site.data.albums %}
     {% for track in album.tracks %}
     <article>
-      <a href="{{ relBase }}/{{ track.slug }}" class="image">
-        <img src="{{ relBase }}{{ track.cover }}" alt="{{ track.name }} " />
+      <a href="{{ relBase }}/{{ track.slug }}" alt="link to {{ track.common.title }}" class="image">
+        <img src="{{ relBase }}{{ track.cover }}" alt="{{ track.common.title }} cover-art" />
       </a>
       <div class="caption">
         <h3>{{ track.common.title }}</h3>
