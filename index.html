@@ -51,7 +51,7 @@ date: 2018-12-11 00:00:00
     
     {% for track in album.tracks %}
     <p style="margin-bottom: 30px;">
-      <a href="{{ relBase }}/{{ track.slug }}" class="icon style2 solid player fa-play"></a> <a href="{{ relBase }}/{{ track.slug }}" style="text-decoration: none;"><strong>{{ track.common.track.no }}. {{ track.common.title }}</strong> </a>
+      <a href="{{ relBase }}/{{ track.slug }}" alt="link to play {{ track.common.title }} by {{ site.title }}" class="icon style2 solid player fa-play"></a> <a href="{{ relBase }}/{{ track.slug }}" style="text-decoration: none;"><strong>{{ track.common.track.no }}. {{ track.common.title }}</strong> </a>
       <br /><span id="{{ track.common.title | slugify | remove: '-'  }}"
         style="font-family: monospace;font-size: 14px"></span> | 
       <span style="font-family: monospace;font-size: 14px">{{ track.common.genre }} </span>
@@ -91,7 +91,7 @@ date: 2018-12-11 00:00:00
   <h2>Tracks</h2>
   </div>
   <!-- Gallery -->
-  <div class="gallery style1 medium lightbox onscroll-fade-in">
+  <div class="gallery style1 medium onscroll-fade-in">
 
     {% for album in site.data.albums %}
     {% for track in album.tracks %}
