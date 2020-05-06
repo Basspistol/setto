@@ -113,15 +113,18 @@ layout: default
     mu.currentTime = 0;
     loadUrl("{{ relBase }}/{{ page.nextTrack.slug }}/"); return false;
   });
+  mu.onplaying = function() {
+    pauseButton.innerHTML = "Pause";
+    pauseButton.classList.remove("fa-play");
+    pauseButton.classList.add("fa-pause");
+    spincover.classList.add("spinnit");
+    spincover.classList.remove("paused");
+  }; 
 
   pauseButton.addEventListener("click", function () {
     if (mu.paused) {
       mu.play();
-      pauseButton.innerHTML = "Pause";
-      pauseButton.classList.remove("fa-play");
-      pauseButton.classList.add("fa-pause");
-      spincover.classList.add("spinnit");
-      spincover.classList.remove("paused");
+
     }
     else {
       mu.pause();
