@@ -2,7 +2,7 @@
 - name: Twitter
   url: https://twitter.com/ToSettoSetto
   icon: fa-twitter
-  share_link: 'https://twitter.com/share?url={{ site.url }}{{ page.url | xml_escape }}&text={{ page.description | xml_escape }}%20via%20&#64;NordForceTech&hashtags=NordForceTech'
+  share_link: 'https://twitter.com/share?url={{ site.url }}{{ page.url | xml_escape }}&text={{ page.description | xml_escape }}%20via%20&#64;ToSettoSetto&hashtags=cybersoul'
   we_have_account: true
 - name: Instagram
   url: https://www.instagram.com/tosettosetto/
@@ -12,7 +12,7 @@
 - name: Telegram
   url: https://t.me/basspistolQC
   icon: fa-telegram
-  share_link: 'https://telegram.me/share/url?url={{ site.url }}{{ page.url }}&text={{ page.description }}%20via%20&#64;NordForce'
+  share_link: 'https://telegram.me/share/url?url={{ site.url }}{{ page.url }}&text={{ page.description }}%20via%20&#64;basspistol'
   we_have_account: true
 - name: Reddit
   url: https://www.reddit.com/r/basspistol

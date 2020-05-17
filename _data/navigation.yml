@@ -1,9 +1,0 @@
-- name: Nyheter
-  url: /nyheter/
-  external_site: false
-- name: Om Oss
-  url: /om-oss/
-  external_site: false
-- name: Team
-  url: https://career.nordforce.se/
-  external_site: true
