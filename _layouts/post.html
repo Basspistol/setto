@@ -19,7 +19,7 @@ lang: en
 <link rel="apple-touch-icon" href="{{ site.url }}/apple-touch-icon.png">
 <link rel="icon" type="image/png" href="{{ site.url }}/touch-icon.png" sizes="192x192">
 <link rel="shortcut icon" href="{{ site.url }}{{ site.icon }}" type="image/png" />
-<noscript><link rel="stylesheet" href="{{ relBase }}/assets/css/noscript.css" /></noscript>
+<noscript><link rel="stylesheet" href="{{ relBase }}/assets/css/noscript20200517.css" /></noscript>
 </head>
 <body class="is-preload" id="body">
 <span id="top" style="display: none;"></span>
@@ -80,7 +80,7 @@ lang: en
                   <li class=""> 
                     <div class="plItem">
                       <div class="plNum">{{ track.common.track.no }}.</div>
-                      <div class="plTitle">{{ track.common.title }} <a class="noJSalbum" href="{{ relBase }}/assets/albums/{{ track.albumSlug }}/{{ track.trackSlug }}.mp3">Listen without JavaScript</a></div>
+                      <div class="plTitle">{{ track.common.title }}</div>
                       <div class="plLength">{% assign round_seconds = track.format.duration | round %}{% assign minutes = round_seconds | divided_by: 60 %}{% assign leftover_seconds = minutes | times: 60 %}{{ minutes }}:{{ round_seconds | minus: leftover_seconds }}</div>
                     </div>
                   </li>
