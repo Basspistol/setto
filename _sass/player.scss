@@ -73,10 +73,12 @@ audio {
   padding: 21px 0;
   border: 1px solid _palette(accent-dark);
   border-top: 0;
+  transition: all 400ms ease-in-out;
 }
 
 #plList li:hover {
   background-color: _palette(border-alt);
+  transition: all 400ms ease-in-out;
 }
 
 .plItem {
@@ -110,6 +112,7 @@ audio {
   background-color: _palette(border-alt)!important;
   cursor: default!important;
   border-radius: 5px;
+
 }
 
 a[id^="btn"] {
