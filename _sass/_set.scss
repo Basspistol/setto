@@ -101,6 +101,18 @@
   -moz-transition: all 400ms ease-in;
   transition: all 400ms ease-in;
   box-shadow: 0 0 10px 1px _palette(border-alt);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  -o-filter: blur(5px);
+  filter: blur(5px);
+ }
+ .sticky:hover {
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -ms-filter: blur(0px);
+  -o-filter: blur(0px);
+  filter: blur(0px);
  }
  @media only screen and (min-width: 769px) {
   .logo {
