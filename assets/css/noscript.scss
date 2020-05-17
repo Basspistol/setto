@@ -8,6 +8,7 @@
 @import 'libs/html-grid';
 @import 'libs/fonts';
 
+
 /*
 	Story by HTML5 UP
 	html5up.net | @ajlkn
@@ -211,7 +212,8 @@
   
 // Set's customizations
 
-@import 'set.scss';
+@import 'set';
+@import 'player';
 
 .logo {
   position: fixed;
@@ -245,4 +247,12 @@
     transition: all 400ms ease-in;
     box-shadow: 0 0 10px 1px _palette(border-alt);
    }
+}
+
+// Player link
+#mainwrap {
+  display: none;
+}
+#noJSalbum {
+  display: unset;
 }

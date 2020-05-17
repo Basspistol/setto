@@ -10,14 +10,18 @@ audio {
 
 #mainwrap {
   border-radius: 5px;
+  width: 100%;
   ul {
     list-style: none;
     padding: 0;
+    li:last-child {
+      border-radius: 0 0 5px 5px;
+    }
   }
 }
 
 #audiowrap {
-  background-color: #231F20;
+  background-color: _palette(accent-dark);
   margin: 0 auto 0 auto;
 }
 
@@ -30,7 +34,7 @@ audio {
   position: relative;
   text-align: center;
   text-decoration: none;
-  top: 13px;
+
 }
 
 
@@ -39,9 +43,9 @@ audio {
   width: 100%;
   height: 60px;
   flex-wrap: unset;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-color: _palette(accent-dark);
   border-radius: 5px 5px 0 0;
 }
 
@@ -63,14 +67,16 @@ audio {
 }
 
 #plList li {
-  background-color: #231F20;
+  background-color: _palette(border-darken);
   cursor: pointer;
   margin: 0;
   padding: 21px 0;
+  border: 1px solid _palette(accent-dark);
+  border-top: 0;
 }
 
 #plList li:hover {
-  background-color: #262223;
+  background-color: _palette(border-alt);
 }
 
 .plItem {
@@ -101,30 +107,26 @@ audio {
 }
 
 .plSel, .plSel:hover {
-  background-color: #262223!important;
+  background-color: _palette(border-alt)!important;
   cursor: default!important;
+  border-radius: 5px;
 }
 
 a[id^="btn"] {
-  background-color: #231F20;
-  color: rgb(255, 255, 255);
+  background-color: _palette(border-darken);
+  color: _palette(fg);
   cursor: pointer;
-  font-size: 50px;
   margin: 0;
-  padding: 0 27px 0 11px;
+  padding: 0 27px 0 21px;
   text-decoration: none;
 }
 
-a[id^="btn"]:last-child {
-  margin-left: -4px;
-}
-
-a[id^="btn"]:hover, a[id^="btn"]:active {
-  background-color: #262223;
-}
 
 a[id^="btn"]::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
+#noJSalbum {
+  display: none;
+}
