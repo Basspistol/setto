@@ -273,6 +273,7 @@ lang: en
           npTitle.text(tracks[id].name);
           index = id;
           audio.src = mediaPath + tracks[id].file + extension;
+          $('audio').attr("data-matomo-title", tracks[id].name);
         },
         playTrack = function (id) {
           loadTrack(id);
