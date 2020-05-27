@@ -10,7 +10,7 @@
   share_link: 
   we_have_account: true
 - name: Telegram
-  url: https://t.me/basspistolQC
+  url: https://t.me/basspistol
   icon: fa-telegram
   share_link: 'https://telegram.me/share/url?url={{ site.url }}{{ page.url }}&text={{ page.description }}%20via%20&#64;basspistol'
   we_have_account: true
