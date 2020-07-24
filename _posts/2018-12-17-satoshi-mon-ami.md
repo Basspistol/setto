@@ -5,9 +5,10 @@ description: >-
   The 2 tracks of laid back cloud rap are tales of daily digital life-struggles.
   When day-to-day communication blurs the line between the virtual and real.
 image: /assets/img/satoshimonami.jpg
-category: release
+category: releases
 credits: ''
 album: satoshi-mon-ami
+check_this_if_cannot_be_bought: false
 stores:
   - name: Bandcamp
     url: 'https://shop.basspistol.com/album/satoshi-mon-ami'

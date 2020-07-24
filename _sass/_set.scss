@@ -65,19 +65,37 @@
   animation-play-state: paused;
 }
 
-/* Navigation */
 
+/* NAVIGATION */
+/* Style the navbar */
+#navbar {
+  z-index: 100000;
+}
+#logo {
+  padding:10px;
+  z-index: 10000;
+  -webkit-transition: filter 400ms ease-in;
+  -moz-transition: filter 400ms ease-in;
+  transition: filter 400ms ease-in;
+
+}
+.logo:hover {
+  filter: blur(0px);
+  -webkit-transition: filter 400ms ease-in;
+  -moz-transition: filter 400ms ease-in;
+  transition: filter 400ms ease-in;
+
+}
 .logo {
-  z-index: 10;
+  filter: blur(20px);
   text-decoration: none;
-  position: absolute;
+  position: fixed;
   top:20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80%;
-  height: 15%;
+  width: 300px;
+  height: 95px;
   background-color: transparent;
-  background-image: url('/assets/setto-logo.svg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 95% 95%;
@@ -86,85 +104,32 @@
   transition: all 400ms ease-in;
   box-shadow: none;
   border-radius: 20px;
-  -webkit-filter: blur(15px);
-  -moz-filter: blur(15px);
-  -ms-filter: blur(15px);
-  -o-filter: blur(15px);
-  filter: blur(15px);
-}
-.logo:hover {
-  -webkit-filter: blur(0px);
-  -moz-filter: blur(0px);
-  -ms-filter: blur(0px);
-  -o-filter: blur(0px);
-  filter: blur(0px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
 }
 .sticky {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 50%;
-  height: 10%;
-  background-color: _palette(bg);
+  filter: blur(0px);
+  -webkit-transition: filter 400ms ease-in;
+  -moz-transition: filter 400ms ease-in;
+  transition: filter 400ms ease-in;
+
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 95% 95%;
   -webkit-transition: all 400ms ease-in;
   -moz-transition: all 400ms ease-in;
   transition: all 400ms ease-in;
-  box-shadow: 0 0 10px 1px _palette(border-alt);
-  -webkit-filter: blur(0px);
-  -moz-filter: blur(0px);
-  -ms-filter: blur(0px);
-  -o-filter: blur(0px);
-  filter: blur(0px);
+
  }
- .sticky:hover {
-  -webkit-filter: blur(0px);
-  -moz-filter: blur(0px);
-  -ms-filter: blur(0px);
-  -o-filter: blur(0px);
-  filter: blur(0px);
- }
- @media only screen and (min-width: 769px) {
-  .logo {
-    position: absolute;
-    top:20px;
-    right: 20px;
-    width: 25%;
-    height: 15%;
-    background-color: transparent;
-    background-image: url('/assets/setto-logo.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 95% 95%;
-    -webkit-transition: all 400ms ease-in;
-    -moz-transition: all 400ms ease-in;
-    transition: all 400ms ease-in;
-    box-shadow: none;
-    border-radius: 20px;
-  }
-  .sticky {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 20%;
-    height: 10%;
-    background-color: _palette(bg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 95% 95%;
-    -webkit-transition: all 400ms ease-in;
-    -moz-transition: all 400ms ease-in;
-    transition: all 400ms ease-in;
-    box-shadow: 0 0 10px 1px _palette(border-alt);
-   }
-}
+ 
 
 nav {
   position: absolute;
   width: 300px;
-  height: 450px;
+
   max-height: 90vh;
   max-width: 90vw;
   top: 50%;
@@ -175,6 +140,8 @@ nav {
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
+
+
   ul {
     margin: auto;
 
@@ -185,11 +152,12 @@ nav {
     list-style-type: none;
     margin: 10px;
     width: 80%;
+    padding: 0;
     a {
       width: 100%;
       display: block;
       margin: auto !important;
-
+      font-size: 14px
     }
   }
  }
@@ -207,17 +175,19 @@ nav {
  }
 .modalDialog {
   position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: _palette(border-dark);
+  background: _palette(fg-light);
   z-index: 11;
   opacity:0;
   -webkit-transition: opacity 400ms ease-in;
   -moz-transition: opacity 400ms ease-in;
   transition: opacity 400ms ease-in;
   pointer-events: none;
+  
 }
 
 .modalDialog:target {
@@ -243,8 +213,8 @@ nav {
 
 
 .close-button {
-  background: _palette(fg);
-  color: _palette(bg);
+  background-color: #FFFFFF;
+  color: _palette(accent-dark);
   line-height: 48px;
   position: absolute;
   right: -12px;
@@ -254,8 +224,8 @@ nav {
   height: 48px;
   text-decoration: none;
   font-weight: bold;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
+  -webkit-border-radius: 48px;
+  -moz-border-radius: 48px;
   border-radius: 48px;
   -moz-box-shadow: 1px 1px 3px #000;
   -webkit-box-shadow: 1px 1px 3px #000;
@@ -264,8 +234,8 @@ nav {
 }
 
 .close-button:hover { 
-  background: _palette(accent); 
-  color: _palette(fg);
+  background-color: _palette(accent); 
+  color: #FFFFFF;
 }
 
 #closearea {
@@ -274,8 +244,6 @@ nav {
   height: 100%;
 
 }
-
-
 
 //* POSTS *//
 
@@ -286,7 +254,7 @@ nav {
 
 #footer {
 
-  background-color: _palette(bg-transparent);
+  background-color: _palette(fg);
   color: _palette(bg);
   box-shadow: inset 0 10px 10px 0 rgba(0, 45, 107, 0.25) !important;
 
@@ -337,6 +305,9 @@ nav {
 #author {
   .bio {
     padding-right: 20px;
+    p {
+      color: _palette(fg);
+    }
   }
 
 }
@@ -346,6 +317,7 @@ div.content {
   img {
     width: 100%;
     height: auto;
+    max-width: 500px;
   }
 }
 
@@ -390,7 +362,7 @@ div.content {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #333;
+  background-color: _palette(accent-dark);
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-content: center;
@@ -506,3 +478,4 @@ div.content {
     }
   }
 }
+

@@ -1,0 +1,49 @@
+---
+title: Web-Log
+subtitle: What's on my minf
+description: 'Ramblings, announcenments and thoughts.'
+tags:
+  - music
+  - news
+  - blog
+  - interviews
+  - links
+  - promotion
+image: /assets/img/texture.png
+---
+
+{% include relBase.html %}
+<!-- Banner -->
+<section class="banner onload-image-fade-in onload-content-fade-right style2 fullscreen content-align-center image-position-center">
+
+  <div class="image">
+    <img src="{{ relBase }}{{ page.image }}" alt="{{ page.title | smartify }}" class="editable" />
+  </div>
+</section>
+<!-- NEWS -->
+<section id="news" class="wrapper style1 align-center">
+  <div class="inner" style="padding-top: 40px;">
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.description }}</p>
+  </div>
+</section>
+{% for post in site.posts %}
+
+<section id="second" class="spotlight style4 orient-{% cycle 'left', 'right' %} content-align-left image-position-center onscroll-image-fade-in" {% if forloop.index == 1 %}style="box-shadow: none;" {% endif %}>
+  <div class="content">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.description }}</p>
+    <p class="editor-link"><a class="btn" rel="nofollow" href="cloudcannon:collections/{{ post.path }}">
+      <strong>&#9998;</strong> Edit Post
+    </a></p>
+    <ul class="actions stacked">
+      <li><a href="{{ relBase }}{{ post.url }}" class="button">{{ site.data.translations[page.lang].read-post }}</a></li>
+    </ul>
+  </div>
+  <div class="image">
+    <img src="{{ relBase }}{{ post.image }}" alt="{{ page.title | smartify }}" />
+  </div>
+</section>
+
+{% endfor %}
+{% include footer.html %}

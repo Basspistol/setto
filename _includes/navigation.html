@@ -1,11 +1,28 @@
 <!-- Navigation -->
-{% if page.url == '/' %}
-<a id="logo" alt="Back to top" title="Back to top" class="logo smooth-scroll-middle" href="#top">&nbsp;</a>
-{% elsif page.collection == 'tracks' %}
-<a id="logo" alt="Back to Album" title="Back to Album" class="logo smooth-scroll-middle" href="../">&nbsp;</a>
-{% else %}
-<a id="logo" alt="Back to home page" title="Back to home page" class="logo" href="/">&nbsp;</a>
+<div id="logo" class="logo">
+  <a href="/"><img width="100em" src="{{ site.logo }}" alt="{{ site.name }} Logo" /></a>
+  &nbsp;&nbsp;&nbsp;<a href="#navbar" onclick="blurBody()" alt="Navigation Menu" title="Navigation Menu"><span style="font-size: 34px;" class="icon solid fa-bars"></span></a>
+  </div>
+  
+  <div id="navbar" style="display: block;" class="modalDialog">
+    <a href="#close" onclick="removeBlur()" alt="Close Menu" title="Close Menu"><div id="closearea">  </div></a>
+    <nav>
+      <a href="#close" title="Close" onclick="removeBlur()" class="close-button close" style="margin: 0 auto;">X</a>
+      <ul> 
+        {% if page.url != '/' %}
+        <li><a href="{{ relBase }}/" class="button smaller">{{ site.data.translations[page.lang].home }}</a></li>
+        {% endif %}
+        {% for entry in site.data.navigation %}
+        {% if entry.external_site == false %}
+        <li><a href="{{ relBase }}{{ entry.url }}" class="button smaller">{{ entry.name }}</a></li>
+        {% else %}
+        <li><a href="{{ entry.url }}" target="_blank" rel="noopener" class="button smaller">{{ entry.name }}</a></li>
+        {% endif %}
+        {% endfor %}
 
-
-{% endif %}
-<!-- End Navigation -->
+      </ul>
+    </nav>
+  </div>
+  
+  
+  <!-- End Navigation -->

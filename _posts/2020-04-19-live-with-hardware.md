@@ -6,10 +6,11 @@ description: >-
   can't get my finger on. Assumptions and projections that I think partially
   stem from the lack in body language
 image: /assets/albums/live-with-hardware/1-ep-life-of-a-dudelini.jpeg
-category: release
+category: releases
 layout: post
 credits:
 album: live-with-hardware
+check_this_if_cannot_be_bought: true
 stores:
   - name:
     url:

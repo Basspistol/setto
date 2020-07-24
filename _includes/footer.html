@@ -4,24 +4,28 @@
     <div>
       <h4>{{ site.title }}</h4>
       <p>{{ site.description }}
-      <br /><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
+      <br /><a href="mailto:{{ site.publisher.email }}">{{ site.publisher.email }}</a></p>
     </div>
     <div>
       <ul>
-        <li><a href="#top" class="smooth-scroll-middle">{{ site.data.translations[page.lang].top }}</a></li>
-        <li><a href="{% if page.url != '/' %}/{% endif %}#album0" class="smooth-scroll-middle">music</a></li>
+        {% if page.url != '/' %}
+        <li><a href="{{ relBase }}/">{{ site.data.translations[page.lang].home }}</a></li>
+        {% endif %}
+        {% for entry in site.data.navigation %}
+        <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>
+        {% endfor %}
       </ul>
     </div>
-    <div><img src="{{ rekBase }}/assets/setto-logo-dark.svg" style="max-width:300px" alt="To Setto Setto Logo" /></div>
+    <div><img src="{{ relBase }}{{ site.logo }}" style="max-width:300px" alt="{{ site.title }} Logo" /></div>
   </div>
   <div class="inner">
     <ul class="icons">
       {% for nw in site.data.social %}
-      {% if nw.we_have_account == true %}
-      <li><a target="_blank" alt="{{ site.title }} on {{ nw.name }}" title="{{ site.title }} on {{ nw.name }}" rel="noopener nofollow" href="{{ nw.url }}" class="icon brands style2 {{ nw.icon }}"><span class="label">{{ nw.name }}</span></a></li>
-      {% endif %}
+
+      <li><a target="_blank" alt="{{ site.title }} on {{ nw.name }}" title="{{ site.title }} on {{ nw.name }}" rel="noopener" href="{{ nw.url }}" class="icon brands style2 {{ nw.icon }}"><span class="label">{{ nw.name }}</span></a></li>
+
       {% endfor %}
-      <!-- <li><a href="mailto:{{ site.author.email }}" class="icon style2 fa-envelope"><span class="label">Email</span></a></li> -->
+
     </ul>
     <p>&copy;{{ site.time | date: '%Y' }} {{ site.publisher.name }} | <a href="{{ relBase }}/webcreds/">Credits</a> | <a href="{{ relBase }}/cookies/">Cookies & Privacy</a></p>
   </div>

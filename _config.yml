@@ -1,20 +1,29 @@
 # ----
 # Site
 
-title : 徒 setto セット
+title: 徒 setto セット
 description: Set, Party, Gang! &#35;Cybersoul
 
-url : https://setto.basspistol.com
+url: https://setto.basspistol.com
+permalink: /:categories/:title/
+mediaurl: https://media.basspistol.com/setto
 
 # banner should be 1024x1024
 banner: /assets/img/setto_logo.png
 icon: /assets/img/setto_icon.png
 logo: /assets/img/setto_icon.png
 
-author: 
-  name: 徒 Setto セット
-  email: setto@basspistol.com
-  twitter: ToSettoSetto
+
+exclude:
+  - changelog.md
+  - '*.*~'
+  - '*.xcf'
+  - '*.blend*'
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE
+
 social:
   name: 徒 Setto セット
   links:
@@ -31,7 +40,6 @@ musicbrainz_artistid: '31e8e456-0589-47eb-9334-20872851cd3e'
 
 plugins:
   - jekyll-sitemap
-  - jekyll-seo-tag
   - jekyll-last-modified-at
 
 # GEO 
@@ -43,20 +51,21 @@ geo:
   region: BJ-ZO
   town: Setto
 
+# Defaults
+
 collections:
   albums:
-    output: false
+    output: true
+    permalink: /albums/:name/
   tracks:
     output: true
-    permalink: /:path/
-
-    # Defaults
-permalink: pretty
+    permalink: /albums/:path/
+  authors:
+    output: false
 
 categories:
-  - release
+  - releases
   - rambling
-  - video
 
 exclude:
   - changelog.md
@@ -75,25 +84,40 @@ defaults:
   - scope:
       path: ""
     values:
-      layout: "page"
+      lang: en  
+  - scope:
+      path: ""
+      type: "tracks"
+    values:
+      layout: "track"
+      lang: en
+      seo:
+        type: "AudioObject"
+  - scope:
+      path: ""
+      type: "albums"
+    values:
+      layout: "album"
+      lang: en
+      seo:
+        type: "AudioObject"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
       lang: en
       _options:
         image:
           width: 1024
           height: 720
           resize_style: cover
-          uploads_dir: "/images"
+          uploads_dir: "/images/pages"
         content:
           width: 720
           height: 720
           resize_style: cover
-          uploads_dir: "/images"
-  - scope:
-      path: ""
-      type: "tracks"
-    values:
-      seo:
-        type: "AudioObject"
+          uploads_dir: "/images/pages"
   - scope:
       path: ""
       type: "posts"
@@ -106,13 +130,12 @@ defaults:
           width: 1024
           height: 720
           resize_style: cover
-          uploads_dir: "/images"
+          uploads_dir: "/images/posts"
         content:
           width: 720
           height: 720
           resize_style: cover
-          uploads_dir: "/images"  
-
+          uploads_dir: "/images/posts"  
 # ---------
 # Translate
 lang: en

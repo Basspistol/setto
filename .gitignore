@@ -1,5 +1,28 @@
-## Jekyll stuff
-.jekyll-cache
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# mousepad shit #
+*.*~
+
+#### JEKYLL
 _site/
-_site
-.sass-cache
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+_data/.~lock.*.csv
+
+## vcode
+.vscode
+.vscode/*
+
+## No cover artwork or Mp3
+*.mp3
+assets/albums/

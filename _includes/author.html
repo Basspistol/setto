@@ -1,16 +1,16 @@
-{% assign author_id = page.team_member | prepend: "/team_members/" | append: "/" %}
-{% assign author = site.team_members | where: "url", author_id | first %}
+{% assign author_id = page.author | prepend: "/authors/" | append: "/" %}
+{% assign author = site.authors | where: "url", author_id | first %}
 <header id="author">
   <div class="bio">
-{% if page.url != '/cookies/' %}
+
   {% if page.collection == 'posts' %}
   <div alt="Picture of {{ author.name }}"
-    style="margin-right: 10px;background-image:url({{ site.icon }});background-repeat: no-repeat;background-size:cover; border-radius:150px; width:150px; height:150px;">
+    style="margin-right: 10px;background-image:url({{ author.image }});background-repeat: no-repeat;background-size:cover; border-radius:150px; width:150px; height:150px;">
   </div>
   <br />
-  <h4>{{ site.description }}</h4>
-
-  <p>
+  <p style="font-style: normal;"><a href="mailto:{{ author.email }}"><strong>{{ author.name }}</strong></a></p>
+  <p style="font-style: normal;">{{ author.position }}{% if author.gpg != nil %} | <a target="_blank" rel="noopener" href="{{ author.gpg }}">GPG</a>{% endif %}</p>
+  <p style="font-size:14px;font-style: normal;">
     Published the 
 
 {% include dates.html %}
@@ -18,18 +18,16 @@
   
   {% endif %}
   <h6>
-    {% if page.lang == sv %}
-    Dela den här sidan:
-    {% else %}
+
     Share this page:  
-    {% endif %}</h6>
+ </h6>
   <ul class="icons"> 
-    <li><a target="_blank" rel="nofollow noopener" title="Share to facebook" alt="Share to facebook" href="https://touch.facebook.com/sharer.php?u={{ site.url }}{{ page.url | xml_escape }}&amp;quote={{ page.description | xml_escape }} via {{ site.url }}" class="icon brands style1 fa-facebook-f"><span class="label">Facebook</span></a></li>
-    <li><a target="_blank" rel="nofollow noopener" title="Share to twitter" alt="Share to twitter" href="https://twitter.com/share?url={{ site.url }}{{ page.url | xml_escape }}&amp;text={{ page.description | xml_escape }}%20via%20@{{ site.author.twitter }}&amp;hashtags=Cybersoul" class="icon brands style1 fa-twitter"><span class="label">Twitter</span></a></li>
-    <li><a target="_blank" rel="nofollow noopener" title="Share to telegram" alt="Share to telgram" href="https://telegram.me/share/url?url={{ site.url }}{{ page.url }}&amp;text={{ page.description }}%20check%20@basspistol" class="icon brands style1 fa-telegram"><span class="label">Telegram</span></a></li>
-    <li><a target="_blank" rel="nofollow noopener" title="Share to reddit" alt="Share to reddit" href="https://reddit.com/submit/?url={{ site.url }}{{ page.url }}&amp;title={{ page.title | xml_escape }}" class="icon brands style1 fa-reddit"><span class="label">Reddit</span></a></li>
+    <li><a target="_blank" rel="nofollow noopener" title="Share to facebook" alt="Share to facebook" href="https://touch.facebook.com/sharer.php?u={{ site.url }}{{ page.url | xml_escape }}&amp;quote={{ page.title | xml_escape }}%20by%20{{ site.title xml_escape }}%20via%20{{ site.url }}" class="icon brands style1 fa-facebook-f"><span class="label">Facebook</span></a></li>
+    <li><a target="_blank" rel="nofollow noopener" title="Share to twitter" alt="Share to twitter" href="https://twitter.com/share?url={{ site.url }}{{ page.url | xml_escape }}&amp;text={{ page.title | xml_escape }}%20by%20{{ site.title xml_escape }}%20&amp;hashtags=paxNion" class="icon brands style1 fa-twitter"><span class="label">Twitter</span></a></li>
+    <li><a target="_blank" rel="nofollow noopener" title="Share to telegram" alt="Share to telgram" href="https://telegram.me/share/url?url={{ site.url }}{{ page.url }}&amp;text={{ page.title | xml_escape }}%20by%20{{ site.title xml_escape }}" class="icon brands style1 fa-telegram"><span class="label">Telegram</span></a></li>
+    <li><a target="_blank" rel="nofollow noopener" title="Share to reddit" alt="Share to reddit" href="https://reddit.com/submit/?url={{ site.url }}{{ page.url }}&amp;title={{ page.title | xml_escape }}%20by%20{{ site.title xml_escape }}" class="icon brands style1 fa-reddit"><span class="label">Reddit</span></a></li>
   </ul>
 
-{% endif %}
+
 </div>
 </header>

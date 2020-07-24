@@ -86,7 +86,7 @@ audio {
 }
 
 .plTitle {
-  left: 50px;
+  left: 75px;
   overflow: hidden;
   position: absolute;
   right: 65px;
@@ -94,11 +94,12 @@ audio {
   top: 0;
   white-space: nowrap;
   font-weight: bold;
+  padding-right: 10px;
 }
 
 .plNum {
   padding-left: 21px;
-  width: 25px;
+  width: 65px;
 }
 
 .plLength {

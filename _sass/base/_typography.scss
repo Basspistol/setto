@@ -27,17 +27,17 @@
 	}
 
 	body {
-    background-color: _palette(bgimg);
+
     background-size: 20%;
     background-repeat: repeat;
 		color: _palette(fg);
 	}
 
 	body, input, select, textarea {
-		font-family: _font(family);
-		font-size: 1rem;
+		font-family: _font(family-fixed);
+		font-size: 0.75rem;
 		font-weight: _font(weight);
-		line-height: 1.65;
+		line-height: 1.45;
 	}
 
 	a {
@@ -69,7 +69,8 @@
 		font-weight: _font(weight-bold);
 		line-height: 1.375;
 		letter-spacing: _font(kerning);
-		margin: 0 0 (_size(element-margin) * 0.5) 0;
+    margin: 0 0 (_size(element-margin) * 0.5) 0;
+    font-family: _font(family);
 
 		a {
 			color: inherit;

@@ -5,14 +5,17 @@ layout: default
 {% include relBase.html %}
 <!-- Banner -->
 <section
-  class="banner onload-image-fade-in onload-content-fade-right style3 fullscreen content-align-center image-position-center" style="background-image:url(' {{ page.cover }}');background-size: cover; background-repeat: no-repeat;">
-  <div style="z-index:0;position:absolute; top:0; left:0; width:100%;height:100%;background-color: rgba(13, 13 ,13, 0.85);"></div>
+  class="banner onload-image-fade-in onload-content-fade-right style3 fullscreen content-align-center image-position-center" style="background-image:url('{{ site.mediaurl }}/{{ page.slug }}.jpeg');background-size: cover; background-repeat: no-repeat;">
+  <div style="z-index:0;position:absolute; top:0; left:0; width:100%;min-height:100%;background-color: rgba(13, 13 ,13, 0.5);"></div>
   <div class="content" style="z-index:1">
     <h1 style="margin-top:80px">{{ page.common.title }}</h1>
-
-    <p><strong><span id="tracktime"></span></strong><span id="{{ page.common.title | slugify | remove: '-'  }}"></span></strong> <br />
-      Style: <strong>{% for style in page.common.genre %}{{ style }}{% endfor %}</strong>   
+    <p><strong>{% for style in page.common.genre %}{{ style }}{% endfor %}</strong> by <strong>{{ page.common.artist }}</strong>
+      <br />{{ page.common.year }}
     </p>
+
+    <p><strong><span id="tracktime"></span></strong><span id="{{ page.common.title | slugify | remove: '-'  }}"></span></strong></p> 
+        
+    
       <script type="text/javascript">
         var {{ page.common.title | slugify | remove: '-'  }}timestamp = {{ page.format.duration | round }};
         var {{ page.common.title | slugify | remove: '-'  }}hours = Math.floor({{ page.common.title | slugify | remove: '-'  }}timestamp / 60 / 60);
@@ -25,15 +28,15 @@ layout: default
 
  
     <ul class="actions stacked">
-      <li><button id="mu_pause" class="smooth-scroll-middle button icon solid fa-play">Play dat!</button></li>
+      <li><button id="mu_pause" class="button icon solid fa-play">Play dat!</button></li>
     </ul>
   </div>
 
   <div class="image">
-    <img src="{{ relBase }}{{ page.cover }}" alt="{{ page.title }} logo" id="coverart" />
+    <img src="{{ site.mediaurl }}/{{ page.slug }}.jpeg" alt="{{ page.title }} logo" id="coverart" />
   </div>
 </section>
-{% if page.all.UNSYNCEDLYRICS != nil %}
+
 <!-- Content -->
 <section class="wrapper style1 align-center">
   <div class="inner" style="padding-top:40px">
@@ -41,6 +44,7 @@ layout: default
       <section style="padding-top:40px">
         {% include author.html %}
         <!-- Content -->
+        {% if page.all.UNSYNCEDLYRICS != nil %}
         <div class="content">
           {% unless page.all.UNSYNCEDLYRICS == '' %}<h2>Lyrics</h2>{% endunless %}
           <p style="font-family: monospace;font-size:16px;">
@@ -50,18 +54,19 @@ layout: default
             {{ page.all.Comment }}
           </p>
         </div>
+        {% endif %}
       </section>
     </div>
   </div>
 </section>
-{% endif %}
 
+{% include streamer.html %}
 <!-- Page navigation -->
 <section class="wrapper style1 align-center">
   <div class="inner">
     <div class="index align-left">
       <!-- Author -->
-      {% include streamer.html %}
+
       <section>
         <!-- Content -->
         <div class="content">
@@ -72,15 +77,15 @@ layout: default
           <div class="post-nav">
             <div>
               {% if page.previous.url and page.lang == page.previous.lang %}
-              <h4><a href="{{ relBase }}/{{ page.previousTrack.slug }}/" alt="Read {{ page.previousTrack.common.title }}" title="Read {{ page.previousTrack.common.title }}"><i class="fas fa-arrow-left"></i></a> <a
-                  href="{{ relBase }}/{{ page.previousTrack.slug }}/">&nbsp;{{ page.previousTrack.common.title }}</a>
+              <h4><a href="{{ relBase }}/albums/{{ page.previousTrack.slug }}/" alt="Read {{ page.previousTrack.common.title }}" title="Read {{ page.previousTrack.common.title }}"><i class="fas fa-arrow-left"></i></a> <a
+                  href="{{ relBase }}/albums/{{ page.previousTrack.slug }}/">&nbsp;{{ page.previousTrack.common.title }}</a>
               </h4>
               {% endif %}
             </div>
             <div class="post-nav-next">
               {% if page.next.url and page.lang == page.next.lang  %}
-              <h4><a href="{{ relBase }}/{{ page.nextTrack.slug }}/">&nbsp;{{ page.nextTrack.common.title }}</a> <a
-                  href="{{ relBase }}/{{ page.nextTrack.slug }}/" alt="Read {{ page.nextTrack.common.title }}" title="Read {{ page.nextTrack.common.title }}"><i class="fas fa-arrow-right"></i></a></h4>
+              <h4><a href="{{ relBase }}/albums/{{ page.nextTrack.slug }}/">&nbsp;{{ page.nextTrack.common.title }}</a> <a
+                  href="{{ relBase }}/albums/{{ page.nextTrack.slug }}/" alt="Read {{ page.nextTrack.common.title }}" title="Read {{ page.nextTrack.common.title }}"><i class="fas fa-arrow-right"></i></a></h4>
               {% endif %}
             </div>
           </div>
@@ -90,9 +95,10 @@ layout: default
     </div>
   </div>
 </section>
+
 <!-- Audio player-->
-<audio autoplay preload="true" data-matomo-title="{{ page.common.title }}">
-  <source src="{{ relBase }}{{ page.audio }}" type="audio/mpeg" ontimeupdate='updateTrackTime(this);' />
+<audio autoplay preload="metadata" data-matomo-title="{{ page.common.title }}">
+  <source src="{{ site.mediaurl }}/{{ page.slug }}.mp3" type="audio/mpeg" ontimeupdate='updateTrackTime(this);' />
   <h1>Your browser isn't ready for so much hotness. Use the download-link instead.</h1>.
 </audio>
 {% include footer.html %}
@@ -111,7 +117,7 @@ layout: default
     // only functional if "loop" is removed
     mu.pause();
     mu.currentTime = 0;
-    loadUrl("{{ relBase }}/{{ page.nextTrack.slug }}/"); return false;
+    loadUrl("{{ relBase }}/albums/{{ page.nextTrack.slug }}/"); return false;
   });
   mu.onplaying = function() {
     pauseButton.innerHTML = "Pause";

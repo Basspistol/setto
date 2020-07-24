@@ -3,10 +3,11 @@ title: Granny is a cyborg now
 date: 2019-12-12 03:03:00
 description: Jazzy Cybersoul with a hint of 303 baselines.
 image: /assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.jpeg
-category: release
+category: releases
 layout: post
 credits:
 album: cyber-grany
+check_this_if_cannot_be_bought: true
 stores:
   - name:
     url:
