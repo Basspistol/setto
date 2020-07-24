@@ -1,18 +1,5 @@
-# ----
-# Site
-
-title: 徒 setto セット
-description: Set, Party, Gang! &#35;Cybersoul
-
-url: https://setto.basspistol.com
+url: "https://setto.basspistol.com" # the base hostname & protocol for your site
 permalink: /:categories/:title/
-mediaurl: https://media.basspistol.com/setto
-
-# banner should be 1024x1024
-banner: /assets/img/setto_logo.png
-icon: /assets/img/setto_icon.png
-logo: /assets/img/setto_icon.png
-
 
 exclude:
   - changelog.md
@@ -24,58 +11,48 @@ exclude:
   - README.md
   - LICENCE
 
-social:
-  name: 徒 Setto セット
-  links:
-    - https://www.instagram.com/tosettosetto
-    - https://twitter.com/ToSettoSetto
+title : 徒 setto セット
+description: 'Set, Party, Gang! &#35;Cybersoul.'
+geo: 
+  timezone: "Europe/Switzerland"
+  lat: '46.203918'
+  long: '6.133011'
+  region: 'CH-GE'
+  town: 'Geneva'
+  country: 'Switzerland'
+  postalcode: '1201'
+
+banner:   /images/setto-logo.svg
+icon:   /images/setto-logoicon.svg
+logo:   /images/setto-logo.svg
+logo-footer: /images/setto-logo-dark.svg
+mediaurl: https://media.basspistol.com/setto.basspistol.com
 
 publisher:
-  name: Basspistol
-  domain: basspistol.com
-  mail: info@basspistol.com
+  name: To Setto Setto
+  domain: setto.basspistol.com
+  mail: setto@basspistol.com
+social:
+  name: To Setto Setto
+  links:
+    - https://twitter.com/ToSettoSetto
+    - https://instagram.com/ToSettoSetto
 
-# musicbrainz
-musicbrainz_artistid: '31e8e456-0589-47eb-9334-20872851cd3e'
-
-plugins:
-  - jekyll-sitemap
-  - jekyll-last-modified-at
-
-# GEO 
-
-geo: 
-  timezone: "Europe/Stockholm"
-  lat: '7.48777'
-  long: '2.076389'
-  region: BJ-ZO
-  town: Setto
-
-# Defaults
+categories:
+  - releases
+  - ramblings
 
 collections:
   albums:
-    output: true
+    output: false
     permalink: /albums/:name/
   tracks:
     output: true
     permalink: /albums/:path/
   authors:
     output: false
-
-categories:
-  - releases
-  - rambling
-
-exclude:
-  - changelog.md
-  - '*.*~'
-  - '*.xcf'
-  - '*.blend*'
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - LICENCE
+      
+# defaults
 
 sass:
   sass_dir: _sass

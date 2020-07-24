@@ -1,14 +1,14 @@
 ---
 title: Satoshi Mon Ami
+author: setto
 date: 2018-12-17 19:00:00
 description: >-
   The 2 tracks of laid back cloud rap are tales of daily digital life-struggles.
   When day-to-day communication blurs the line between the virtual and real.
-image: /assets/img/satoshimonami.jpg
+image: /images/posts/1-k-as-tu-fait-de-nous-.jpeg
 category: releases
 credits: ''
 album: satoshi-mon-ami
-check_this_if_cannot_be_bought: false
 stores:
   - name: Bandcamp
     url: 'https://shop.basspistol.com/album/satoshi-mon-ami'

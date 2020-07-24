@@ -9,13 +9,13 @@ cover: /assets/albums/live-with-hardware/1-ep-life-of-a-dudelini.jpeg
 date: 2020-4-20
 tracks:
   - path: >-
-      /home/set/git/basspistol/setto/assets/albums/live-with-hardware/1-ep-life-of-a-dudelini.mp3
+      /home/set/git/basspistol/setto.basspistol.com/assets/albums/live-with-hardware/1-ep-life-of-a-dudelini.mp3
     audio: /assets/albums/live-with-hardware/1-ep-life-of-a-dudelini.mp3
     slug: live-with-hardware/1-ep-life-of-a-dudelini
     albumSlug: live-with-hardware
     trackSlug: 1-ep-life-of-a-dudelini
     coverPath: >-
-      /home/set/git/basspistol/setto/assets/albums/live-with-hardware/1-ep-life-of-a-dudelini.jpeg
+      /home/set/git/basspistol/setto.basspistol.com/assets/albums/live-with-hardware/1-ep-life-of-a-dudelini.jpeg
     cover: /assets/albums/live-with-hardware/1-ep-life-of-a-dudelini.jpeg
     format:
       tagTypes:

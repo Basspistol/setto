@@ -1,12 +1,13 @@
 ---
 layout: track
-path: /home/set/git/basspistol/setto/assets/albums/darkweb/3-swipe-instrumental-.mp3
+path: >-
+  /home/set/git/basspistol/setto.basspistol.com/assets/albums/darkweb/3-swipe-instrumental-.mp3
 audio: /assets/albums/darkweb/3-swipe-instrumental-.mp3
 slug: darkweb/3-swipe-instrumental-
 albumSlug: darkweb
 trackSlug: 3-swipe-instrumental-
 coverPath: >-
-  /home/set/git/basspistol/setto/assets/albums/darkweb/3-swipe-instrumental-.jpeg
+  /home/set/git/basspistol/setto.basspistol.com/assets/albums/darkweb/3-swipe-instrumental-.jpeg
 cover: /assets/albums/darkweb/3-swipe-instrumental-.jpeg
 format:
   tagTypes:
@@ -86,13 +87,13 @@ all:
   TYER: '2019'
 nextTrack:
   path: >-
-    /home/set/git/basspistol/setto/assets/albums/darkweb/4-darkweb-instrumental-.mp3
+    /home/set/git/basspistol/setto.basspistol.com/assets/albums/darkweb/4-darkweb-instrumental-.mp3
   audio: /assets/albums/darkweb/4-darkweb-instrumental-.mp3
   slug: darkweb/4-darkweb-instrumental-
   albumSlug: darkweb
   trackSlug: 4-darkweb-instrumental-
   coverPath: >-
-    /home/set/git/basspistol/setto/assets/albums/darkweb/4-darkweb-instrumental-.jpeg
+    /home/set/git/basspistol/setto.basspistol.com/assets/albums/darkweb/4-darkweb-instrumental-.jpeg
   cover: /assets/albums/darkweb/4-darkweb-instrumental-.jpeg
   format:
     tagTypes:
@@ -176,12 +177,14 @@ nextTrack:
     Comment: Cover art and music by To&nbsp;Setto&nbsp;Setto
     TYER: '2019'
 previousTrack:
-  path: /home/set/git/basspistol/setto/assets/albums/darkweb/2-darkweb.mp3
+  path: >-
+    /home/set/git/basspistol/setto.basspistol.com/assets/albums/darkweb/2-darkweb.mp3
   audio: /assets/albums/darkweb/2-darkweb.mp3
   slug: darkweb/2-darkweb
   albumSlug: darkweb
   trackSlug: 2-darkweb
-  coverPath: /home/set/git/basspistol/setto/assets/albums/darkweb/2-darkweb.jpeg
+  coverPath: >-
+    /home/set/git/basspistol/setto.basspistol.com/assets/albums/darkweb/2-darkweb.jpeg
   cover: /assets/albums/darkweb/2-darkweb.jpeg
   format:
     tagTypes:

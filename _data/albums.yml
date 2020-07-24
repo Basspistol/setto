@@ -1,91 +1,4 @@
 - layout: album
-  slug: live-with-hardware
-  name: Live with hardware
-  artists: 徒 Setto セット
-  bitrate: 192000
-  trackCount: 1
-  cover: /assets/albums/live-with-hardware/1-ep-life-of-a-dudelini.jpeg
-  date: 2020-4-20
-  tracks:
-    - path: >-
-        /home/set/git/basspistol/setto/assets/albums/live-with-hardware/1-ep-life-of-a-dudelini.mp3
-      audio: /assets/albums/live-with-hardware/1-ep-life-of-a-dudelini.mp3
-      slug: live-with-hardware/1-ep-life-of-a-dudelini
-      albumSlug: live-with-hardware
-      trackSlug: 1-ep-life-of-a-dudelini
-      coverPath: >-
-        /home/set/git/basspistol/setto/assets/albums/live-with-hardware/1-ep-life-of-a-dudelini.jpeg
-      cover: /assets/albums/live-with-hardware/1-ep-life-of-a-dudelini.jpeg
-      format:
-        tagTypes:
-          - ID3v2.4
-        trackInfo: []
-        lossless: false
-        container: MPEG
-        codec: MPEG 1 Layer 3
-        sampleRate: 48000
-        numberOfChannels: 2
-        bitrate: 192000
-        codecProfile: CBR
-        tool: LAME3.100
-        duration: 683.472
-      native:
-        ID3v2.4:
-          - id: TIT2
-            value: EP-Life of a Dudelini
-          - id: TPE1
-            value: 徒 Setto セット
-          - id: TALB
-            value: Live with hardware
-          - id: COMM
-            value: &ref_0
-              language: eng
-              description: ''
-              text: Live take
-          - id: TDRC
-            value: '2020-04-20'
-          - id: TRCK
-            value: '1'
-          - id: TCON
-            value: Cybersoul
-      quality:
-        warnings: []
-      common:
-        track:
-          'no': 1
-          of: null
-        disk:
-          'no': null
-          of: null
-        title: EP-Life of a Dudelini
-        artists:
-          - 徒 Setto セット
-        artist: 徒 Setto セット
-        album: Live with hardware
-        comment:
-          - Live take
-        year: 2020
-        date: '2020-04-20'
-        genre:
-          - Cybersoul
-      transformed:
-        ID3v2.4:
-          TIT2: EP-Life of a Dudelini
-          TPE1: 徒 Setto セット
-          TALB: Live with hardware
-          COMM: *ref_0
-          TDRC: '2020-04-20'
-          TRCK: '1'
-          TCON: Cybersoul
-      all:
-        TIT2: EP-Life of a Dudelini
-        TPE1: 徒 Setto セット
-        TALB: Live with hardware
-        COMM: *ref_0
-        TDRC: '2020-04-20'
-        TRCK: '1'
-        TCON: Cybersoul
-- layout: album
   slug: cyber-grany
   name: Cyber Grany
   artists: 徒 Setto セット
@@ -95,13 +8,13 @@
   date: 2019-1-1
   tracks:
     - path: >-
-        /home/set/git/basspistol/setto/assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.mp3
+        /home/set/git/basspistol/setto.basspistol.com/assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.mp3
       audio: /assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.mp3
       slug: cyber-grany/1-grandma-got-the-ssh-keys
       albumSlug: cyber-grany
       trackSlug: 1-grandma-got-the-ssh-keys
       coverPath: >-
-        /home/set/git/basspistol/setto/assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.jpeg
+        /home/set/git/basspistol/setto.basspistol.com/assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.jpeg
       cover: /assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.jpeg
       format:
         tagTypes:
@@ -209,12 +122,14 @@
   cover: /assets/albums/darkweb/1-swipe.jpeg
   date: 2019-1-1
   tracks:
-    - path: /home/set/git/basspistol/setto/assets/albums/darkweb/1-swipe.mp3
+    - path: >-
+        /home/set/git/basspistol/setto.basspistol.com/assets/albums/darkweb/1-swipe.mp3
       audio: /assets/albums/darkweb/1-swipe.mp3
       slug: darkweb/1-swipe
       albumSlug: darkweb
       trackSlug: 1-swipe
-      coverPath: /home/set/git/basspistol/setto/assets/albums/darkweb/1-swipe.jpeg
+      coverPath: >-
+        /home/set/git/basspistol/setto.basspistol.com/assets/albums/darkweb/1-swipe.jpeg
       cover: /assets/albums/darkweb/1-swipe.jpeg
       format:
         tagTypes:
@@ -573,12 +488,14 @@
           Je yeuxt vers l'avant de temps en temps.
         TCON: Cyber Soul
         TYER: '2019'
-    - path: /home/set/git/basspistol/setto/assets/albums/darkweb/2-darkweb.mp3
+    - path: >-
+        /home/set/git/basspistol/setto.basspistol.com/assets/albums/darkweb/2-darkweb.mp3
       audio: /assets/albums/darkweb/2-darkweb.mp3
       slug: darkweb/2-darkweb
       albumSlug: darkweb
       trackSlug: 2-darkweb
-      coverPath: /home/set/git/basspistol/setto/assets/albums/darkweb/2-darkweb.jpeg
+      coverPath: >-
+        /home/set/git/basspistol/setto.basspistol.com/assets/albums/darkweb/2-darkweb.jpeg
       cover: /assets/albums/darkweb/2-darkweb.jpeg
       format:
         tagTypes:
@@ -670,13 +587,13 @@
         TCON: Cypher Rap
         TYER: '2019'
     - path: >-
-        /home/set/git/basspistol/setto/assets/albums/darkweb/3-swipe-instrumental-.mp3
+        /home/set/git/basspistol/setto.basspistol.com/assets/albums/darkweb/3-swipe-instrumental-.mp3
       audio: /assets/albums/darkweb/3-swipe-instrumental-.mp3
       slug: darkweb/3-swipe-instrumental-
       albumSlug: darkweb
       trackSlug: 3-swipe-instrumental-
       coverPath: >-
-        /home/set/git/basspistol/setto/assets/albums/darkweb/3-swipe-instrumental-.jpeg
+        /home/set/git/basspistol/setto.basspistol.com/assets/albums/darkweb/3-swipe-instrumental-.jpeg
       cover: /assets/albums/darkweb/3-swipe-instrumental-.jpeg
       format:
         tagTypes:
@@ -761,13 +678,13 @@
         TCON: Cyber Soul
         TYER: '2019'
     - path: >-
-        /home/set/git/basspistol/setto/assets/albums/darkweb/4-darkweb-instrumental-.mp3
+        /home/set/git/basspistol/setto.basspistol.com/assets/albums/darkweb/4-darkweb-instrumental-.mp3
       audio: /assets/albums/darkweb/4-darkweb-instrumental-.mp3
       slug: darkweb/4-darkweb-instrumental-
       albumSlug: darkweb
       trackSlug: 4-darkweb-instrumental-
       coverPath: >-
-        /home/set/git/basspistol/setto/assets/albums/darkweb/4-darkweb-instrumental-.jpeg
+        /home/set/git/basspistol/setto.basspistol.com/assets/albums/darkweb/4-darkweb-instrumental-.jpeg
       cover: /assets/albums/darkweb/4-darkweb-instrumental-.jpeg
       format:
         tagTypes:
@@ -789,7 +706,7 @@
           - id: TPE1
             value: 徒 Setto セット
           - id: COMM
-            value: &ref_1
+            value: &ref_0
               language: XXX
               description: ''
               text: ''
@@ -833,7 +750,7 @@
         ID3v2.3:
           TIT2: Darkweb (Instrumental)
           TPE1: 徒 Setto セット
-          COMM: *ref_1
+          COMM: *ref_0
           TALB: Darkweb
           TPE2: 徒 Setto セット
           TCON: Cypher Rap
@@ -843,13 +760,100 @@
       all:
         TIT2: Darkweb (Instrumental)
         TPE1: 徒 Setto セット
-        COMM: *ref_1
+        COMM: *ref_0
         TALB: Darkweb
         TPE2: 徒 Setto セット
         TCON: Cypher Rap
         TRCK: '4'
         Comment: Cover art and music by To&nbsp;Setto&nbsp;Setto
         TYER: '2019'
+- layout: album
+  slug: live-with-hardware
+  name: Live with hardware
+  artists: 徒 Setto セット
+  bitrate: 192000
+  trackCount: 1
+  cover: /assets/albums/live-with-hardware/1-ep-life-of-a-dudelini.jpeg
+  date: 2020-4-20
+  tracks:
+    - path: >-
+        /home/set/git/basspistol/setto.basspistol.com/assets/albums/live-with-hardware/1-ep-life-of-a-dudelini.mp3
+      audio: /assets/albums/live-with-hardware/1-ep-life-of-a-dudelini.mp3
+      slug: live-with-hardware/1-ep-life-of-a-dudelini
+      albumSlug: live-with-hardware
+      trackSlug: 1-ep-life-of-a-dudelini
+      coverPath: >-
+        /home/set/git/basspistol/setto.basspistol.com/assets/albums/live-with-hardware/1-ep-life-of-a-dudelini.jpeg
+      cover: /assets/albums/live-with-hardware/1-ep-life-of-a-dudelini.jpeg
+      format:
+        tagTypes:
+          - ID3v2.4
+        trackInfo: []
+        lossless: false
+        container: MPEG
+        codec: MPEG 1 Layer 3
+        sampleRate: 48000
+        numberOfChannels: 2
+        bitrate: 192000
+        codecProfile: CBR
+        tool: LAME3.100
+        duration: 683.472
+      native:
+        ID3v2.4:
+          - id: TIT2
+            value: EP-Life of a Dudelini
+          - id: TPE1
+            value: 徒 Setto セット
+          - id: TALB
+            value: Live with hardware
+          - id: COMM
+            value: &ref_1
+              language: eng
+              description: ''
+              text: Live take
+          - id: TDRC
+            value: '2020-04-20'
+          - id: TRCK
+            value: '1'
+          - id: TCON
+            value: Cybersoul
+      quality:
+        warnings: []
+      common:
+        track:
+          'no': 1
+          of: null
+        disk:
+          'no': null
+          of: null
+        title: EP-Life of a Dudelini
+        artists:
+          - 徒 Setto セット
+        artist: 徒 Setto セット
+        album: Live with hardware
+        comment:
+          - Live take
+        year: 2020
+        date: '2020-04-20'
+        genre:
+          - Cybersoul
+      transformed:
+        ID3v2.4:
+          TIT2: EP-Life of a Dudelini
+          TPE1: 徒 Setto セット
+          TALB: Live with hardware
+          COMM: *ref_1
+          TDRC: '2020-04-20'
+          TRCK: '1'
+          TCON: Cybersoul
+      all:
+        TIT2: EP-Life of a Dudelini
+        TPE1: 徒 Setto セット
+        TALB: Live with hardware
+        COMM: *ref_1
+        TDRC: '2020-04-20'
+        TRCK: '1'
+        TCON: Cybersoul
 - layout: album
   slug: satoshi-mon-ami
   name: Satoshi mon ami
@@ -860,13 +864,13 @@
   date: 2018-1-1
   tracks:
     - path: >-
-        /home/set/git/basspistol/setto/assets/albums/satoshi-mon-ami/1-k-as-tu-fait-de-nous-.mp3
+        /home/set/git/basspistol/setto.basspistol.com/assets/albums/satoshi-mon-ami/1-k-as-tu-fait-de-nous-.mp3
       audio: /assets/albums/satoshi-mon-ami/1-k-as-tu-fait-de-nous-.mp3
       slug: satoshi-mon-ami/1-k-as-tu-fait-de-nous-
       albumSlug: satoshi-mon-ami
       trackSlug: 1-k-as-tu-fait-de-nous-
       coverPath: >-
-        /home/set/git/basspistol/setto/assets/albums/satoshi-mon-ami/1-k-as-tu-fait-de-nous-.jpeg
+        /home/set/git/basspistol/setto.basspistol.com/assets/albums/satoshi-mon-ami/1-k-as-tu-fait-de-nous-.jpeg
       cover: /assets/albums/satoshi-mon-ami/1-k-as-tu-fait-de-nous-.jpeg
       format:
         tagTypes:
@@ -950,13 +954,13 @@
         TCON: Cyber Soul
         TYER: '2018'
     - path: >-
-        /home/set/git/basspistol/setto/assets/albums/satoshi-mon-ami/2-r-ve-de-toi.mp3
+        /home/set/git/basspistol/setto.basspistol.com/assets/albums/satoshi-mon-ami/2-r-ve-de-toi.mp3
       audio: /assets/albums/satoshi-mon-ami/2-r-ve-de-toi.mp3
       slug: satoshi-mon-ami/2-r-ve-de-toi
       albumSlug: satoshi-mon-ami
       trackSlug: 2-r-ve-de-toi
       coverPath: >-
-        /home/set/git/basspistol/setto/assets/albums/satoshi-mon-ami/2-r-ve-de-toi.jpeg
+        /home/set/git/basspistol/setto.basspistol.com/assets/albums/satoshi-mon-ami/2-r-ve-de-toi.jpeg
       cover: /assets/albums/satoshi-mon-ami/2-r-ve-de-toi.jpeg
       format:
         tagTypes:

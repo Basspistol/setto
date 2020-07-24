@@ -1,18 +1,16 @@
 ---
-title: ''
-description: ''
-date: ''
-author: ''
-category: ''
+title: 
+author:
+date: 
+description: 
+image: 
+category: 
+layout:
+credits: ''
 album:
-tags: []
-image: ''
-download: ''
-link: ''
-check_this_if_cannot_be_bought: false
 stores:
-  - name: ''
-    url: ''
-    icon: ''
+  - name:
+    url: 
+    icon: 
     download: false
 ---

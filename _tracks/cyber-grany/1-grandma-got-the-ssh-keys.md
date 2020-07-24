@@ -1,13 +1,13 @@
 ---
 layout: track
 path: >-
-  /home/set/git/basspistol/setto/assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.mp3
+  /home/set/git/basspistol/setto.basspistol.com/assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.mp3
 audio: /assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.mp3
 slug: cyber-grany/1-grandma-got-the-ssh-keys
 albumSlug: cyber-grany
 trackSlug: 1-grandma-got-the-ssh-keys
 coverPath: >-
-  /home/set/git/basspistol/setto/assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.jpeg
+  /home/set/git/basspistol/setto.basspistol.com/assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.jpeg
 cover: /assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.jpeg
 format: &ref_0
   tagTypes:
@@ -108,13 +108,13 @@ all: &ref_5
   TYER: '2019'
 nextTrack: &ref_6
   path: >-
-    /home/set/git/basspistol/setto/assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.mp3
+    /home/set/git/basspistol/setto.basspistol.com/assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.mp3
   audio: /assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.mp3
   slug: cyber-grany/1-grandma-got-the-ssh-keys
   albumSlug: cyber-grany
   trackSlug: 1-grandma-got-the-ssh-keys
   coverPath: >-
-    /home/set/git/basspistol/setto/assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.jpeg
+    /home/set/git/basspistol/setto.basspistol.com/assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.jpeg
   cover: /assets/albums/cyber-grany/1-grandma-got-the-ssh-keys.jpeg
   format: *ref_0
   native: *ref_1

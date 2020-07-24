@@ -9,13 +9,13 @@ cover: /assets/albums/satoshi-mon-ami/1-k-as-tu-fait-de-nous-.jpeg
 date: 2018-1-1
 tracks:
   - path: >-
-      /home/set/git/basspistol/setto/assets/albums/satoshi-mon-ami/1-k-as-tu-fait-de-nous-.mp3
+      /home/set/git/basspistol/setto.basspistol.com/assets/albums/satoshi-mon-ami/1-k-as-tu-fait-de-nous-.mp3
     audio: /assets/albums/satoshi-mon-ami/1-k-as-tu-fait-de-nous-.mp3
     slug: satoshi-mon-ami/1-k-as-tu-fait-de-nous-
     albumSlug: satoshi-mon-ami
     trackSlug: 1-k-as-tu-fait-de-nous-
     coverPath: >-
-      /home/set/git/basspistol/setto/assets/albums/satoshi-mon-ami/1-k-as-tu-fait-de-nous-.jpeg
+      /home/set/git/basspistol/setto.basspistol.com/assets/albums/satoshi-mon-ami/1-k-as-tu-fait-de-nous-.jpeg
     cover: /assets/albums/satoshi-mon-ami/1-k-as-tu-fait-de-nous-.jpeg
     format:
       tagTypes:
@@ -99,13 +99,13 @@ tracks:
       TCON: Cyber Soul
       TYER: '2018'
   - path: >-
-      /home/set/git/basspistol/setto/assets/albums/satoshi-mon-ami/2-r-ve-de-toi.mp3
+      /home/set/git/basspistol/setto.basspistol.com/assets/albums/satoshi-mon-ami/2-r-ve-de-toi.mp3
     audio: /assets/albums/satoshi-mon-ami/2-r-ve-de-toi.mp3
     slug: satoshi-mon-ami/2-r-ve-de-toi
     albumSlug: satoshi-mon-ami
     trackSlug: 2-r-ve-de-toi
     coverPath: >-
-      /home/set/git/basspistol/setto/assets/albums/satoshi-mon-ami/2-r-ve-de-toi.jpeg
+      /home/set/git/basspistol/setto.basspistol.com/assets/albums/satoshi-mon-ami/2-r-ve-de-toi.jpeg
     cover: /assets/albums/satoshi-mon-ami/2-r-ve-de-toi.jpeg
     format:
       tagTypes:
